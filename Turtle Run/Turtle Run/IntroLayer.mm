@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "IntroLayer.h"
 #import "HelloWorldLayer.h"
+#import "GroundLayer.h"
 
 
 #pragma mark - IntroLayer
@@ -25,7 +26,7 @@
 	
 	// 'layer' is an autorelease object.
 	IntroLayer *layer = [IntroLayer node];
-	
+    	
 	// add layer as a child to scene
 	[scene addChild: layer];
 	

@@ -59,21 +59,23 @@ enum {
 		// init physics
 		[self initPhysics];
 		
+        //Create background ~K
+             
 		// create reset button
 		[self createMenu];
-		
+		      
 		//Set up sprite
 		
 #if 1
 		// Use batch node. Faster
-		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:100];
+		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"tile_tiny.png" capacity:100];
 		spriteTexture_ = [parent texture];
 #else
 		// doesn't use batch node. Slower
-		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"blocks.png"];
+		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"tile_tiny.png"];
 		CCNode *parent = [CCNode node];
 #endif
-		[self addChild:parent z:0 tag:kTagParentNode];
+		[self addChild:parent z:1 tag:kTagParentNode];
 		
 		
 		[self addNewSpriteAtPosition:ccp(s.width/2, s.height/2)];
