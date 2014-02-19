@@ -191,6 +191,7 @@
 		A2048B9A18A9E0AB00A36361 /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2048B9918A9E0AB00A36361 /* IntroLayer.mm */; };
 		A2048B9D18A9E0AB00A36361 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2048B9C18A9E0AB00A36361 /* GLES-Render.mm */; };
 		A2048B9F18A9E0AB00A36361 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = A2048B9E18A9E0AB00A36361 /* blocks.png */; };
+		A2BBB72618B439FC005F55E0 /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB72518B439FC005F55E0 /* Turtle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -577,6 +578,8 @@
 		A2048B9B18A9E0AB00A36361 /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		A2048B9C18A9E0AB00A36361 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		A2048B9E18A9E0AB00A36361 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		A2BBB72418B439FC005F55E0 /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
+		A2BBB72518B439FC005F55E0 /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -652,6 +655,8 @@
 				A204896F18A9E0A800A36361 /* Resources */,
 				A204898718A9E0A800A36361 /* libs */,
 				A2048B8E18A9E0AB00A36361 /* Supporting Files */,
+				A2BBB72418B439FC005F55E0 /* Turtle.h */,
+				A2BBB72518B439FC005F55E0 /* Turtle.m */,
 			);
 			path = "Turtle Run";
 			sourceTree = "<group>";
@@ -1407,6 +1412,7 @@
 				A2048B9A18A9E0AB00A36361 /* IntroLayer.mm in Sources */,
 				A2048B4918A9E0AB00A36361 /* b2WorldCallbacks.cpp in Sources */,
 				A2048B6918A9E0AB00A36361 /* b2DistanceJoint.cpp in Sources */,
+				A2BBB72618B439FC005F55E0 /* Turtle.m in Sources */,
 				A2048A8918A9E0AA00A36361 /* CCWindow.m in Sources */,
 				A2048B2F18A9E0AB00A36361 /* b2Settings.cpp in Sources */,
 				A2048A6718A9E0AA00A36361 /* cocos2d.m in Sources */,
