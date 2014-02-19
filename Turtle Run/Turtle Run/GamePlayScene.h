@@ -7,11 +7,19 @@
 //
 
 #import "CCScene.h"
+#import "SpriteLayer.h"
+#import "GroundLayer.h"
+#import "IntroLayer.h"
+
 //#import "GroundLayer.h"
 //#import "SpriteLayer.h"
 
 @interface GamePlayScene : CCScene {
-
+    
+    SpriteLayer *spriteLayer;
+//    GroundLayer *groundLayer;
+//    IntroLayer *introLayer;
+    
 }
 
 @end

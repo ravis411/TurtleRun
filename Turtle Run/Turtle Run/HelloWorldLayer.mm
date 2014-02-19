@@ -146,8 +146,14 @@ enum {
 		
 		[leaderboardViewController release];
 	}];
+    
+    //Start New Game
+    CCMenuItem *itemNewGame = [CCMenuItemFont itemWithString:@"New Game" block:^(id sender) {
+        
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[GamePlayScene node]]];
+    }];
 	
-	CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, reset, nil];
+	CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, reset, itemNewGame, nil];
 	
 	[menu alignItemsVertically];
 	
