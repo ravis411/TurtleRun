@@ -194,11 +194,6 @@
 		A2048B9A18A9E0AB00A36361 /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2048B9918A9E0AB00A36361 /* IntroLayer.mm */; };
 		A2048B9D18A9E0AB00A36361 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2048B9C18A9E0AB00A36361 /* GLES-Render.mm */; };
 		A2048B9F18A9E0AB00A36361 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = A2048B9E18A9E0AB00A36361 /* blocks.png */; };
-		A2B8E57E18B496B500BF8AEA /* turtle_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E57D18B496B500BF8AEA /* turtle_placeholder.png */; };
-		A2B8E58018B496C500BF8AEA /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E57F18B496C500BF8AEA /* tile.png */; };
-		A2B8E58218B496CD00BF8AEA /* floortile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E58118B496CD00BF8AEA /* floortile.jpg */; };
-		A2B8E58518B498F700BF8AEA /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B8E58418B498F700BF8AEA /* GamePlayScene.m */; };
-		A2BBB72618B439FC005F55E0 /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB72518B439FC005F55E0 /* Turtle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -587,13 +582,6 @@
 		A2048B9B18A9E0AB00A36361 /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		A2048B9C18A9E0AB00A36361 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		A2048B9E18A9E0AB00A36361 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
-		A2B8E57D18B496B500BF8AEA /* turtle_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_placeholder.png; path = Resources/turtle_placeholder.png; sourceTree = "<group>"; };
-		A2B8E57F18B496C500BF8AEA /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile.png; path = Resources/tile.png; sourceTree = "<group>"; };
-		A2B8E58118B496CD00BF8AEA /* floortile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = floortile.jpg; path = Resources/floortile.jpg; sourceTree = "<group>"; };
-		A2B8E58318B498F700BF8AEA /* GamePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
-		A2B8E58418B498F700BF8AEA /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
-		A2BBB72418B439FC005F55E0 /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
-		A2BBB72518B439FC005F55E0 /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -654,8 +642,6 @@
 		A204896E18A9E0A800A36361 /* Turtle Run */ = {
 			isa = PBXGroup;
 			children = (
-				A2B8E58318B498F700BF8AEA /* GamePlayScene.h */,
-				A2B8E58418B498F700BF8AEA /* GamePlayScene.m */,
 				A2048B9218A9E0AB00A36361 /* AppDelegate.h */,
 				3D0DE9C018B47F890010F4C1 /* SpriteLayer.h */,
 				3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */,
@@ -670,8 +656,6 @@
 				A204896F18A9E0A800A36361 /* Resources */,
 				A204898718A9E0A800A36361 /* libs */,
 				A2048B8E18A9E0AB00A36361 /* Supporting Files */,
-				A2BBB72418B439FC005F55E0 /* Turtle.h */,
-				A2BBB72518B439FC005F55E0 /* Turtle.m */,
 			);
 			path = "Turtle Run";
 			sourceTree = "<group>";
@@ -679,15 +663,9 @@
 		A204896F18A9E0A800A36361 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				3D0DE9CA18B49CA70010F4C1 /* clawg_64x64.png */,
 				3D0DE9C618B4990C0010F4C1 /* clawg.png */,
 				3D0DE9C718B4990C0010F4C1 /* turtle.png */,
-=======
-				A2B8E58118B496CD00BF8AEA /* floortile.jpg */,
-				A2B8E57F18B496C500BF8AEA /* tile.png */,
-				A2B8E57D18B496B500BF8AEA /* turtle_placeholder.png */,
->>>>>>> d2b61dd6d5e1c5130ebd83f8cc6152854df79291
 				3D3C51F018B4363D004403E1 /* tile_tiny.png */,
 				A204897018A9E0A800A36361 /* Default.png */,
 				A204897218A9E0A800A36361 /* Default@2x.png */,
@@ -1279,15 +1257,12 @@
 			files = (
 				A204898118A9E0A800A36361 /* Icon.png in Resources */,
 				A2048ADF18A9E0AA00A36361 /* ChangeLog in Resources */,
-				A2B8E58218B496CD00BF8AEA /* floortile.jpg in Resources */,
 				A204897318A9E0A800A36361 /* Default@2x.png in Resources */,
 				A204897D18A9E0A800A36361 /* Icon-Small.png in Resources */,
 				A204897918A9E0A800A36361 /* Icon-72.png in Resources */,
 				A204897118A9E0A800A36361 /* Default.png in Resources */,
 				A204897B18A9E0A800A36361 /* Icon-Small-50.png in Resources */,
 				A204898618A9E0A800A36361 /* iTunesArtwork in Resources */,
-				A2B8E57E18B496B500BF8AEA /* turtle_placeholder.png in Resources */,
-				A2B8E58018B496C500BF8AEA /* tile.png in Resources */,
 				A2048B9F18A9E0AB00A36361 /* blocks.png in Resources */,
 				A204897F18A9E0A800A36361 /* Icon-Small@2x.png in Resources */,
 				A204897718A9E0A800A36361 /* Default-Landscape~ipad.png in Resources */,
@@ -1442,7 +1417,6 @@
 				A2048B9A18A9E0AB00A36361 /* IntroLayer.mm in Sources */,
 				A2048B4918A9E0AB00A36361 /* b2WorldCallbacks.cpp in Sources */,
 				A2048B6918A9E0AB00A36361 /* b2DistanceJoint.cpp in Sources */,
-				A2BBB72618B439FC005F55E0 /* Turtle.m in Sources */,
 				A2048A8918A9E0AA00A36361 /* CCWindow.m in Sources */,
 				A2048B2F18A9E0AB00A36361 /* b2Settings.cpp in Sources */,
 				A2048A6718A9E0AA00A36361 /* cocos2d.m in Sources */,
@@ -1461,7 +1435,6 @@
 				A2048B1318A9E0AA00A36361 /* b2TimeOfImpact.cpp in Sources */,
 				A20489BB18A9E0A800A36361 /* CCCamera.m in Sources */,
 				A20489B518A9E0A800A36361 /* CCAnimationCache.m in Sources */,
-				A2B8E58518B498F700BF8AEA /* GamePlayScene.m in Sources */,
 				A20489D718A9E0A900A36361 /* CCGLProgram.m in Sources */,
 				A2048AC718A9E0AA00A36361 /* SimpleAudioEngine.m in Sources */,
 				A2048A7918A9E0AA00A36361 /* CCTouchDispatcher.m in Sources */,
@@ -1528,7 +1501,9 @@
 					DEBUG,
 					"COCOS2D_DEBUG=1",
 				);
-				HEADER_SEARCH_PATHS = "\"Turtle Run/libs/kazmath/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"Turtle Run/libs/kazmath/include\"",
+				);
 				INFOPLIST_FILE = "Turtle Run/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -1553,7 +1528,9 @@
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
 				);
-				HEADER_SEARCH_PATHS = "\"Turtle Run/libs/kazmath/include\"";
+				HEADER_SEARCH_PATHS = (
+					"\"Turtle Run/libs/kazmath/include\"",
+				);
 				INFOPLIST_FILE = "Turtle Run/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",
