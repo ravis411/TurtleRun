@@ -15,8 +15,14 @@
     self = [super init];
     if (self) {
         
-        CGSize size = [[CCDirector sharedDirector] size];
+        CGSize size = [[CCDirector sharedDirector] winSize];
         
+        CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
+        background.position = ccp(size.width/2, size.height/2);
+        
+        [self addChild:background];
+        
+        self.isTouchEnabled = YES;
         m_Turtle = [Turtle node];
         [self addChild:m_Turtle];
     }

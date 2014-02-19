@@ -15,6 +15,7 @@
 #import "GLES-Render.h"
 #import "GroundLayer.h"
 #import "Turtle.h"
+#import "GamePlayScene.h"
 
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.

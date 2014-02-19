@@ -11,9 +11,10 @@
 #import "Turtle.h"
 
 @interface SpriteLayer : CCLayer {
-    GroundLayer *ground;
     Turtle *m_Turtle;
 }
 
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;
+
+-(void)dealloc;
 @end

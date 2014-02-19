@@ -15,10 +15,10 @@
 
 - (id)init
 {
-    self = [super init];
+    self = [super initWithFile:@"turtle_placeholder.png"];
     if (self) {
         CGSize size = [[CCDirector sharedDirector] winSize];
-        
+        self.position = ccp(size.width/2, 0);
         weaponState = ice;
         m_weaponLevel = 1;
         
