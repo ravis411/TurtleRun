@@ -13,7 +13,14 @@
 #import "cocos2d.h"
 #import "Box2D.h"
 #import "GLES-Render.h"
+<<<<<<< HEAD
 #import "SpriteLayer.h"
+=======
+#import "GroundLayer.h"
+#import "Turtle.h"
+#import "GamePlayScene.h"
+
+>>>>>>> d2b61dd6d5e1c5130ebd83f8cc6152854df79291
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
 //This ratio defines how many pixels correspond to 1 Box2D "metre"
@@ -28,8 +35,12 @@
 	CCTexture2D *spriteTexture_;	// weak ref
 	b2World* world;					// strong ref
 	GLESDebugDraw *m_debugDraw;		// strong ref
+<<<<<<< HEAD
     SpriteLayer* sprites;
     //int spriteSpeed;
+=======
+    GroundLayer *ground;
+>>>>>>> d2b61dd6d5e1c5130ebd83f8cc6152854df79291
     
 }
 
