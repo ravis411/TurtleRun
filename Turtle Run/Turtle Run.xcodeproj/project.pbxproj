@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0DE9C218B47F890010F4C1 /* SpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */; };
 		3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C51EE18B42F85004403E1 /* GroundLayer.m */; };
 		3D3C51F118B4363D004403E1 /* tile_tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3C51F018B4363D004403E1 /* tile_tiny.png */; };
 		A204895B18A9E0A700A36361 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895A18A9E0A700A36361 /* QuartzCore.framework */; };
@@ -193,6 +194,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0DE9C018B47F890010F4C1 /* SpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteLayer.h; sourceTree = "<group>"; };
+		3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLayer.m; sourceTree = "<group>"; };
 		3D3C51ED18B42F85004403E1 /* GroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundLayer.h; sourceTree = "<group>"; };
 		3D3C51EE18B42F85004403E1 /* GroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundLayer.m; sourceTree = "<group>"; };
 		3D3C51F018B4363D004403E1 /* tile_tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_tiny.png; path = Resources/tile_tiny.png; sourceTree = "<group>"; };
@@ -636,6 +639,8 @@
 			children = (
 				A2048B9218A9E0AB00A36361 /* AppDelegate.h */,
 				3D3C51ED18B42F85004403E1 /* GroundLayer.h */,
+				3D0DE9C018B47F890010F4C1 /* SpriteLayer.h */,
+				3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */,
 				3D3C51EE18B42F85004403E1 /* GroundLayer.m */,
 				A2048B9318A9E0AB00A36361 /* AppDelegate.mm */,
 				A2048B9518A9E0AB00A36361 /* HelloWorldLayer.h */,
@@ -1426,6 +1431,7 @@
 				A2048B9118A9E0AB00A36361 /* main.m in Sources */,
 				A20489FC18A9E0A900A36361 /* CCNode.m in Sources */,
 				3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */,
+				3D0DE9C218B47F890010F4C1 /* SpriteLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
