@@ -26,6 +26,7 @@ enum {
 @interface HelloWorldLayer()
 -(void) initPhysics;
 -(void) addNewSpriteAtPosition:(CGPoint)p;
+-(void) spawnRandomSprite;
 -(void) createMenu;
 @end
 
@@ -55,7 +56,8 @@ enum {
 		self.touchEnabled = YES;
 		self.accelerometerEnabled = YES;
 		CGSize s = [CCDirector sharedDirector].winSize;
-		
+
+        
 		// init physics
 		[self initPhysics];
 		
@@ -63,16 +65,18 @@ enum {
              
 		// create reset button
 		[self createMenu];
-		      
+        
+        
+        
 		//Set up sprite
 		
 #if 1
 		// Use batch node. Faster
-		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"tile_tiny.png" capacity:100];
+		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"clawg_64x64.png" capacity:100];
 		spriteTexture_ = [parent texture];
 #else
 		// doesn't use batch node. Slower
-		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"tile_tiny.png"];
+		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"clawg_64x64.png"];
 		CCNode *parent = [CCNode node];
 #endif
 		[self addChild:parent z:1 tag:kTagParentNode];
@@ -85,6 +89,7 @@ enum {
 		[label setColor:ccc3(0,0,255)];
 		label.position = ccp( s.width/2, s.height-50);
 		
+        //adding obstacle
 		[self scheduleUpdate];
 	}
 	return self;
@@ -227,10 +232,10 @@ enum {
 	
 	kmGLPopMatrix();
 }
-
+//Currently, the enemies spawn as boxes subject to gravity
 -(void) addNewSpriteAtPosition:(CGPoint)p
 {
-	CCLOG(@"Add sprite %0.2f x %02.f",p.x,p.y);
+	CCLOG(@"Add sprite %0.4f x %04.f",p.x,p.y);
 	// Define the dynamic body.
 	//Set up a 1m squared box in the physics world
 	b2BodyDef bodyDef;
@@ -240,13 +245,13 @@ enum {
 	
 	// Define another box shape for our dynamic body.
 	b2PolygonShape dynamicBox;
-	dynamicBox.SetAsBox(.5f, .5f);//These are mid points for our 1m box
+	dynamicBox.SetAsBox(1.0f, 1.0f);//These are mid points for our 1m box
 	
 	// Define the dynamic body fixture.
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;	
 	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.3f;
+	fixtureDef.friction = 0.5f;
 	body->CreateFixture(&fixtureDef);
 	
 
@@ -254,15 +259,22 @@ enum {
 	
 	//We have a 64x64 sprite sheet with 4 different 32x32 images.  The following code is
 	//just randomly picking one of the images
-	int idx = (CCRANDOM_0_1() > .5 ? 0:1);
-	int idy = (CCRANDOM_0_1() > .5 ? 0:1);
-	CCPhysicsSprite *sprite = [CCPhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(32 * idx,32 * idy,32,32)];
+    // CCPhysicsSprite *obstacle = [CCSprite spriteWithFile:@"clawg.png"];
+   // CCPhysicsSprite *sprite = [CCSprite spriteWithFile:@"clawg.png"];
+    CCPhysicsSprite *sprite = [CCPhysicsSprite spriteWithTexture:spriteTexture_ rect:CGRectMake(0,0,64,64)];
 	[parent addChild:sprite];
 	
 	[sprite setPTMRatio:PTM_RATIO];
 	[sprite setB2Body:body];
 	[sprite setPosition: ccp( p.x, p.y)];
 
+}
+
+-(void) spawnRandomSprite {
+    CCNode *parent = [self getChildByTag:kTagParentNode];
+    CGSize s = [[CCDirector sharedDirector] winSize];
+    CGPoint spawnPoint = CGPointMake(s.width * rand(), s.height * rand());
+    [parent addNewSpriteAtPosition:spawnPoint];
 }
 
 -(void) update: (ccTime) dt
@@ -274,6 +286,7 @@ enum {
 	
 	int32 velocityIterations = 8;
 	int32 positionIterations = 1;
+    
 	
 	// Instruct the world to perform a single step of simulation. It is
 	// generally best to keep the time step and iterations fixed.

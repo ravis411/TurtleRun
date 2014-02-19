@@ -7,10 +7,13 @@
 //
 
 #import "CCLayer.h"
-#import "GroundLayer.h"
+#import "cocos2d.h"
+#import <GameKit/GameKit.h>
 
 @interface SpriteLayer : CCLayer {
-    GroundLayer *ground;
+    CCSprite* obstacle;
+    CCMoveTo* moveAction;
+    int spriteSpeed;
 }
 
 @end
