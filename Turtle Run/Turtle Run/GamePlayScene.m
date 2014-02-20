@@ -22,6 +22,7 @@
         spriteLayer = [SpriteLayer node];
         [self addChild:spriteLayer z:1];
         
+        
     }
     return self;
 }

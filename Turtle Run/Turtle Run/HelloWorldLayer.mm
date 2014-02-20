@@ -15,6 +15,8 @@
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
+#import "SimpleAudioEngine.h"
+
 
 enum {
 	kTagParentNode = 1,
@@ -59,8 +61,9 @@ enum {
 		// init physics
 		[self initPhysics];
 		
-        //Create background ~K
-             
+        //Plays music
+        [[SimpleAudioEngine sharedEngine] playEffect:@"fireandflames.mp3"];
+        
 		// create reset button
 		[self createMenu];
 		      
@@ -143,8 +146,8 @@ enum {
 	}];
     
     //Start New Game
+    
     CCMenuItem *itemNewGame = [CCMenuItemFont itemWithString:@"New Game" block:^(id sender) {
-        
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[GamePlayScene node]]];
     }];
 	
