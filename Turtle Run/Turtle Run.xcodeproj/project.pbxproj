@@ -660,11 +660,11 @@
 			isa = PBXGroup;
 			children = (
 				A2B8E58318B498F700BF8AEA /* GamePlayScene.h */,
+				A2B8E58418B498F700BF8AEA /* GamePlayScene.m */,
 				3D0A9B9D18B5928B00ABA9F1 /* Obstacle.h */,
+				3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */,
 				3D0A9BA218B5C5E900ABA9F1 /* Clock.h */,
 				3D0A9BA318B5C5E900ABA9F1 /* Clock.m */,
-				3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */,
-				A2B8E58418B498F700BF8AEA /* GamePlayScene.m */,
 				A2048B9218A9E0AB00A36361 /* AppDelegate.h */,
 				A2048B9318A9E0AB00A36361 /* AppDelegate.mm */,
 				3D3C51ED18B42F85004403E1 /* GroundLayer.h */,

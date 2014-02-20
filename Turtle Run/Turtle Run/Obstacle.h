@@ -7,7 +7,10 @@
 //
 
 #import "CCSprite.h"
+#import "cocos2d.h"
 
 @interface Obstacle : CCSprite
-
++ (int) speed;
+-(void) travel;
+-(void) update:(ccTime)dt;
 @end

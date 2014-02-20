@@ -7,7 +7,18 @@
 //
 
 #import "Obstacle.h"
+static int obstacleSpeed = 10;
 
-@implementation Obstacle 
+@implementation Obstacle
++ (int) speed {return obstacleSpeed;}
+
+//basic southward movement shared by all Obstacles
+-(void) travel {
+    //CGSize winSize = [CCDirector sharedDirector].winSize;
+    
+}
+-(void) update:(ccTime)dt {
+    //[self travel];
+}
 
 @end
