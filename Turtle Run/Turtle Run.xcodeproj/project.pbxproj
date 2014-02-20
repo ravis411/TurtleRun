@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0A9B9F18B5928B00ABA9F1 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */; };
 		3D0DE9C218B47F890010F4C1 /* SpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */; };
 		3D0DE9D818B4B0D60010F4C1 /* turtle_150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */; };
 		3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C51EE18B42F85004403E1 /* GroundLayer.m */; };
@@ -200,6 +201,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0A9B9D18B5928B00ABA9F1 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Obstacle.m; sourceTree = "<group>"; };
 		3D0DE9C018B47F890010F4C1 /* SpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteLayer.h; sourceTree = "<group>"; };
 		3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLayer.m; sourceTree = "<group>"; };
 		3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_150x150.png; path = Resources/turtle_150x150.png; sourceTree = "<group>"; };
@@ -652,6 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				A2B8E58318B498F700BF8AEA /* GamePlayScene.h */,
+				3D0A9B9D18B5928B00ABA9F1 /* Obstacle.h */,
+				3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */,
 				A2B8E58418B498F700BF8AEA /* GamePlayScene.m */,
 				A2048B9218A9E0AB00A36361 /* AppDelegate.h */,
 				A2048B9318A9E0AB00A36361 /* AppDelegate.mm */,
@@ -1460,6 +1465,7 @@
 				A20489FC18A9E0A900A36361 /* CCNode.m in Sources */,
 				3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */,
 				3D0DE9C218B47F890010F4C1 /* SpriteLayer.m in Sources */,
+				3D0A9B9F18B5928B00ABA9F1 /* Obstacle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
