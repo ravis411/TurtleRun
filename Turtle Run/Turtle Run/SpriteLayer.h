@@ -9,9 +9,11 @@
 #import "CCLayer.h"
 #import "GroundLayer.h"
 #import "Turtle.h"
+#import "Obstacle.h"
 
 @interface SpriteLayer : CCLayer {
     Turtle *m_Turtle;
+    Obstacle *m_Obstacle;
 }
 
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;

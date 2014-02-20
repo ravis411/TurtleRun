@@ -25,6 +25,9 @@
         self.isTouchEnabled = YES;
         m_Turtle = [Turtle node];
         [self addChild:m_Turtle];
+        
+        m_Obstacle = [Obstacle node];
+        [self addChild:m_Obstacle];
     }
     return self;
 }

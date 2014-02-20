@@ -282,8 +282,10 @@ enum {
 	//http://gafferongames.com/game-physics/fix-your-timestep/
 	
 	int32 velocityIterations = 8;
+    
 	int32 positionIterations = 1;
-	
+	//Weird breakpoint here ^^^
+    
 	// Instruct the world to perform a single step of simulation. It is
 	// generally best to keep the time step and iterations fixed.
 	world->Step(dt, velocityIterations, positionIterations);	

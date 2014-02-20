@@ -17,7 +17,7 @@ static int obstacleSpeed = 10;
     self = [super initWithFile:@"clawg_64x64.png"];
     if (self) {
         CGSize size = [[CCDirector sharedDirector] winSize];
-        self.position = ccp(size.width/2, 50);
+        self.position = ccp(arc4random_uniform(size.width), 450);
     }
     return self;
 }
