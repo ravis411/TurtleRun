@@ -23,4 +23,6 @@
     
 }
 
+-(void) update:(ccTime)dt;
+
 @end

@@ -282,7 +282,6 @@ enum {
 	//http://gafferongames.com/game-physics/fix-your-timestep/
 	
 	int32 velocityIterations = 8;
-    
 	int32 positionIterations = 1;
 	//Weird breakpoint here ^^^
     

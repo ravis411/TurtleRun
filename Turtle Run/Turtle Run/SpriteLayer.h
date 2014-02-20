@@ -18,5 +18,7 @@
 
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;
 
+-(void) update:(ccTime)dt;
+
 -(void)dealloc;
 @end

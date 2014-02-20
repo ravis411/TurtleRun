@@ -24,10 +24,13 @@ static int obstacleSpeed = 10;
 
 //basic southward movement shared by all Obstacles
 -(void) travel:(ccTime)dt {
-    self.position = ccp(self.position.x, self.position.y - dt*obstacleSpeed);
+    self.position = ccpAdd(self.position, CGPointMake(0,-1 *10));
 }
+
 -(void) update:(ccTime)dt {
     [self travel:dt];
+ //   CGPoint velocity = CGPointMake(0,-1);
+   // self.position = ccpAdd(self.position,velocity);
 }
 
 @end

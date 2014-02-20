@@ -28,6 +28,8 @@
         
         m_Obstacle = [Obstacle node];
         [self addChild:m_Obstacle];
+        
+        
     }
     return self;
 }
@@ -37,6 +39,12 @@
     location = [[CCDirector sharedDirector] convertToGL:location];
     [m_Turtle setPosition:location];
 }
+
+-(void) update:(ccTime)dt {
+    [m_Turtle update:dt];
+    [m_Obstacle update:dt];
+}
+
 - (void)dealloc
 {
     [super dealloc];
