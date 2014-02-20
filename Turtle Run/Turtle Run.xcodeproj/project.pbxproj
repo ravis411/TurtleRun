@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3D0A9B9F18B5928B00ABA9F1 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */; };
+		3D0A9BA118B5C49900ABA9F1 /* Through the Fire and Flames (midi version).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A9BA018B5C49900ABA9F1 /* Through the Fire and Flames (midi version).mp3 */; };
 		3D0A9BA418B5C5EA00ABA9F1 /* Clock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A9BA318B5C5E900ABA9F1 /* Clock.m */; };
-		3D0A9BA618B5EE1C00ABA9F1 /* fireandflames.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A9BA518B5EE1C00ABA9F1 /* fireandflames.mp3 */; };
 		3D0DE9C218B47F890010F4C1 /* SpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */; };
 		3D0DE9D818B4B0D60010F4C1 /* turtle_150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */; };
 		3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C51EE18B42F85004403E1 /* GroundLayer.m */; };
@@ -205,9 +205,9 @@
 /* Begin PBXFileReference section */
 		3D0A9B9D18B5928B00ABA9F1 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
 		3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Obstacle.m; sourceTree = "<group>"; };
+		3D0A9BA018B5C49900ABA9F1 /* Through the Fire and Flames (midi version).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Through the Fire and Flames (midi version).mp3"; path = "Resources/Through the Fire and Flames (midi version).mp3"; sourceTree = "<group>"; };
 		3D0A9BA218B5C5E900ABA9F1 /* Clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clock.h; sourceTree = "<group>"; };
 		3D0A9BA318B5C5E900ABA9F1 /* Clock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clock.m; sourceTree = "<group>"; };
-		3D0A9BA518B5EE1C00ABA9F1 /* fireandflames.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fireandflames.mp3; path = Resources/fireandflames.mp3; sourceTree = "<group>"; };
 		3D0DE9C018B47F890010F4C1 /* SpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteLayer.h; sourceTree = "<group>"; };
 		3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLayer.m; sourceTree = "<group>"; };
 		3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_150x150.png; path = Resources/turtle_150x150.png; sourceTree = "<group>"; };
@@ -689,6 +689,7 @@
 		A204896F18A9E0A800A36361 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D0A9BA018B5C49900ABA9F1 /* Through the Fire and Flames (midi version).mp3 */,
 				3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */,
 				A2B8E58118B496CD00BF8AEA /* floortile.jpg */,
 				A2B8E57F18B496C500BF8AEA /* tile.png */,
@@ -701,7 +702,6 @@
 				A204897818A9E0A800A36361 /* Icon-72.png */,
 				A204897A18A9E0A800A36361 /* Icon-Small-50.png */,
 				A204897C18A9E0A800A36361 /* Icon-Small.png */,
-				3D0A9BA518B5EE1C00ABA9F1 /* fireandflames.mp3 */,
 				A204897E18A9E0A800A36361 /* Icon-Small@2x.png */,
 				A204898018A9E0A800A36361 /* Icon.png */,
 				A204898218A9E0A800A36361 /* Icon@2x.png */,
@@ -1301,7 +1301,7 @@
 				A204898318A9E0A800A36361 /* Icon@2x.png in Resources */,
 				3D3C51F118B4363D004403E1 /* tile_tiny.png in Resources */,
 				3D0DE9D818B4B0D60010F4C1 /* turtle_150x150.png in Resources */,
-				3D0A9BA618B5EE1C00ABA9F1 /* fireandflames.mp3 in Resources */,
+				3D0A9BA118B5C49900ABA9F1 /* Through the Fire and Flames (midi version).mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
