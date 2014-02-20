@@ -10,6 +10,7 @@
 #import "SpriteLayer.h"
 #import "GroundLayer.h"
 #import "IntroLayer.h"
+#import "SimpleAudioEngine.h"
 
 //#import "GroundLayer.h"
 //#import "SpriteLayer.h"
