@@ -11,6 +11,7 @@
 
 @interface Obstacle : CCSprite
 + (int) speed;
--(void) travel;
+-(id) init;
+-(void) travel:(ccTime)dt;
 -(void) update:(ccTime)dt;
 @end

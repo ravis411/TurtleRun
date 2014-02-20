@@ -12,13 +12,22 @@ static int obstacleSpeed = 10;
 @implementation Obstacle
 + (int) speed {return obstacleSpeed;}
 
+- (id)init
+{
+    self = [super initWithFile:@"clawg_64x64.png"];
+    if (self) {
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        self.position = ccp(size.width/2, 50);
+    }
+    return self;
+}
+
 //basic southward movement shared by all Obstacles
--(void) travel {
-    //CGSize winSize = [CCDirector sharedDirector].winSize;
-    
+-(void) travel:(ccTime)dt {
+    self.position = ccp(self.position.x, self.position.y - dt*obstacleSpeed);
 }
 -(void) update:(ccTime)dt {
-    //[self travel];
+    [self travel:dt];
 }
 
 @end
