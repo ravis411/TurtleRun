@@ -230,7 +230,7 @@ and when to execute the Scenes.
 -(void) setViewport;
 
 /** converts a UIKit coordinate to an OpenGL coordinate
- Useful to convert (multi) touch coordinates to the current layout (portrait or landscape)
+ Useful to convert (multi) touch coordinates to the current layout (portrait or Portrait)
  */
 -(CGPoint) convertToGL: (CGPoint) p;
 /** converts an OpenGL coordinate to a UIKit coordinate

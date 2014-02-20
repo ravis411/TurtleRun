@@ -340,7 +340,7 @@ static CCDirector *_sharedDirector = nil;
 }
 
 
-#pragma mark Director Scene Landscape
+#pragma mark Director Scene Portrait
 
 -(CGPoint)convertToGL:(CGPoint)uiPoint
 {
