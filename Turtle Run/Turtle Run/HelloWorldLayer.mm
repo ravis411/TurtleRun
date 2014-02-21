@@ -62,7 +62,7 @@ enum {
 		[self initPhysics];
 		
         //Plays music
-        [[SimpleAudioEngine sharedEngine] playEffect:@"fireandflames.mp3"];
+        
         
 		// create reset button
 		[self createMenu];
@@ -284,7 +284,8 @@ enum {
 	int32 velocityIterations = 8;
 	int32 positionIterations = 1;
     
-	
+	[[HelloWorldLayer scene] update:dt];
+    
 	// Instruct the world to perform a single step of simulation. It is
 	// generally best to keep the time step and iterations fixed.
 	world->Step(dt, velocityIterations, positionIterations);

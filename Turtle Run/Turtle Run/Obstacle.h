@@ -14,4 +14,5 @@
 -(id) init;
 -(void) travel:(ccTime)dt;
 -(void) update:(ccTime)dt;
+-(void) dealloc;
 @end

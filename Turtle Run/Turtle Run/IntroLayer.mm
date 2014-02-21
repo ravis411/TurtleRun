@@ -39,7 +39,7 @@
 {
 	if( (self=[super init])) {
 		
-		// ask director for the window size
+	/*	// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 		
 		CCSprite *background;
@@ -54,7 +54,9 @@
 		
 		// add the label as a child to this Layer
 		[self addChild: background];
-	}
+	
+*/
+    }
 	
 	return self;
 }
