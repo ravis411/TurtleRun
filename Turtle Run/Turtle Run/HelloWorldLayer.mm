@@ -276,18 +276,18 @@ enum {
 
 -(void) update: (ccTime) dt
 {
-	//It is recommended that a fixed time step is used with Box2D for stability
+    //It is recommended that a fixed time step is used with Box2D for stability
 	//of the simulation, however, we are using a variable time step here.
 	//You need to make an informed choice, the following URL is useful
 	//http://gafferongames.com/game-physics/fix-your-timestep/
 	
 	int32 velocityIterations = 8;
 	int32 positionIterations = 1;
-	//Weird breakpoint here ^^^
     
+	
 	// Instruct the world to perform a single step of simulation. It is
 	// generally best to keep the time step and iterations fixed.
-	world->Step(dt, velocityIterations, positionIterations);	
+	world->Step(dt, velocityIterations, positionIterations);
 }
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
