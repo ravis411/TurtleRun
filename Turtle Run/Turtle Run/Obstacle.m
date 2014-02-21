@@ -15,9 +15,12 @@ static int obstacleSpeed = 10;
 - (id)init
 {
     self = [super initWithFile:@"clawg_64x64.png"];
+    
     if (self) {
         CGSize size = [[CCDirector sharedDirector] winSize];
         self.position = ccp(arc4random_uniform(size.width), 450);
+        CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
+        [self runAction:moveAction];
     }
     return self;
 }
@@ -28,8 +31,13 @@ static int obstacleSpeed = 10;
 }
 
 -(void) update:(ccTime)dt {
-    [self travel:dt];
- //   CGPoint velocity = CGPointMake(0,-1);
+   // [ travel:dt];
+   
+    //self.position = ccpAdd(self.position, CGPointMake(0,-1 * dt));
+    if (self.position.y < 100) {
+        [self dealloc];
+    }
+    //   CGPoint velocity = CGPointMake(0,-1);
    // self.position = ccpAdd(self.position,velocity);
 }
 
