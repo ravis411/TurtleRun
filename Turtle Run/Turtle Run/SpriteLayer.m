@@ -37,7 +37,13 @@
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event{
     CGPoint location = [touch locationInView:[touch view]];
     location = [[CCDirector sharedDirector] convertToGL:location];
-    [m_Turtle setPosition:location];
+  //  [m_Turtle setPosition:location];
+}
+
+-(BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    CGPoint location = [self convertTouchToNodeSpace: touch];
+    //m_Turtle.position = location;
+    return YES;
 }
 
 -(void) update:(ccTime)dt {

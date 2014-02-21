@@ -22,7 +22,7 @@
         spriteLayer = [SpriteLayer node];
         [self addChild:spriteLayer z:1];
         
-        
+        [self scheduleUpdate];
     }
     return self;
 }

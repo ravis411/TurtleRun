@@ -29,7 +29,7 @@
 -(void) update:(ccTime)dt{
     CGSize size = [[CCDirector sharedDirector] winSize];
     
-    self.position = ccp(50, 50);
+    //self.position = ccp(50, 50);
     
     //position should only be able to move in the X direction
     
