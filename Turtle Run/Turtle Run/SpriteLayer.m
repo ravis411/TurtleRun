@@ -22,7 +22,7 @@
         
         [self addChild:background];
         
-        self.isTouchEnabled = YES;
+        self.touchEnabled = YES;
         m_Turtle = [Turtle node];
         [self addChild:m_Turtle];
         
