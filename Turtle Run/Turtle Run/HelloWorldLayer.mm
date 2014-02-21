@@ -62,7 +62,7 @@ enum {
 		[self initPhysics];
 		
         //Plays music
-        [[SimpleAudioEngine sharedEngine] playEffect:@"fireandflames.mp3"];
+        
         
 		// create reset button
 		[self createMenu];

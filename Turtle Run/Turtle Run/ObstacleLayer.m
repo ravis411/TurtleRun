@@ -26,7 +26,7 @@
     spawnTimer -= 1;
     if (spawnTimer <= 0) {
         [self spawn];
-        spawnTimer = 50;
+        spawnTimer = 70;
     }
     
     for (CCNode *child in self.children) {

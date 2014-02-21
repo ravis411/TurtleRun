@@ -12,6 +12,7 @@
 #import "IntroLayer.h"
 //#import "GroundLayer.h"
 //#import "SpriteLayer.h"
+#import "SimpleAudioEngine.h"
 
 @interface GamePlayScene : CCScene {
     

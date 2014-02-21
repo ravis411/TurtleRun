@@ -17,8 +17,12 @@ static int obstacleSpeed = 10;
     self = [super initWithFile:@"clawg_64x64.png"];
     
     if (self) {
+        int cols = 4;
+        int col = arc4random_uniform(cols);
         CGSize size = [[CCDirector sharedDirector] winSize];
-        self.position = ccp(arc4random_uniform(size.width), 450);
+        self.position = ccp(
+                            (((col + 1) * size.width)/(cols+1)), 450
+                            );
         //CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
         //[self runAction:moveAction];
         [self scheduleUpdate];
