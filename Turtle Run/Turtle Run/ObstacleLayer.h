@@ -13,12 +13,13 @@
 #import "CCLayer.h"
 
 @interface ObstacleLayer : CCLayer {
-    NSArray *obstacles;
+    NSMutableArray *obstacles;
     int spawnTimer;
 }
 
 -(id) init;
 -(void)spawn;
+-(void)clean;
 -(void)update:(ccTime)dt;
 
 @end

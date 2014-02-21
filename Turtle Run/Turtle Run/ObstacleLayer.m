@@ -13,7 +13,7 @@
 -(id) init {
     if (self = [super init]){
         spawnTimer = 0;
-        [self scheduleUpdate];
+        //[self scheduleUpdate];
     }
    return self;
 }
@@ -27,6 +27,12 @@
     if (spawnTimer <= 0) {
         [self spawn];
         spawnTimer = 50;
+    }
+    
+    for (CCNode *child in self.children) {
+        if (child.position.y <= -100) {
+            [self removeChild:child];
+        }
     }
 }
 
