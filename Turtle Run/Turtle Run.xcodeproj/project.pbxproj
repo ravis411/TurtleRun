@@ -11,6 +11,7 @@
 		3D0A9BA618B5EE1C00ABA9F1 /* fireandflames.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A9BA518B5EE1C00ABA9F1 /* fireandflames.mp3 */; };
 		3D0DE9C218B47F890010F4C1 /* SpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */; };
 		3D0DE9D818B4B0D60010F4C1 /* turtle_150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */; };
+		3D19CEC518B6EB3600F0ED62 /* ObstacleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D19CEC418B6EB3600F0ED62 /* ObstacleLayer.m */; };
 		3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C51EE18B42F85004403E1 /* GroundLayer.m */; };
 		3D3C51F118B4363D004403E1 /* tile_tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3C51F018B4363D004403E1 /* tile_tiny.png */; };
 		3D47A2AB18B60C0C00A97017 /* clawg_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */; };
@@ -209,6 +210,8 @@
 		3D0DE9C018B47F890010F4C1 /* SpriteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteLayer.h; sourceTree = "<group>"; };
 		3D0DE9C118B47F890010F4C1 /* SpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLayer.m; sourceTree = "<group>"; };
 		3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_150x150.png; path = Resources/turtle_150x150.png; sourceTree = "<group>"; };
+		3D19CEC318B6EB3500F0ED62 /* ObstacleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObstacleLayer.h; sourceTree = "<group>"; };
+		3D19CEC418B6EB3600F0ED62 /* ObstacleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObstacleLayer.m; sourceTree = "<group>"; };
 		3D3C51ED18B42F85004403E1 /* GroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundLayer.h; sourceTree = "<group>"; };
 		3D3C51EE18B42F85004403E1 /* GroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundLayer.m; sourceTree = "<group>"; };
 		3D3C51F018B4363D004403E1 /* tile_tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_tiny.png; path = Resources/tile_tiny.png; sourceTree = "<group>"; };
@@ -662,6 +665,8 @@
 				A2B8E58418B498F700BF8AEA /* GamePlayScene.m */,
 				3D0A9B9D18B5928B00ABA9F1 /* Obstacle.h */,
 				3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */,
+				3D19CEC318B6EB3500F0ED62 /* ObstacleLayer.h */,
+				3D19CEC418B6EB3600F0ED62 /* ObstacleLayer.m */,
 				A2BBB72418B439FC005F55E0 /* Turtle.h */,
 				A2BBB72518B439FC005F55E0 /* Turtle.m */,
 				A2048B9218A9E0AB00A36361 /* AppDelegate.h */,
@@ -1474,6 +1479,7 @@
 				3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */,
 				3D0DE9C218B47F890010F4C1 /* SpriteLayer.m in Sources */,
 				3D0A9B9F18B5928B00ABA9F1 /* Obstacle.m in Sources */,
+				3D19CEC518B6EB3600F0ED62 /* ObstacleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
