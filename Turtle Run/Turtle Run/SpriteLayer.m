@@ -26,8 +26,8 @@
         m_Turtle = [Turtle node];
         [self addChild:m_Turtle];
         
-        m_Obstacle = [Obstacle node];
-        [self addChild:m_Obstacle];
+        m_ObstacleLayer = [ObstacleLayer node];
+        [self addChild:m_ObstacleLayer];
         
         
     }
@@ -53,7 +53,7 @@
 
 -(void) update:(ccTime)dt {
     [m_Turtle update:dt];
-    [m_Obstacle update:dt];
+    [m_ObstacleLayer update:dt];
 }
 
 - (void)dealloc

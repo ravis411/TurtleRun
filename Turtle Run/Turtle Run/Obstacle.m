@@ -15,21 +15,34 @@ static int obstacleSpeed = 10;
 - (id)init
 {
     self = [super initWithFile:@"clawg_64x64.png"];
+    
     if (self) {
+        int cols = 4;
+        int col = arc4random_uniform(cols);
         CGSize size = [[CCDirector sharedDirector] winSize];
-        self.position = ccp(arc4random_uniform(size.width), 450);
+        self.position = ccp(
+                            (((col + 1) * size.width)/(cols+1)), 450
+                            );
+        //CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
+        //[self runAction:moveAction];
+        [self scheduleUpdate];
     }
     return self;
 }
 
 //basic southward movement shared by all Obstacles
--(void) travel:(ccTime)dt {
-    self.position = ccpAdd(self.position, CGPointMake(0,-1 *10));
+-(void) travel {
+    self.position = ccpAdd(self.position, CGPointMake(0,-2));
 }
 
 -(void) update:(ccTime)dt {
-    [self travel:dt];
- //   CGPoint velocity = CGPointMake(0,-1);
+   [self travel];
+   
+    //self.position = ccpAdd(self.position, CGPointMake(0,-1 * dt));
+    if (self.position.y < 100) {
+        
+    }
+    //   CGPoint velocity = CGPointMake(0,-1);
    // self.position = ccpAdd(self.position,velocity);
 }
 

@@ -19,6 +19,7 @@
 //        [self addChild:groundLayer z:0];
         
         //Add sprite layer for turtle/enemies
+        [[SimpleAudioEngine sharedEngine] playEffect:@"fireandflames.mp3"];
         spriteLayer = [SpriteLayer node];
         [self addChild:spriteLayer z:1];
         
