@@ -12,28 +12,45 @@
 
 @synthesize direction = m_Direction;
 @synthesize weaponLevel = m_weaponLevel;
+@synthesize moveToPoint = m_MoveToPoint;
 
 - (id)init
 {
     self = [super initWithFile:@"turtle_150x150.png"];
     if (self) {
-        CGSize size = [[CCDirector sharedDirector] winSize];
-        self.position = ccp(size.width/2, 50);
+        yPosition = 50;
+        speed = 300;
+        
+        winSize = [[CCDirector sharedDirector] winSize];
+        self.position = m_MoveToPoint = ccp(winSize.width/2, yPosition);
         weaponState = ice;
         m_weaponLevel = 1;
-        
     }
     return self;
 }
 
 -(void) update:(ccTime)dt{
-    CGSize size = [[CCDirector sharedDirector] winSize];
-    
-    //self.position = ccp(50, 50);
-    
-    //position should only be able to move in the X direction
-    
-    if(self.position.x > size.width){
+    //CGSize size = [[CCDirector sharedDirector] winSize];
+    if ( ccpDistance(self.position, m_MoveToPoint) != 0 ) {
+        //Make sure the point to move to has the correct y value
+        if(m_MoveToPoint.y != yPosition){
+            m_MoveToPoint.y = yPosition;
+        }
+        
+        if (self.position.x < m_MoveToPoint.x) {
+            self.position = ccp(self.position.x + dt * speed, yPosition);
+            if (self.position.x > m_MoveToPoint.x) {
+                self.position = ccp(m_MoveToPoint.x, yPosition);
+
+            }
+        }
+        else if (self.position.x > m_MoveToPoint.x){
+            self.position = ccp(self.position.x - dt * speed, yPosition);
+            if (self.position.x < m_MoveToPoint.x) {
+                self.position = ccp(m_MoveToPoint.x, yPosition);
+                
+            }
+        }
         
     }
 }
