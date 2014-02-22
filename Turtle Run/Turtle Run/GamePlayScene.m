@@ -42,6 +42,10 @@
     return self;
 }
 
+-(void) turtleHit{
+    m_Lives--;
+}
+
 -(void) update:(ccTime)dt {
     [spriteLayer update:dt];
     
