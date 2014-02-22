@@ -205,7 +205,7 @@
 		A2B8E57E18B496B500BF8AEA /* turtle_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E57D18B496B500BF8AEA /* turtle_placeholder.png */; };
 		A2B8E58018B496C500BF8AEA /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E57F18B496C500BF8AEA /* tile.png */; };
 		A2B8E58218B496CD00BF8AEA /* floortile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E58118B496CD00BF8AEA /* floortile.jpg */; };
-		A2B8E58518B498F700BF8AEA /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B8E58418B498F700BF8AEA /* GamePlayScene.m */; };
+		A2B8E58518B498F700BF8AEA /* GamePlayScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2B8E58418B498F700BF8AEA /* GamePlayScene.mm */; };
 		A2BBB72618B439FC005F55E0 /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBB72518B439FC005F55E0 /* Turtle.m */; };
 /* End PBXBuildFile section */
 
@@ -614,7 +614,7 @@
 		A2B8E57F18B496C500BF8AEA /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile.png; path = Resources/tile.png; sourceTree = "<group>"; };
 		A2B8E58118B496CD00BF8AEA /* floortile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = floortile.jpg; path = Resources/floortile.jpg; sourceTree = "<group>"; };
 		A2B8E58318B498F700BF8AEA /* GamePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
-		A2B8E58418B498F700BF8AEA /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
+		A2B8E58418B498F700BF8AEA /* GamePlayScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GamePlayScene.mm; sourceTree = "<group>"; };
 		A2BBB72418B439FC005F55E0 /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
 		A2BBB72518B439FC005F55E0 /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -678,7 +678,7 @@
 			isa = PBXGroup;
 			children = (
 				A2B8E58318B498F700BF8AEA /* GamePlayScene.h */,
-				A2B8E58418B498F700BF8AEA /* GamePlayScene.m */,
+				A2B8E58418B498F700BF8AEA /* GamePlayScene.mm */,
 				3D0A9B9D18B5928B00ABA9F1 /* Obstacle.h */,
 				3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */,
 				3D19CEC318B6EB3500F0ED62 /* ObstacleLayer.h */,
@@ -1502,7 +1502,7 @@
 				49FEF58F18B84FA5004736B3 /* TurtleAttackLayer.m in Sources */,
 				A20489BB18A9E0A800A36361 /* CCCamera.m in Sources */,
 				A20489B518A9E0A800A36361 /* CCAnimationCache.m in Sources */,
-				A2B8E58518B498F700BF8AEA /* GamePlayScene.m in Sources */,
+				A2B8E58518B498F700BF8AEA /* GamePlayScene.mm in Sources */,
 				A20489D718A9E0A900A36361 /* CCGLProgram.m in Sources */,
 				A2048AC718A9E0AA00A36361 /* SimpleAudioEngine.m in Sources */,
 				A2048A7918A9E0AA00A36361 /* CCTouchDispatcher.m in Sources */,
