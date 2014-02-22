@@ -16,7 +16,7 @@
         CGSize size = [[CCDirector sharedDirector] winSize];
         backgroundList = [[NSMutableArray alloc]init];
         int totalheight = 0;
-        while(totalheight<size.height*2){
+        while(totalheight<size.height*1.7){
             CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
             background.position = ccp(size.width/2, totalheight);
             [self addChild:background];
@@ -35,7 +35,7 @@
 -(void) update:(ccTime)dt {
     CCSprite* removableBackground = nil;
     for(CCSprite* cs in backgroundList){
-        cs.position = ccpAdd(cs.position, CGPointMake(0,-1));
+        cs.position = ccpAdd(cs.position, CGPointMake(0,-2));
         int checkHeight =cs.position.y + cs.boundingBox.size.height;
         if(checkHeight<0){
             removableBackground = cs;
