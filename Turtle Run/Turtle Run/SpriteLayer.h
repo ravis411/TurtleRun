@@ -19,7 +19,11 @@
     TurtleAttackLayer *m_TurtleAttackLayer;
 }
 
--(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;
+//Not sure if this is necessary cuz it works without it.
+//-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;
+
+//Will loop through all obstacles and check for collisions
+-(void) detectColissions;
 
 -(void) update:(ccTime)dt;
 
