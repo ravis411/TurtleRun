@@ -10,7 +10,9 @@
 //#import "Obstacle.h"//need this to check for colisions
 
 @implementation SpriteLayer
-    
+
+@synthesize turtleLives = m_TurtleLives;
+
 - (id)init
 {
     self = [super init];
@@ -36,17 +38,21 @@
         m_TurtleAttackLayer = [TurtleAttackLayer node];
         [self addChild:m_TurtleAttackLayer];
         
+        m_TurtleLives = 3;
+        gameOver = NO;
         
     }
     return self;
 }
 
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event{
-    if (draggingTurtle) {
-    CGPoint location = [touch locationInView:[touch view]];
-    location = [[CCDirector sharedDirector] convertToGL:location];
-    //[m_Turtle setPosition:location];
-        [m_Turtle dragTurtle:location];
+    if(!gameOver){
+        if (draggingTurtle) {
+        CGPoint location = [touch locationInView:[touch view]];
+        location = [[CCDirector sharedDirector] convertToGL:location];
+        //[m_Turtle setPosition:location];
+            [m_Turtle dragTurtle:location];
+        }
     }
 }
 
@@ -80,6 +86,7 @@
     NSMutableArray *removeEnemiesList = [[NSMutableArray alloc]init];
     NSMutableArray *removeBulletsList = [[NSMutableArray alloc]init];
     //Loop through all children of ObstacleLayer
+    
     for (CCNode *child in m_ObstacleLayer.children) {
         //Make sure the child is an Obstacle
         if ( [child isKindOfClass:[Obstacle class] ]) {
@@ -93,10 +100,12 @@
             }
             if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
                 //The turtle got hit!?
-                [child hit:100];
+                [removeEnemiesList addObject:child];
+                m_TurtleLives--;
             }
         }
     }
+
     for(TurtleAttack* att in removeBulletsList){
         [m_TurtleAttackLayer removeChild:att];
     }
@@ -115,7 +124,19 @@
     [self removeChild:splode];
 }
 
-
+-(void)clearChildren{
+//    for (CCNode *child in m_ObstacleLayer.children) {
+//        [self removeChild:child];
+//    }
+//    for( CCNode *attack in m_TurtleAttackLayer.children){
+//        [self removeChild:attack];
+//    }
+//    [self removeChild:m_Turtle];
+    gameOver = YES;
+    [self removeAllChildrenWithCleanup:YES];
+    
+    
+}
 
 
 -(void) update:(ccTime)dt {

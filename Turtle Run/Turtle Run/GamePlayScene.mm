@@ -35,15 +35,24 @@
         m_Level = 1;
         m_Lives = 3;
         m_WeaponLevel = 1;
-        m_DeadObstacles = 0;
+//        m_DeadObstacles = 0;
         
         [self scheduleUpdate];
     }
     return self;
 }
 
+
+
 -(void) update:(ccTime)dt {
     [spriteLayer update:dt];
+    
+    if(m_Lives == 0){
+        [spriteLayer clearChildren];
+        [self startGameOver];
+    }
+    
+    m_Lives = spriteLayer.turtleLives;
     
     int numEnemiesToCompleteLevel;
     
@@ -67,11 +76,21 @@
         default:
             break;
     }
-    if(m_DeadObstacles >= numEnemiesToCompleteLevel){
+    if(spriteLayer.enemiesKilled >= numEnemiesToCompleteLevel){
         m_Level++;
+        spriteLayer.enemiesKilled = 0;
     }
     [uiLayer update:dt level:m_Level lives:m_Lives];
     
+}
+
+-(void)startGameOver{
+    [uiLayer showGameOverLabel];
+    [self scheduleOnce:@selector(exitScene) delay:3];
+}
+
+-(void) exitScene{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[HelloWorldLayer scene]]];
 }
 
 @end

@@ -21,7 +21,7 @@
     if (self) {
         updateCount = 0;
         yPosition = 50;
-        speed = 300;
+        speed = 400;
         m_ReadyToFire = NO;
         winSize = [[CCDirector sharedDirector] winSize];
         self.position = m_MoveToPoint = ccp(winSize.width/2, yPosition);
