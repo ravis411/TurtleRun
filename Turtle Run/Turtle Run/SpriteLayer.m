@@ -140,13 +140,15 @@
 
 
 -(void) update:(ccTime)dt {
-    [self detectColissions];
-    [m_BackgroundLayer update:dt];
-    [m_Turtle update:dt];
-    if(m_Turtle.readyToFire)
-        [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
-    [m_ObstacleLayer update:dt];
-    [m_TurtleAttackLayer update:dt];
+    if(!gameOver){
+        [self detectColissions];
+        [m_BackgroundLayer update:dt];
+        [m_Turtle update:dt];
+        if(m_Turtle.readyToFire)
+            [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
+        [m_ObstacleLayer update:dt];
+        [m_TurtleAttackLayer update:dt];
+    }
 }
 
 - (void)dealloc

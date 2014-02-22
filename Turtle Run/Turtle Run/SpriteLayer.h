@@ -18,6 +18,8 @@
     Turtle *m_Turtle;
     Obstacle *m_ObstacleLayer;
     TurtleAttackLayer *m_TurtleAttackLayer;
+    int m_TurtleLives;
+    BOOL gameOver;
     BackgroundLayer *m_BackgroundLayer;
 }
 
