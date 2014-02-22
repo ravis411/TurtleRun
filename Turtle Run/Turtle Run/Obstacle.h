@@ -9,8 +9,16 @@
 #import "CCSprite.h"
 #import "cocos2d.h"
 
-@interface Obstacle : CCSprite
+@interface Obstacle : CCSprite {
+    CCTexture2D *texSplode;
+}
+
+@property int hp;
+
 + (int) speed;
+-(void) hit:(int)damage;
+-(bool) dies;
+-(void) splode;
 -(id) init;
 -(void) travel:(ccTime)dt;
 -(void) update:(ccTime)dt;

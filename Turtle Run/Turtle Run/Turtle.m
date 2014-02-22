@@ -31,6 +31,20 @@
     return self;
 }
 
+
+-(CGRect)rect{
+    return CGRectMake(self.position.x - self.contentSize.width * self.anchorPoint.x,
+                      self.position.y - self.contentSize.height * self.anchorPoint.y, self.contentSize.width, self.contentSize.height);
+}
+
+-(BOOL)contains:(CGPoint)pt{
+   return CGRectContainsPoint([self rect], pt);
+}
+
+-(void)dragTurtle:(CGPoint)pt{
+    self.position = self.moveToPoint = ccp(pt.x, yPosition);
+}
+
 -(void) update:(ccTime)dt{
     updateCount=updateCount+ 1;
     if(updateCount>30){
@@ -42,6 +56,9 @@
     }
     
     //CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    //This if block checks to make sure the turtle needs to move someplace
+        // Mostly for if user taps screen
     if ( ccpDistance(self.position, m_MoveToPoint) != 0 ) {
         //Make sure the point to move to has the correct y value
         if(m_MoveToPoint.y != yPosition){
@@ -62,7 +79,9 @@
                 
             }
         }
-        
-    }
+    }//end user tap if block
+    
+    
+    
 }
 @end
