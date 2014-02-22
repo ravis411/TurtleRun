@@ -16,4 +16,5 @@
 }
 -(void) travel;
 -(id)initAttack:(int)speed pos:(CGPoint)point;
+-(CGRect)rect;
 @end

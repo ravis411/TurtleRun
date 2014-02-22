@@ -37,7 +37,6 @@
 }
 
 -(void) addAttack:(int)speed start:(CGPoint)startPos{
-    NSLog(@"Adding Attack");
     TurtleAttack* attack = [[TurtleAttack alloc]initAttack:speed pos:startPos];
     [self addChild:attack];
     [attackCollection addObject:attack];
