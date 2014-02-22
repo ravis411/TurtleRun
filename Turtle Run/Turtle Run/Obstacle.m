@@ -44,21 +44,20 @@ static int obstacleSpeed = 10;
 
 -(void) update:(ccTime)dt {
     [self travel];
-   
-    //self.position = ccpAdd(self.position, CGPointMake(0,-1 * dt));
-    if (self.position.y < 100) {
-        
-    }
-    //   CGPoint velocity = CGPointMake(0,-1);
-   // self.position = ccpAdd(self.position,velocity);
 }
 
 -(void) hit:(int)damage {
     hp -= damage;
+    if (hp <= 0) {
+        [self splode];
+    }
 }
 
 -(bool) dies {
-    if (hp <= 0) {return true;}
+    if (hp <= 0) {
+        [self splode];
+        return true;}
+    
     return false;
 }
 

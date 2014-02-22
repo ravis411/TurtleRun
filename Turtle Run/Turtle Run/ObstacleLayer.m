@@ -37,7 +37,6 @@
             [self removeChild:child];
         }
         else if (dies) {
-            [child splode];
             [self removeChild:child];
         }
     }
