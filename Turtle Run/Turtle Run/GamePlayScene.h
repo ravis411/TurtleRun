@@ -22,7 +22,7 @@
     int m_Level;
     int m_Lives;
     int m_WeaponLevel;
-    int m_DeadObstacles;
+//    int m_DeadObstacles;
 //    GroundLayer *groundLayer;
 //    IntroLayer *introLayer;
     
@@ -33,6 +33,7 @@
 @property int weaponLevel;
 @property int deadObstacles;
 
+-(void) startGameOver;
 -(void) update:(ccTime)dt;
 
 @end

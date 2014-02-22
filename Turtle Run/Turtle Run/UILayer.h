@@ -14,6 +14,10 @@
     CCLabelTTF *m_LevelLabel;
     CCLabelTTF *m_LifeLabel;
     CCLabelTTF *m_WeaponLabel;
+    CCLabelTTF *m_GameOverLabel;
 }
+
+-(void) showGameOverLabel;
+
 -(void) update:(ccTime)dt level:(int) currentLevel lives:(int)currentLives;
 @end
