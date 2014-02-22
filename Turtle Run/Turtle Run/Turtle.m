@@ -47,7 +47,8 @@
 
 -(void) update:(ccTime)dt{
     updateCount=updateCount+ 1;
-    if(updateCount>30){
+    if(updateCount>20
+       ){
         self.readyToFire = YES;
         updateCount = 0;
     }
