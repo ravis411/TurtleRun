@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 USC. All rights reserved.
 //
 
+#import <Box2D.h>
+#import "HelloWorldLayer.h"
 #import "CCScene.h"
 #import "SpriteLayer.h"
 #import "GroundLayer.h"
@@ -14,6 +16,7 @@
 //#import "SpriteLayer.h"
 #import "SimpleAudioEngine.h"
 #import "UILayer.h"
+
 
 @interface GamePlayScene : CCScene {
     
@@ -35,5 +38,6 @@
 
 -(void) startGameOver;
 -(void) update:(ccTime)dt;
+-(void) exitScene;
 
 @end

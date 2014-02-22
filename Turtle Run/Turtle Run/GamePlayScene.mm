@@ -86,5 +86,11 @@
 
 -(void)startGameOver{
     [uiLayer showGameOverLabel];
+    [self scheduleOnce:@selector(exitScene) delay:3];
 }
+
+-(void) exitScene{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[HelloWorldLayer scene]]];
+}
+
 @end
