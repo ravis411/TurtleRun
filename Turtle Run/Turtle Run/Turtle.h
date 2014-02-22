@@ -36,6 +36,7 @@
 -(void) update:(ccTime)dt;
 -(void) setupAnim;
 -(CGRect) rect;
+-(BOOL) contains:(CGPoint)pt;//returns true if the point is within the turtle
 -(void) shootWeapon;
 -(BOOL) contains:(CGPoint)pt;//returns true if the point is within the turtle
 -(void) dragTurtle:(CGPoint)pt;//Called when the user drags the turtle
