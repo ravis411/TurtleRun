@@ -7,6 +7,7 @@
 //
 
 #import "SpriteLayer.h"
+//#import "Obstacle.h"//need this to check for colisions
 
 @implementation SpriteLayer
     
@@ -46,8 +47,6 @@
     }
 }
 
-
-
 -(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
     draggingTurtle = NO;
 }
@@ -72,7 +71,25 @@
 }
 
 
+
+
+-(void)detectColissions{
+    //Loop through all children of ObstacleLayer
+    for (CCNode *child in m_ObstacleLayer.children) {
+        //Make sure the child is an Obstacle
+        if ( [child isKindOfClass:[Obstacle class] ]) {
+            if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
+                //The turtle got hit!?
+            }
+        }
+    }
+}
+
+
+
+
 -(void) update:(ccTime)dt {
+    [self detectColissions];
     [m_Turtle update:dt];
     if(m_Turtle.readyToFire)
         [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
