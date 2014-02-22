@@ -11,12 +11,14 @@
 #import "Turtle.h"
 #import "ObstacleLayer.h"
 #import "TurtleAttackLayer.h"
+#import "BackgroundLayer.h"
 
 @interface SpriteLayer : CCLayer {
     bool draggingTurtle; //For when the user is dragging the turtle.
     Turtle *m_Turtle;
     Obstacle *m_ObstacleLayer;
     TurtleAttackLayer *m_TurtleAttackLayer;
+    BackgroundLayer *m_BackgroundLayer;
 }
 
 @property int enemiesKilled;

@@ -16,12 +16,15 @@
     self = [super init];
     if (self) {
         self.enemiesKilled = 0;
-        CGSize size = [[CCDirector sharedDirector] winSize];
+//        CGSize size = [[CCDirector sharedDirector] winSize];
         
-        CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
-        background.position = ccp(size.width/2, size.height/2);
+        m_BackgroundLayer = [BackgroundLayer node];
+        [self addChild:m_BackgroundLayer];
         
-        [self addChild:background];
+//        CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
+//        background.position = ccp(size.width/2, size.height/2);
+//        
+//        [self addChild:background];
         
         self.touchEnabled = YES;
         m_Turtle = [Turtle node];
@@ -117,6 +120,7 @@
 
 -(void) update:(ccTime)dt {
     [self detectColissions];
+    [m_BackgroundLayer update:dt];
     [m_Turtle update:dt];
     if(m_Turtle.readyToFire)
         [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
