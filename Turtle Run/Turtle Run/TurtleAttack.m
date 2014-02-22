@@ -38,6 +38,11 @@
     self.position = ccpAdd(self.position, CGPointMake(0,travelSpeed));
 }
 
+-(CGRect)rect{
+    return CGRectMake(self.position.x - self.contentSize.width * self.anchorPoint.x,
+                      self.position.y - self.contentSize.height * self.anchorPoint.y, self.contentSize.width, self.contentSize.height);
+}
+
 
 
 @end

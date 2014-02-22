@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        
+        self.enemiesKilled = 0;
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
@@ -74,15 +74,41 @@
 
 
 -(void)detectColissions{
+    NSMutableArray *removeEnemiesList = [[NSMutableArray alloc]init];
+    NSMutableArray *removeBulletsList = [[NSMutableArray alloc]init];
     //Loop through all children of ObstacleLayer
     for (CCNode *child in m_ObstacleLayer.children) {
         //Make sure the child is an Obstacle
         if ( [child isKindOfClass:[Obstacle class] ]) {
+            for(TurtleAttack* t in m_TurtleAttackLayer.children){
+                if(CGRectIntersectsRect([t rect], [child rect])){
+                    [removeEnemiesList addObject:child];
+                    [removeBulletsList addObject:t];
+                    self.enemiesKilled +=1;
+                    NSLog(@"%i, Enemies hit!",self.enemiesKilled);
+                }
+            }
             if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
-                //The turtle got hit!?
+                NSLog(@"Turtle is hit!");
             }
         }
     }
+    for(TurtleAttack* att in removeBulletsList){
+        [m_TurtleAttackLayer removeChild:att];
+    }
+    
+    
+    for(CCNode *remove in removeEnemiesList){
+        CCSprite *splode = [CCSprite spriteWithFile:@"splode.png"];
+        splode.position = remove.position;
+        [self addChild:splode];
+        [m_ObstacleLayer removeChild:remove];
+        [self performSelector:@selector(removeEnemy:) withObject:splode afterDelay:0.1];
+    }
+}
+
+-(void)removeEnemy:(CCNode*)splode{
+    [self removeChild:splode];
 }
 
 

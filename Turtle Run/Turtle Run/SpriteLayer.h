@@ -19,6 +19,8 @@
     TurtleAttackLayer *m_TurtleAttackLayer;
 }
 
+@property int enemiesKilled;
+
 //Not sure if this is necessary cuz it works without it.
 //-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;
 
