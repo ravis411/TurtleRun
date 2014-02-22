@@ -196,6 +196,7 @@
 		A2048B9A18A9E0AB00A36361 /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2048B9918A9E0AB00A36361 /* IntroLayer.mm */; };
 		A2048B9D18A9E0AB00A36361 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2048B9C18A9E0AB00A36361 /* GLES-Render.mm */; };
 		A2048B9F18A9E0AB00A36361 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = A2048B9E18A9E0AB00A36361 /* blocks.png */; };
+		A2619E2318B8581D000A85A5 /* UILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A2619E2218B8581D000A85A5 /* UILayer.m */; };
 		A2B8E57E18B496B500BF8AEA /* turtle_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E57D18B496B500BF8AEA /* turtle_placeholder.png */; };
 		A2B8E58018B496C500BF8AEA /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E57F18B496C500BF8AEA /* tile.png */; };
 		A2B8E58218B496CD00BF8AEA /* floortile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2B8E58118B496CD00BF8AEA /* floortile.jpg */; };
@@ -594,6 +595,8 @@
 		A2048B9B18A9E0AB00A36361 /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		A2048B9C18A9E0AB00A36361 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		A2048B9E18A9E0AB00A36361 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		A2619E2118B8581D000A85A5 /* UILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayer.h; sourceTree = "<group>"; };
+		A2619E2218B8581D000A85A5 /* UILayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILayer.m; sourceTree = "<group>"; };
 		A2B8E57D18B496B500BF8AEA /* turtle_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_placeholder.png; path = Resources/turtle_placeholder.png; sourceTree = "<group>"; };
 		A2B8E57F18B496C500BF8AEA /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile.png; path = Resources/tile.png; sourceTree = "<group>"; };
 		A2B8E58118B496CD00BF8AEA /* floortile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = floortile.jpg; path = Resources/floortile.jpg; sourceTree = "<group>"; };
@@ -684,6 +687,8 @@
 				A204896F18A9E0A800A36361 /* Resources */,
 				A204898718A9E0A800A36361 /* libs */,
 				A2048B8E18A9E0AB00A36361 /* Supporting Files */,
+				A2619E2118B8581D000A85A5 /* UILayer.h */,
+				A2619E2218B8581D000A85A5 /* UILayer.m */,
 			);
 			path = "Turtle Run";
 			sourceTree = "<group>";
@@ -1393,6 +1398,7 @@
 				A20489A918A9E0A800A36361 /* CCActionProgressTimer.m in Sources */,
 				A2048B0418A9E0AA00A36361 /* b2CollideCircle.cpp in Sources */,
 				A204898B18A9E0A800A36361 /* CCAction.m in Sources */,
+				A2619E2318B8581D000A85A5 /* UILayer.m in Sources */,
 				A2048AC318A9E0AA00A36361 /* CocosDenshion.m in Sources */,
 				A2048A4818A9E0A900A36361 /* CCTextureCache.m in Sources */,
 				A2048AEB18A9E0AA00A36361 /* neon_matrix_impl.c in Sources */,
@@ -1539,9 +1545,7 @@
 					DEBUG,
 					"COCOS2D_DEBUG=1",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"Turtle Run/libs/kazmath/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"Turtle Run/libs/kazmath/include\"";
 				INFOPLIST_FILE = "Turtle Run/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -1566,9 +1570,7 @@
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"Turtle Run/libs/kazmath/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"Turtle Run/libs/kazmath/include\"";
 				INFOPLIST_FILE = "Turtle Run/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",
