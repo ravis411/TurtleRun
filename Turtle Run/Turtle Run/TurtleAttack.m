@@ -14,7 +14,7 @@
 
 
 -(id)init{
-    self = [super initWithFile:@"tile_tiny.png"];
+    self = [super initWithFile:@"blast.png"];
     if (self) {
         winSize = [[CCDirector sharedDirector] winSize];
         self.position = ccp(winSize.width/2, 350);
@@ -24,7 +24,7 @@
 }
 
 -(id)initAttack:(int)speed pos:(CGPoint)point{
-    self = [super initWithFile:@"tile_tiny.png"];
+    self = [super initWithFile:@"blast.png"];
     if (self) {
         winSize = [[CCDirector sharedDirector] winSize];
         self.position = point;

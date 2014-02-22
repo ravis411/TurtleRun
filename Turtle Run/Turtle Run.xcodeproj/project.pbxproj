@@ -15,6 +15,8 @@
 		3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C51EE18B42F85004403E1 /* GroundLayer.m */; };
 		3D3C51F118B4363D004403E1 /* tile_tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3C51F018B4363D004403E1 /* tile_tiny.png */; };
 		3D47A2AB18B60C0C00A97017 /* clawg_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */; };
+		3DB0E1C118B852F70003E209 /* splode.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0E1C018B852F70003E209 /* splode.png */; };
+		3DB0E1C318B85AB50003E209 /* blast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0E1C218B85AB50003E209 /* blast.png */; };
 		49FEF58C18B84A09004736B3 /* TurtleAttack.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF58B18B84A09004736B3 /* TurtleAttack.m */; };
 		49FEF58F18B84FA5004736B3 /* TurtleAttackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF58E18B84FA5004736B3 /* TurtleAttackLayer.m */; };
 		A204895B18A9E0A700A36361 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895A18A9E0A700A36361 /* QuartzCore.framework */; };
@@ -218,6 +220,8 @@
 		3D3C51EE18B42F85004403E1 /* GroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundLayer.m; sourceTree = "<group>"; };
 		3D3C51F018B4363D004403E1 /* tile_tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_tiny.png; path = Resources/tile_tiny.png; sourceTree = "<group>"; };
 		3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clawg_64x64.png; path = Resources/clawg_64x64.png; sourceTree = "<group>"; };
+		3DB0E1C018B852F70003E209 /* splode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splode.png; path = Resources/splode.png; sourceTree = "<group>"; };
+		3DB0E1C218B85AB50003E209 /* blast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blast.png; path = Resources/blast.png; sourceTree = "<group>"; };
 		49FEF58A18B84A09004736B3 /* TurtleAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleAttack.h; sourceTree = "<group>"; };
 		49FEF58B18B84A09004736B3 /* TurtleAttack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleAttack.m; sourceTree = "<group>"; };
 		49FEF58D18B84FA5004736B3 /* TurtleAttackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleAttackLayer.h; sourceTree = "<group>"; };
