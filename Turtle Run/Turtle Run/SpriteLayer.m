@@ -89,7 +89,8 @@
                 }
             }
             if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
-                NSLog(@"Turtle is hit!");
+                //The turtle got hit!?
+                [child hit:100];
             }
         }
     }
