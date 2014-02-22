@@ -17,15 +17,22 @@
     Turtle *m_Turtle;
     Obstacle *m_ObstacleLayer;
     TurtleAttackLayer *m_TurtleAttackLayer;
+    int m_TurtleLives;
+    BOOL gameOver;
 }
 
+
 @property int enemiesKilled;
+@property int turtleLives;
+
 
 //Not sure if this is necessary cuz it works without it.
 //-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;
 
 //Will loop through all obstacles and check for collisions
 -(void) detectColissions;
+
+-(void) clearChildren;
 
 -(void) update:(ccTime)dt;
 
