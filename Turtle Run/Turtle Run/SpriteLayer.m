@@ -29,19 +29,40 @@
         m_ObstacleLayer = [ObstacleLayer node];
         [self addChild:m_ObstacleLayer];
         
+        m_TurtleAttackLayer = [TurtleAttackLayer node];
+        [self addChild:m_TurtleAttackLayer];
+        
         
     }
     return self;
 }
 
-//-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event{
-//    CGPoint location = [touch locationInView:[touch view]];
-//    location = [[CCDirector sharedDirector] convertToGL:location];
-//  //  [m_Turtle setPosition:location];
-//}
+-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event{
+    if (draggingTurtle) {
+    CGPoint location = [touch locationInView:[touch view]];
+    location = [[CCDirector sharedDirector] convertToGL:location];
+    //[m_Turtle setPosition:location];
+        [m_Turtle dragTurtle:location];
+    }
+}
+
+
+
+-(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
+    draggingTurtle = NO;
+}
 
 -(BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     CGPoint location = [self convertTouchToNodeSpace: touch];
+    
+    //See if the touch location is on the turtle.
+        //If it is, and the user drags, the turtle should move where they drag.
+    if ([m_Turtle contains:(location)]) {
+        draggingTurtle = YES;
+        return YES;
+    }
+    
+    //If they did not touch the turtle have the turtle move to whereever they clicked.
     m_Turtle.moveToPoint = location;
     return YES;
 }
@@ -53,7 +74,10 @@
 
 -(void) update:(ccTime)dt {
     [m_Turtle update:dt];
+    if(m_Turtle.readyToFire)
+        [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
     [m_ObstacleLayer update:dt];
+    [m_TurtleAttackLayer update:dt];
 }
 
 - (void)dealloc

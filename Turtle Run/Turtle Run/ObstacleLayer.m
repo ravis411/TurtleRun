@@ -19,6 +19,8 @@
 }
 
 -(void) spawn {
+    [obstacles addObject:[Obstacle node]];
+    
     [self addChild:[Obstacle node]];
 }
 
@@ -30,11 +32,27 @@
     }
     
     for (CCNode *child in self.children) {
+        bool dies = [child dies];
         if (child.position.y <= -100) {
+            [self removeChild:child];
+        }
+        else if (dies) {
             [self removeChild:child];
         }
     }
 }
+
+
+
+-(CGRect)rect{
+    return CGRectMake(self.position.x - self.contentSize.width * self.anchorPoint.x,
+                      self.position.y - self.contentSize.height * self.anchorPoint.y, self.contentSize.width, self.contentSize.height);
+}
+
+-(BOOL)contains:(CGPoint)pt{
+    return CGRectContainsPoint([self rect], pt);
+}
+
 
 
 @end
