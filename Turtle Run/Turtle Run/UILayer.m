@@ -26,8 +26,17 @@
         m_LifeLabel.visible = YES;
         [self addChild:m_LifeLabel];
        // m_WeaponLabel = [CCLabelTTF labelWithString:@"Weapon: Fire" fontName:@"Marker Felt" fontSize:12];
+        
+        m_GameOverLabel = [CCLabelTTF labelWithString:@"Game Over" fontName:@"ArialMT" fontSize:34];
+        m_GameOverLabel.position = ccp(size.width/2, size.height/2);
+        m_GameOverLabel.visible = NO;
+        [self addChild:m_GameOverLabel];
     }
     return self;
+}
+
+-(void)showGameOverLabel{
+    m_GameOverLabel.visible = YES;
 }
 
 -(void) update:(ccTime)dt level: (int)currentLevel lives: (int) currentLives{

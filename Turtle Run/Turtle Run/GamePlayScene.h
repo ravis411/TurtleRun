@@ -33,7 +33,7 @@
 @property int weaponLevel;
 @property int deadObstacles;
 
--(void) turtleHit;
+-(void) startGameOver;
 -(void) update:(ccTime)dt;
 
 @end

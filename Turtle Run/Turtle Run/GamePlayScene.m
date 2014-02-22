@@ -42,12 +42,17 @@
     return self;
 }
 
--(void) turtleHit{
-    m_Lives--;
-}
+
 
 -(void) update:(ccTime)dt {
     [spriteLayer update:dt];
+    
+    if(m_Lives == 0){
+        [spriteLayer clearChildren];
+        [self startGameOver];
+    }
+    
+    m_Lives = spriteLayer.turtleLives;
     
     int numEnemiesToCompleteLevel;
     
@@ -78,4 +83,7 @@
     
 }
 
+-(void)startGameOver{
+    [uiLayer showGameOverLabel];
+}
 @end

@@ -10,7 +10,9 @@
 //#import "Obstacle.h"//need this to check for colisions
 
 @implementation SpriteLayer
-    
+
+@synthesize turtleLives = m_TurtleLives;
+
 - (id)init
 {
     self = [super init];
@@ -33,6 +35,8 @@
         m_TurtleAttackLayer = [TurtleAttackLayer node];
         [self addChild:m_TurtleAttackLayer];
         
+        m_TurtleLives = 3;
+        gameOver = NO;
         
     }
     return self;
@@ -75,27 +79,43 @@
 
 -(void)detectColissions{
     //Loop through all children of ObstacleLayer
+    
     for (CCNode *child in m_ObstacleLayer.children) {
         //Make sure the child is an Obstacle
         if ( [child isKindOfClass:[Obstacle class] ]) {
             if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
                 //The turtle got hit!?
                 [child hit:100];
+                m_TurtleLives--;
             }
         }
     }
+    
+}
+
+-(void)clearChildren{
+//    for (CCNode *child in m_ObstacleLayer.children) {
+//        [self removeChild:child];
+//    }
+//    for( CCNode *attack in m_TurtleAttackLayer.children){
+//        [self removeChild:attack];
+//    }
+//    [self removeChild:m_Turtle];
+    [self removeAllChildrenWithCleanup:YES];
+    gameOver = YES;
+    
 }
 
 
-
-
 -(void) update:(ccTime)dt {
-    [self detectColissions];
-    [m_Turtle update:dt];
-    if(m_Turtle.readyToFire)
-        [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
-    [m_ObstacleLayer update:dt];
-    [m_TurtleAttackLayer update:dt];
+    if(!gameOver){
+        [self detectColissions];
+        [m_Turtle update:dt];
+        if(m_Turtle.readyToFire)
+            [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
+        [m_ObstacleLayer update:dt];
+        [m_TurtleAttackLayer update:dt];
+    }
 }
 
 - (void)dealloc
