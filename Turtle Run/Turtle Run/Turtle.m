@@ -31,6 +31,9 @@
 
 -(void) update:(ccTime)dt{
     //CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    //This if block checks to make sure the turtle needs to move someplace
+        // Mostyle for if user taps screen
     if ( ccpDistance(self.position, m_MoveToPoint) != 0 ) {
         //Make sure the point to move to has the correct y value
         if(m_MoveToPoint.y != yPosition){
@@ -51,7 +54,12 @@
                 
             }
         }
-        
     }
+    
+    //This if block will be for dragging the turtle on the screen
+    
+    
+    
+    
 }
 @end
