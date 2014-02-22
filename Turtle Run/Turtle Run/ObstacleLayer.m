@@ -19,6 +19,8 @@
 }
 
 -(void) spawn {
+    [obstacles addObject:[Obstacle node]];
+    
     [self addChild:[Obstacle node]];
 }
 
@@ -30,7 +32,11 @@
     }
     
     for (CCNode *child in self.children) {
+        bool dies = [child dies];
         if (child.position.y <= -100) {
+            [self removeChild:child];
+        }
+        else if (dies) {
             [self removeChild:child];
         }
     }

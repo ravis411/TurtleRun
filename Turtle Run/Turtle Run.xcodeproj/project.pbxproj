@@ -15,6 +15,8 @@
 		3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C51EE18B42F85004403E1 /* GroundLayer.m */; };
 		3D3C51F118B4363D004403E1 /* tile_tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3C51F018B4363D004403E1 /* tile_tiny.png */; };
 		3D47A2AB18B60C0C00A97017 /* clawg_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */; };
+		3DB0E1C118B852F70003E209 /* splode.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0E1C018B852F70003E209 /* splode.png */; };
+		3DB0E1C318B85AB50003E209 /* blast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0E1C218B85AB50003E209 /* blast.png */; };
 		A204895B18A9E0A700A36361 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895A18A9E0A700A36361 /* QuartzCore.framework */; };
 		A204895D18A9E0A700A36361 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895C18A9E0A700A36361 /* OpenGLES.framework */; };
 		A204895F18A9E0A700A36361 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895E18A9E0A700A36361 /* OpenAL.framework */; };
@@ -216,6 +218,8 @@
 		3D3C51EE18B42F85004403E1 /* GroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundLayer.m; sourceTree = "<group>"; };
 		3D3C51F018B4363D004403E1 /* tile_tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_tiny.png; path = Resources/tile_tiny.png; sourceTree = "<group>"; };
 		3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clawg_64x64.png; path = Resources/clawg_64x64.png; sourceTree = "<group>"; };
+		3DB0E1C018B852F70003E209 /* splode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splode.png; path = Resources/splode.png; sourceTree = "<group>"; };
+		3DB0E1C218B85AB50003E209 /* blast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blast.png; path = Resources/blast.png; sourceTree = "<group>"; };
 		A204895718A9E0A700A36361 /* Turtle Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turtle Run.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A204895A18A9E0A700A36361 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A204895C18A9E0A700A36361 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -691,6 +695,8 @@
 		A204896F18A9E0A800A36361 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3DB0E1C218B85AB50003E209 /* blast.png */,
+				3DB0E1C018B852F70003E209 /* splode.png */,
 				3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */,
 				3D0DE9D718B4B0D60010F4C1 /* turtle_150x150.png */,
 				A2B8E58118B496CD00BF8AEA /* floortile.jpg */,
@@ -1306,6 +1312,8 @@
 				3D0DE9D818B4B0D60010F4C1 /* turtle_150x150.png in Resources */,
 				3D0A9BA618B5EE1C00ABA9F1 /* fireandflames.mp3 in Resources */,
 				3D47A2AB18B60C0C00A97017 /* clawg_64x64.png in Resources */,
+				3DB0E1C118B852F70003E209 /* splode.png in Resources */,
+				3DB0E1C318B85AB50003E209 /* blast.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
