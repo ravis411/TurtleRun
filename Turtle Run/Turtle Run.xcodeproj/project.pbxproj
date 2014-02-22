@@ -15,6 +15,8 @@
 		3D3C51EF18B42F85004403E1 /* GroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C51EE18B42F85004403E1 /* GroundLayer.m */; };
 		3D3C51F118B4363D004403E1 /* tile_tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3C51F018B4363D004403E1 /* tile_tiny.png */; };
 		3D47A2AB18B60C0C00A97017 /* clawg_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */; };
+		49FEF58C18B84A09004736B3 /* TurtleAttack.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF58B18B84A09004736B3 /* TurtleAttack.m */; };
+		49FEF58F18B84FA5004736B3 /* TurtleAttackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF58E18B84FA5004736B3 /* TurtleAttackLayer.m */; };
 		A204895B18A9E0A700A36361 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895A18A9E0A700A36361 /* QuartzCore.framework */; };
 		A204895D18A9E0A700A36361 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895C18A9E0A700A36361 /* OpenGLES.framework */; };
 		A204895F18A9E0A700A36361 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A204895E18A9E0A700A36361 /* OpenAL.framework */; };
@@ -216,6 +218,10 @@
 		3D3C51EE18B42F85004403E1 /* GroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundLayer.m; sourceTree = "<group>"; };
 		3D3C51F018B4363D004403E1 /* tile_tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tile_tiny.png; path = Resources/tile_tiny.png; sourceTree = "<group>"; };
 		3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clawg_64x64.png; path = Resources/clawg_64x64.png; sourceTree = "<group>"; };
+		49FEF58A18B84A09004736B3 /* TurtleAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleAttack.h; sourceTree = "<group>"; };
+		49FEF58B18B84A09004736B3 /* TurtleAttack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleAttack.m; sourceTree = "<group>"; };
+		49FEF58D18B84FA5004736B3 /* TurtleAttackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleAttackLayer.h; sourceTree = "<group>"; };
+		49FEF58E18B84FA5004736B3 /* TurtleAttackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleAttackLayer.m; sourceTree = "<group>"; };
 		A204895718A9E0A700A36361 /* Turtle Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turtle Run.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A204895A18A9E0A700A36361 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A204895C18A9E0A700A36361 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -667,6 +673,10 @@
 				3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */,
 				3D19CEC318B6EB3500F0ED62 /* ObstacleLayer.h */,
 				3D19CEC418B6EB3600F0ED62 /* ObstacleLayer.m */,
+				49FEF58A18B84A09004736B3 /* TurtleAttack.h */,
+				49FEF58B18B84A09004736B3 /* TurtleAttack.m */,
+				49FEF58D18B84FA5004736B3 /* TurtleAttackLayer.h */,
+				49FEF58E18B84FA5004736B3 /* TurtleAttackLayer.m */,
 				A2BBB72418B439FC005F55E0 /* Turtle.h */,
 				A2BBB72518B439FC005F55E0 /* Turtle.m */,
 				A2048B9218A9E0AB00A36361 /* AppDelegate.h */,
@@ -1400,6 +1410,7 @@
 				A2048B8418A9E0AB00A36361 /* b2WeldJoint.cpp in Sources */,
 				A204899A18A9E0A800A36361 /* CCActionGrid3D.m in Sources */,
 				A2048AE318A9E0AA00A36361 /* mat4stack.c in Sources */,
+				49FEF58C18B84A09004736B3 /* TurtleAttack.m in Sources */,
 				A2048B0818A9E0AA00A36361 /* b2CollidePolygon.cpp in Sources */,
 				A2048B7218A9E0AB00A36361 /* b2Joint.cpp in Sources */,
 				A2048A3F18A9E0A900A36361 /* CCSpriteFrameCache.m in Sources */,
@@ -1468,6 +1479,7 @@
 				A20489F018A9E0A900A36361 /* CCMenu.m in Sources */,
 				A2048AF918A9E0AA00A36361 /* vec4.c in Sources */,
 				A2048B1318A9E0AA00A36361 /* b2TimeOfImpact.cpp in Sources */,
+				49FEF58F18B84FA5004736B3 /* TurtleAttackLayer.m in Sources */,
 				A20489BB18A9E0A800A36361 /* CCCamera.m in Sources */,
 				A20489B518A9E0A800A36361 /* CCAnimationCache.m in Sources */,
 				A2B8E58518B498F700BF8AEA /* GamePlayScene.m in Sources */,
@@ -1539,9 +1551,7 @@
 					DEBUG,
 					"COCOS2D_DEBUG=1",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"Turtle Run/libs/kazmath/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"Turtle Run/libs/kazmath/include\"";
 				INFOPLIST_FILE = "Turtle Run/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -1566,9 +1576,7 @@
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"Turtle Run/libs/kazmath/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"Turtle Run/libs/kazmath/include\"";
 				INFOPLIST_FILE = "Turtle Run/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",

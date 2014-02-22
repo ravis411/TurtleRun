@@ -11,6 +11,7 @@
 
 @interface Turtle : CCSprite
 {
+    BOOL m_ReadyToFire;
     CGPoint m_Direction;
     CGPoint m_MoveToPoint;
     CGSize winSize;//The size of the window
@@ -24,10 +25,10 @@
     };
     
     enum turtleWeapon weaponState;
-    
+    int updateCount;
     int m_weaponLevel;
 }
-
+@property BOOL readyToFire;
 @property CGPoint direction;
 @property int weaponLevel;
 @property CGPoint moveToPoint;//The point the turtle should move to.

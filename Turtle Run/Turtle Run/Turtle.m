@@ -13,14 +13,16 @@
 @synthesize direction = m_Direction;
 @synthesize weaponLevel = m_weaponLevel;
 @synthesize moveToPoint = m_MoveToPoint;
+@synthesize readyToFire = m_ReadyToFire;
 
 - (id)init
 {
     self = [super initWithFile:@"turtle_150x150.png"];
     if (self) {
+        updateCount = 0;
         yPosition = 50;
         speed = 300;
-        
+        m_ReadyToFire = NO;
         winSize = [[CCDirector sharedDirector] winSize];
         self.position = m_MoveToPoint = ccp(winSize.width/2, yPosition);
         weaponState = ice;
@@ -30,6 +32,15 @@
 }
 
 -(void) update:(ccTime)dt{
+    updateCount=updateCount+ 1;
+    if(updateCount>30){
+        self.readyToFire = YES;
+        updateCount = 0;
+    }
+    else{
+        self.readyToFire = NO;
+    }
+    
     //CGSize size = [[CCDirector sharedDirector] winSize];
     if ( ccpDistance(self.position, m_MoveToPoint) != 0 ) {
         //Make sure the point to move to has the correct y value

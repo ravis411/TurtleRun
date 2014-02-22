@@ -29,6 +29,9 @@
         m_ObstacleLayer = [ObstacleLayer node];
         [self addChild:m_ObstacleLayer];
         
+        m_TurtleAttackLayer = [TurtleAttackLayer node];
+        [self addChild:m_TurtleAttackLayer];
+        
         
     }
     return self;
@@ -53,7 +56,10 @@
 
 -(void) update:(ccTime)dt {
     [m_Turtle update:dt];
+    if(m_Turtle.readyToFire)
+        [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
     [m_ObstacleLayer update:dt];
+    [m_TurtleAttackLayer update:dt];
 }
 
 - (void)dealloc
