@@ -80,7 +80,7 @@
         if ( [child isKindOfClass:[Obstacle class] ]) {
             if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
                 //The turtle got hit!?
-                [child hit:100];
+                [child hit:200];
             }
         }
     }
