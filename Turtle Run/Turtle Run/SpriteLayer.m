@@ -104,6 +104,19 @@
                 m_TurtleLives--;
             }
         }
+        //else if object is a Wall
+        else if( [child isKindOfClass:[ImoveableObjectObstacle class]] ){
+            //Remove the bullet cuz it hit a wall
+            for(TurtleAttack* t in m_TurtleAttackLayer.children){
+                if(CGRectIntersectsRect([t rect], [child rect])){
+                    [removeBulletsList addObject:t];
+                }
+            }
+              //The turtle is dead
+            if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
+                m_TurtleLives = 0;
+            }
+        }
     }
 
     for(TurtleAttack* att in removeBulletsList){

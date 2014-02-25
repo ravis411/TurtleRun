@@ -1,15 +1,12 @@
-//
-//  Obstacle.m
-//  Turtle Run
-//
-//  Created by Kyle on 2/19/14.
-//  Copyright (c) 2014 USC. All rights reserved.
+
 //
 
-#import "ObstacleImoveableObject.h"
+#import "ImoveableObjectObstacle.h"
 static int obstacleSpeed = 10;
 
-@implementation ObstacleImoveableObject
+@implementation ImoveableObjectObstacle {
+    
+}
 
 @synthesize hp;
 
@@ -17,13 +14,16 @@ static int obstacleSpeed = 10;
 
 - (id)init
 {
-    self = [super initWithFile:@"Icon_Small.png"];
+    CGRect rect= CGRectMake(0, 0, 75, 25);
+    self = [super initWithFile:@"tile.png" rect:rect];
     
     if (self) {
+        hp = 100;
         int cols = 4;
         int col = arc4random_uniform(cols);
         texSplode = [[CCTextureCache sharedTextureCache] addImage:@"splode.png"];
         CGSize size = [[CCDirector sharedDirector] winSize];
+        //[self setScale:.07];
         self.position = ccp(
                             (((col + 1) * size.width)/(cols+1)), 450
                             );

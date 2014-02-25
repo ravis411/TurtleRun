@@ -17,7 +17,7 @@
 		3D47A2AB18B60C0C00A97017 /* clawg_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */; };
 		3DB0E1C118B852F70003E209 /* splode.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0E1C018B852F70003E209 /* splode.png */; };
 		3DB0E1C318B85AB50003E209 /* blast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0E1C218B85AB50003E209 /* blast.png */; };
-		3F751BA218B8767A00A02E9F /* ObstacleImoveableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F751BA118B8767A00A02E9F /* ObstacleImoveableObject.m */; };
+		3F751BA218B8767A00A02E9F /* ImoveableObjectObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F751BA118B8767A00A02E9F /* ImoveableObjectObstacle.m */; };
 		49FA577318B8952600C4DF8A /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FA577218B8952600C4DF8A /* BackgroundLayer.m */; };
 		49FEF58C18B84A09004736B3 /* TurtleAttack.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF58B18B84A09004736B3 /* TurtleAttack.m */; };
 		49FEF58F18B84FA5004736B3 /* TurtleAttackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF58E18B84FA5004736B3 /* TurtleAttackLayer.m */; };
@@ -225,8 +225,8 @@
 		3D47A2AA18B60C0C00A97017 /* clawg_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clawg_64x64.png; path = Resources/clawg_64x64.png; sourceTree = "<group>"; };
 		3DB0E1C018B852F70003E209 /* splode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splode.png; path = Resources/splode.png; sourceTree = "<group>"; };
 		3DB0E1C218B85AB50003E209 /* blast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blast.png; path = Resources/blast.png; sourceTree = "<group>"; };
-		3F751BA018B8767A00A02E9F /* ObstacleImoveableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObstacleImoveableObject.h; sourceTree = "<group>"; };
-		3F751BA118B8767A00A02E9F /* ObstacleImoveableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObstacleImoveableObject.m; sourceTree = "<group>"; };
+		3F751BA018B8767A00A02E9F /* ImoveableObjectObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImoveableObjectObstacle.h; sourceTree = "<group>"; };
+		3F751BA118B8767A00A02E9F /* ImoveableObjectObstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImoveableObjectObstacle.m; sourceTree = "<group>"; };
 		49FA577118B8952600C4DF8A /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLayer.h; sourceTree = "<group>"; };
 		49FA577218B8952600C4DF8A /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLayer.m; sourceTree = "<group>"; };
 		49FEF58A18B84A09004736B3 /* TurtleAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleAttack.h; sourceTree = "<group>"; };
@@ -687,9 +687,9 @@
 				3D0A9B9D18B5928B00ABA9F1 /* Obstacle.h */,
 				3D0A9B9E18B5928B00ABA9F1 /* Obstacle.m */,
 				3D19CEC318B6EB3500F0ED62 /* ObstacleLayer.h */,
-				3F751BA018B8767A00A02E9F /* ObstacleImoveableObject.h */,
-				3F751BA118B8767A00A02E9F /* ObstacleImoveableObject.m */,
 				3D19CEC418B6EB3600F0ED62 /* ObstacleLayer.m */,
+				3F751BA018B8767A00A02E9F /* ImoveableObjectObstacle.h */,
+				3F751BA118B8767A00A02E9F /* ImoveableObjectObstacle.m */,
 				49FEF58A18B84A09004736B3 /* TurtleAttack.h */,
 				49FEF58B18B84A09004736B3 /* TurtleAttack.m */,
 				49FEF58D18B84FA5004736B3 /* TurtleAttackLayer.h */,
@@ -1457,7 +1457,7 @@
 				A2048B6218A9E0AB00A36361 /* b2PolygonAndCircleContact.cpp in Sources */,
 				A2048B4618A9E0AB00A36361 /* b2World.cpp in Sources */,
 				A2048B8B18A9E0AB00A36361 /* b2Rope.cpp in Sources */,
-				3F751BA218B8767A00A02E9F /* ObstacleImoveableObject.m in Sources */,
+				3F751BA218B8767A00A02E9F /* ImoveableObjectObstacle.m in Sources */,
 				A2048AB618A9E0AA00A36361 /* CDAudioManager.m in Sources */,
 				A2048B0A18A9E0AA00A36361 /* b2Collision.cpp in Sources */,
 				A2048A6318A9E0AA00A36361 /* CCTransitionProgress.m in Sources */,

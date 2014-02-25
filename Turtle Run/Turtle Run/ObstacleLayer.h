@@ -10,11 +10,13 @@
  */
 
 #import "Obstacle.h"
+#import "ImoveableObjectObstacle.h"
 #import "CCLayer.h"
 
 @interface ObstacleLayer : CCLayer {
     NSMutableArray *obstacles;
     int spawnTimer;
+    int spawnWallTimer;
 }
 
 -(id) init;
