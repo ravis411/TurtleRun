@@ -81,12 +81,12 @@ enum {
 		[self addChild:parent z:1 tag:kTagParentNode];
 		
 		
-		[self addNewSpriteAtPosition:ccp(s.width/2, s.height/2)];
+		//[self addNewSpriteAtPosition:ccp(s.width/2, s.height/2)];
 		
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Tap screen" fontName:@"Marker Felt" fontSize:32];
+		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Turtle Run" fontName:@"Marker Felt" fontSize:48];
 		[self addChild:label z:0];
-		[label setColor:ccc3(0,0,255)];
-		label.position = ccp( s.width/2, s.height-50);
+		[label setColor:ccc3(120,255,120)];
+		label.position = ccp( s.width/2, s.height-75);
 		
 		[self scheduleUpdate];
 	}
@@ -299,7 +299,7 @@ enum {
 		
 		location = [[CCDirector sharedDirector] convertToGL: location];
 		
-		[self addNewSpriteAtPosition: location];
+		//[self addNewSpriteAtPosition: location];
 	}
 }
 
