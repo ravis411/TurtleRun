@@ -20,6 +20,7 @@ typedef enum powerDropType
 @interface PowerUp : CCSprite {
     PowerType type;
 }
-
+-(void)setPowerUpType:(int)value;
+-(int)getPowerUpType;
 -(void)travel;
 @end

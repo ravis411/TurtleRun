@@ -18,6 +18,7 @@
     int speed; //Speed of turtle
     float yPosition; //The y value of the position should always be the same
     
+    
     enum turtleWeapon{
         fire,
         ice,
@@ -29,6 +30,7 @@
     int m_weaponLevel;
     
     int shootingRate;
+    int cannonCount;
 }
 @property BOOL readyToFire;
 @property CGPoint direction;
@@ -43,4 +45,6 @@
 -(BOOL) contains:(CGPoint)pt;//returns true if the point is within the turtle
 -(void) dragTurtle:(CGPoint)pt;//Called when the user drags the turtle
 -(void)changeShootingPauses:(int)amount;
+-(int)getCannonCount;
+-(void)incrementCannonCount:(int)value;
 @end

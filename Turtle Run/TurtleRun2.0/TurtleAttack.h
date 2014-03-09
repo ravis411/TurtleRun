@@ -13,8 +13,9 @@
     CGSize winSize;//The size of the window
     int travelSpeed;
     CGPoint startPos;
+    int degree;
 }
 -(void) travel;
--(id)initAttack:(int)speed pos:(CGPoint)point;
+-(id)initAttack:(int)speed pos:(CGPoint)point degree:(int)argumentDeg;
 -(CGRect)rect;
 @end

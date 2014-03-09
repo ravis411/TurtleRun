@@ -23,9 +23,10 @@
     return self;
 }
 
--(id)initAttack:(int)speed pos:(CGPoint)point{
+-(id)initAttack:(int)speed pos:(CGPoint)point degree:(int)argumentDeg{
     self = [super initWithFile:@"blast.png"];
     if (self) {
+        degree = argumentDeg;
         winSize = [[CCDirector sharedDirector] winSize];
         self.position = point;
         travelSpeed = speed;
@@ -35,7 +36,8 @@
 }
 
 -(void) travel {
-    self.position = ccpAdd(self.position, CGPointMake(0,travelSpeed));
+    int bufferedDeg = degree/10;
+    self.position = ccpAdd(self.position, CGPointMake(bufferedDeg,travelSpeed));
 }
 
 -(CGRect)rect{

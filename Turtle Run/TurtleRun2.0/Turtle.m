@@ -28,6 +28,7 @@
         weaponState = ice;
         m_weaponLevel = 1;
         shootingRate = 20;
+        cannonCount = 1;
     }
     return self;
 }
@@ -85,6 +86,12 @@
 
 -(void)changeShootingPauses:(int)amount{
     shootingRate+=amount;
+}
+-(int)getCannonCount{
+    return cannonCount;
+}
+-(void)incrementCannonCount:(int)value{
+    cannonCount+=value;
 }
 
 @end

@@ -13,5 +13,5 @@
     NSMutableArray* attackCollection;
 }
 -(void) update:(ccTime)dt;
--(void) addAttack:(int)speed start:(CGPoint)startPos;
+-(void) addAttack:(int)speed start:(CGPoint)startPos degree:(int)deg;
 @end

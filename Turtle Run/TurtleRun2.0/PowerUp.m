@@ -22,6 +22,28 @@
     return self;
     
 }
+-(void)setPowerUpType:(int)value{
+    switch (value) {
+        case 0:
+            type = weapons;
+            [self setTexture:[[CCTextureCache sharedTextureCache] addImage:@"splode.png"]];
+            break;
+        case 1:
+            type = shootingAbility;
+            break;
+
+        case 2:
+            type = lives;
+            break;
+            
+        case 3:
+            type = bomb;
+            break;
+            
+        default:
+            break;
+    }
+}
 
 -(void) update:(ccTime)dt {
     [self travel];
@@ -35,6 +57,31 @@
     return CGRectMake(self.position.x - self.contentSize.width * self.anchorPoint.x,
                       self.position.y - self.contentSize.height * self.anchorPoint.y, self.contentSize.width, self.contentSize.height);
 }
+
+-(int)getPowerUpType{
+    switch (type) {
+        case weapons:
+            return 0;
+            break;
+        case shootingAbility:
+            return 1;
+            break;
+            
+        case lives:
+           return 2;
+            break;
+            
+        case bomb:
+            return 3;
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+
 
 
 @end

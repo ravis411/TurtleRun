@@ -36,8 +36,8 @@
     }
 }
 
--(void) addAttack:(int)speed start:(CGPoint)startPos{
-    TurtleAttack* attack = [[TurtleAttack alloc]initAttack:speed pos:startPos];
+-(void) addAttack:(int)speed start:(CGPoint)startPos degree:(int)deg{
+    TurtleAttack* attack = [[TurtleAttack alloc]initAttack:speed pos:startPos degree:deg];
     [self addChild:attack];
     [attackCollection addObject:attack];
 }

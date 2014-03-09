@@ -92,13 +92,31 @@
     NSMutableArray *removePowerUpList = [[NSMutableArray alloc]init];
     //Loop through all children of ObstacleLayer
     
-    for(CCNode *child in m_PowerUpLayer.children){
+    for(PowerUp *child in m_PowerUpLayer.children){
         if([child isKindOfClass:[PowerUp class]])
             if(CGRectIntersectsRect([m_Turtle rect], [child rect])){
                 NSLog(@"POWER UP");
                 
                 [removePowerUpList addObject:child];
-                [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
+                NSLog(@"Got the powerup value: %d", [child getPowerUpType]);
+                switch ([child getPowerUpType]) {
+                    case 0:
+                        [m_Turtle incrementCannonCount:1];
+                        break;
+                    case 1:
+                        [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
+                        break;
+                    case 2:
+                        [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
+                        break;
+                    case 3:
+                        [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
             }
     }
     
@@ -115,7 +133,7 @@
                     [removeEnemiesList addObject:child];
                     [removeBulletsList addObject:t];
                     self.enemiesKilled +=1;
-                    NSLog(@"%i, Enemies hit!",self.enemiesKilled);
+//                    NSLog(@"%i, Enemies hit!",self.enemiesKilled);
                     NSUInteger randomIndex = arc4random() % powerUpProbability;
 
                     if(randomIndex == 0){
@@ -186,8 +204,13 @@
         [self detectCollisions];
         [m_BackgroundLayer update:dt];
         [m_Turtle update:dt];
-        if(m_Turtle.readyToFire)
-            [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
+        if(m_Turtle.readyToFire){
+            for(int i=1;i<=[m_Turtle getCannonCount];i++){
+                int temp = 45 - i*(90/([m_Turtle getCannonCount]+1));
+                [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position degree:temp];
+
+            }
+        }
         [m_ObstacleLayer update:dt];
         [m_TurtleAttackLayer update:dt];
         [m_PowerUpLayer update:dt];
