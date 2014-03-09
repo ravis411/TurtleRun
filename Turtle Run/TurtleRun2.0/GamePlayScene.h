@@ -27,6 +27,7 @@
     //    int m_DeadObstacles;
     //    GroundLayer *groundLayer;
     //    IntroLayer *introLayer;
+    ALuint soundEffectID;
     
 }
 

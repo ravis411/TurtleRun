@@ -25,7 +25,7 @@
         //        [self addChild:groundLayer z:0];
         
         //Add sprite layer for turtle/enemies
-        [[SimpleAudioEngine sharedEngine] playEffect:@"fireandflames.mp3"];
+        soundEffectID = [[SimpleAudioEngine sharedEngine] playEffect:@"fireandflames.mp3"];
         spriteLayer = [SpriteLayer node];
         [self addChild:spriteLayer z:1];
         
@@ -86,6 +86,7 @@
 
 -(void)startGameOver{
     [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:NO];
+    [[SimpleAudioEngine sharedEngine] stopEffect:soundEffectID];
     [uiLayer showGameOverLabel];
     [self scheduleOnce:@selector(exitScene) delay:3];
 }
