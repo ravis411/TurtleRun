@@ -12,6 +12,7 @@
 @implementation SpriteLayer
 
 @synthesize turtleLives = m_TurtleLives;
+@synthesize score = m_Score;
 
 - (id)init
 {
@@ -95,6 +96,7 @@
                     [removeEnemiesList addObject:child];
                     [removeBulletsList addObject:t];
                     self.enemiesKilled +=1;
+                    self.score +=10;
                     NSLog(@"%i, Enemies hit!",self.enemiesKilled);
                 }
             }

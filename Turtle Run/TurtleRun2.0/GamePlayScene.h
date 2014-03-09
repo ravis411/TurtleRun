@@ -15,6 +15,7 @@
 //#import "SpriteLayer.h"
 #import "SimpleAudioEngine.h"
 #import "UILayer.h"
+#import "GameOverLayer.h"
 
 
 @interface GamePlayScene : CCScene {
@@ -24,6 +25,7 @@
     int m_Level;
     int m_Lives;
     int m_WeaponLevel;
+    int m_Score;
     //    int m_DeadObstacles;
     //    GroundLayer *groundLayer;
     //    IntroLayer *introLayer;
@@ -34,6 +36,8 @@
 @property int lives;
 @property int weaponLevel;
 @property int deadObstacles;
+@property int score;
+@property NSDate *date;
 
 -(void) startGameOver;
 -(void) update:(ccTime)dt;

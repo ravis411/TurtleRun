@@ -17,12 +17,12 @@
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         m_LevelLabel = [CCLabelTTF labelWithString:@"Level: 1" fontName:@"ArialMT" fontSize:18];
-        m_LevelLabel.position = ccp(size.width/2 - 80, size.height-10);
+        m_LevelLabel.position = ccp(size.width/2 - 100, size.height-10);
         m_LevelLabel.visible = YES;
         [self addChild:m_LevelLabel];
         
         m_LifeLabel = [CCLabelTTF labelWithString:@"Lives: 3" fontName:@"ArialMT" fontSize:18];
-        m_LifeLabel.position = ccp(size.width/2 + 80, size.height-10);
+        m_LifeLabel.position = ccp(size.width/2 + 100, size.height-10);
         m_LifeLabel.visible = YES;
         [self addChild:m_LifeLabel];
         // m_WeaponLabel = [CCLabelTTF labelWithString:@"Weapon: Fire" fontName:@"Marker Felt" fontSize:12];
@@ -31,6 +31,11 @@
         m_GameOverLabel.position = ccp(size.width/2, size.height/2);
         m_GameOverLabel.visible = NO;
         [self addChild:m_GameOverLabel];
+        
+        m_ScoreLabel = [CCLabelTTF labelWithString:@"Score: 0" fontName:@"ArialMT" fontSize:18];
+        m_ScoreLabel.position = (ccp(size.width/2, size.height -10));
+        m_ScoreLabel.visible = YES;
+        [self addChild:m_ScoreLabel];
     }
     return self;
 }
@@ -39,8 +44,9 @@
     m_GameOverLabel.visible = YES;
 }
 
--(void) update:(ccTime)dt level: (int)currentLevel lives: (int) currentLives{
+-(void) update:(ccTime)dt level: (int)currentLevel lives: (int) currentLives score: (int)currentScore{
     m_LevelLabel.string = [NSString stringWithFormat:@"Level: %d", currentLevel];
     m_LifeLabel.string = [NSString stringWithFormat:@"Lives: %d", currentLives];
+    m_ScoreLabel.string = [NSString stringWithFormat:@"Score: %d", currentScore];
 }
 @end

@@ -19,6 +19,7 @@
     Obstacle *m_ObstacleLayer;
     TurtleAttackLayer *m_TurtleAttackLayer;
     int m_TurtleLives;
+    int m_Score;
     BOOL gameOver;
     BackgroundLayer *m_BackgroundLayer;
 }
@@ -26,6 +27,8 @@
 
 @property int enemiesKilled;
 @property int turtleLives;
+@property int score;
+@property NSDate *date;
 
 
 //Not sure if this is necessary cuz it works without it.
@@ -37,6 +40,8 @@
 -(void) clearChildren;
 
 -(void) update:(ccTime)dt;
+
+-(void) checkTimeElapsed;
 
 -(void)dealloc;
 @end
