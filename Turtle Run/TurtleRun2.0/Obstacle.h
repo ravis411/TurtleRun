@@ -9,11 +9,16 @@
 #import "CCSprite.h"
 #import "cocos2d.h"
 
+
+
 @interface Obstacle : CCSprite {
     CCTexture2D *texSplode;
+    BOOL leftToRightVelocity;
+
 }
 
 @property int hp;
+@property BOOL diagonalType;
 
 + (int) speed;
 -(void) hit:(int)damage;
@@ -25,5 +30,5 @@
 -(void) dealloc;
 -(CGRect) rect;
 -(BOOL) contains:(CGPoint)pt;//returns true if the point is within the obstacle
-
+-(void)setType:(int)typeValue;
 @end

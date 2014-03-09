@@ -20,9 +20,11 @@
 }
 
 -(void) spawn {
+    NSLog(@"Spawn");
     //[obstacles addObject:[Obstacle node]];
-    
-    [self addChild:[Obstacle node]];
+    Obstacle *o = [Obstacle node];
+    [o setType:arc4random()%2+1];
+    [self addChild:o];
 }
 
 -(void) update:(ccTime)dt {

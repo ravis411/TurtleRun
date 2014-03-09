@@ -36,12 +36,44 @@ static int obstacleSpeed = 10;
         //[self runAction:moveAction];
         [self scheduleUpdate];
     }
+   
     return self;
+}
+
+-(void)setType:(int)typeValue{
+    int rawNum = typeValue %2;
+    if(rawNum == 0){
+            NSLog(@"Set straight");
+            leftToRightVelocity = YES;
+            self.diagonalType = NO;
+    }
+    else{
+            NSLog(@"Set diaginal");
+            leftToRightVelocity = YES;
+            self.diagonalType = YES;
+    }
+    
 }
 
 //basic southward movement shared by all Obstacles
 -(void) travel {
-    self.position = ccpAdd(self.position, CGPointMake(0,-3));
+//     NSLog(diagonalType ? @"Yes" : @"No");
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    if(!self.diagonalType){
+        self.position = ccpAdd(self.position, CGPointMake(0,-3));
+    }
+    else{
+        if(leftToRightVelocity)
+            self.position = ccpAdd(self.position, CGPointMake(3,-3));
+        else
+            self.position = ccpAdd(self.position, CGPointMake(-3,-3));
+        
+        if(self.position.x>size.width)
+            leftToRightVelocity = NO;
+        if(self.position.x<0)
+            leftToRightVelocity = YES;
+    }
+    
 }
 
 -(void) update:(ccTime)dt {
