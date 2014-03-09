@@ -6,8 +6,9 @@
 
 #import "CCSprite.h"
 #import "cocos2d.h"
+#import "ObstacleBaseClass.h"
 
-@interface ImoveableObjectObstacle : CCSprite {
+@interface ImoveableObjectObstacle : ObstacleBaseClass {
     CCTexture2D *texSplode;
 }
 

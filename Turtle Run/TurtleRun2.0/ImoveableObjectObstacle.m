@@ -25,7 +25,7 @@ static int obstacleSpeed = 10;
         CGSize size = [[CCDirector sharedDirector] winSize];
         //[self setScale:.07];
         self.position = ccp(
-                            (((col + 1) * size.width)/(cols+1)), 450
+                            (((col + 1) * size.width)/(cols+1)), size.height-50
                             );
         //CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
         //[self runAction:moveAction];
@@ -53,7 +53,8 @@ static int obstacleSpeed = 10;
 -(bool) dies {
     if (hp <= 0) {
         [self splode];
-        return true;}
+        return true;
+    }
     
     return false;
 }
@@ -63,10 +64,6 @@ static int obstacleSpeed = 10;
 }
 
 
--(CGRect)rect{
-    return CGRectMake(self.position.x - self.contentSize.width * self.anchorPoint.x,
-                      self.position.y - self.contentSize.height * self.anchorPoint.y, self.contentSize.width, self.contentSize.height);
-}
 
 -(BOOL)contains:(CGPoint)pt{
     return CGRectContainsPoint([self rect], pt);

@@ -1289,6 +1289,7 @@
 				9451A11618CB9F020036B62A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
