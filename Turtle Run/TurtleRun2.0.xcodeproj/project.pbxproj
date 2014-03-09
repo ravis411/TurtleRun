@@ -167,6 +167,7 @@
 		9451A15218CBAB510036B62A /* turtle_150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 9451A14518CBAB510036B62A /* turtle_150x150.png */; };
 		9451A15318CBAB510036B62A /* turtle_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9451A14618CBAB510036B62A /* turtle_placeholder.png */; };
 		9451A15418CBAB510036B62A /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9451A14718CBAB510036B62A /* turtle.png */; };
+		94F6E55718CCFB7700B296AD /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55618CCFB7700B296AD /* water.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -490,6 +491,7 @@
 		9451A14518CBAB510036B62A /* turtle_150x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_150x150.png; path = Resources/turtle_150x150.png; sourceTree = "<group>"; };
 		9451A14618CBAB510036B62A /* turtle_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle_placeholder.png; path = Resources/turtle_placeholder.png; sourceTree = "<group>"; };
 		9451A14718CBAB510036B62A /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turtle.png; path = Resources/turtle.png; sourceTree = "<group>"; };
+		94F6E55618CCFB7700B296AD /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water.png; path = Resources/water.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +594,7 @@
 		94519F7918CB9F000036B62A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				94F6E55618CCFB7700B296AD /* water.png */,
 				9451A13B18CBAB510036B62A /* blast.png */,
 				9451A13C18CBAB510036B62A /* blocks.png */,
 				9451A13D18CBAB510036B62A /* cannon_spritesheet.png */,
@@ -1039,6 +1042,7 @@
 				94519F8B18CB9F000036B62A /* Icon.png in Resources */,
 				9451A14E18CBAB510036B62A /* floortile.jpg in Resources */,
 				9451A15118CBAB510036B62A /* tile.png in Resources */,
+				94F6E55718CCFB7700B296AD /* water.png in Resources */,
 				9451A0E918CB9F020036B62A /* ChangeLog in Resources */,
 				9451A14F18CBAB510036B62A /* splode.png in Resources */,
 				94519F7D18CB9F000036B62A /* Default@2x.png in Resources */,

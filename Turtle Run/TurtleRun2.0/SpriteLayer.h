@@ -42,4 +42,6 @@
 -(void) update:(ccTime)dt;
 
 -(void)dealloc;
+
+-(void)level:(int)level;
 @end

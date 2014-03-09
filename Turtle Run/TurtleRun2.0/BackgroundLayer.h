@@ -11,8 +11,11 @@
 
 @interface BackgroundLayer : CCLayer {
     NSMutableArray* backgroundList;
+    NSString *nextBackground;
 }
 
 -(void) update:(ccTime)dt;
+-(void) changeBackground:(int)level;
+
 
 @end

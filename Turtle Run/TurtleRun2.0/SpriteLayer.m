@@ -194,6 +194,12 @@
     }
 }
 
+
+-(void)level:(int)level{
+    [m_BackgroundLayer changeBackground:level];
+}
+
+
 - (void)dealloc
 {
     [super dealloc];

@@ -78,6 +78,7 @@
     }
     if(spriteLayer.enemiesKilled >= numEnemiesToCompleteLevel){
         m_Level++;
+        [spriteLayer level:m_Level];
         spriteLayer.enemiesKilled = 0;
     }
     [uiLayer update:dt level:m_Level lives:m_Lives];

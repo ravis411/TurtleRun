@@ -11,13 +11,15 @@
 
 @implementation BackgroundLayer
 -(id) init {
-    self = [super init];
+  self = [super init];
     if(self){
         CGSize size = [[CCDirector sharedDirector] winSize];
+        nextBackground = @"floortile.jpg";
+        
         backgroundList = [[NSMutableArray alloc]init];
         int totalheight = 0;
         while(totalheight<size.height*1.7){
-            CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
+            CCSprite *background = [CCSprite spriteWithFile:nextBackground];
             background.position = ccp(size.width/2, totalheight);
             [self addChild:background];
             [backgroundList addObject:background];
@@ -26,13 +28,15 @@
         //        CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
         //        background.position = ccp(size.width/2, 0);
         //        [self addChild:background];
-        //        [backgroundList addObject:background];
+        //        [backgroundList addObject:background];*/
     }
     
     return self;
 }
 
 -(void) update:(ccTime)dt {
+    
+    
     CCSprite* removableBackground = nil;
     for(CCSprite* cs in backgroundList){
         cs.position = ccpAdd(cs.position, CGPointMake(0,-1));
@@ -41,9 +45,9 @@
             removableBackground = cs;
         }
     }
-    if(removableBackground != nil){
+   if(removableBackground != nil){
         CGSize size = [[CCDirector sharedDirector] winSize];
-        CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
+        CCSprite *background = [CCSprite spriteWithFile:nextBackground];
         CCSprite *last = [backgroundList lastObject];
         background.position = ccp(size.width/2, (last.position.y+last.boundingBox.size.height));
         [self addChild:background];
@@ -52,5 +56,21 @@
         [self removeChild:removableBackground];
     }
 }
+
+
+-(void) changeBackground:(int)level{
+    
+    if (level <= 2) {
+        nextBackground = @"floortile.jpg";
+    }
+    else if (level <= 4){
+        nextBackground = @"water.png";
+
+    }
+    else{
+        return;
+    }
+}
+
 
 @end
