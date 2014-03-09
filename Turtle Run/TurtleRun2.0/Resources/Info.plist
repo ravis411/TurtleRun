@@ -12,6 +12,7 @@
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
+		<string>IconTurtle120x120</string>
 		<string>IconTurtle114x114</string>
 		<string>TurtleIcon57x57</string>
 		<string>Icon.png</string>

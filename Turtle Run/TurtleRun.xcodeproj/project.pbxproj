@@ -171,6 +171,7 @@
 		94F6E55918CD015100B296AD /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55818CD015100B296AD /* grass.png */; };
 		94F6E55B18CD0FE700B296AD /* TurtleIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55A18CD0FE700B296AD /* TurtleIcon57x57.png */; };
 		94F6E55D18CD119800B296AD /* IconTurtle114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55C18CD119800B296AD /* IconTurtle114x114.png */; };
+		94F6E55F18CD2EDD00B296AD /* IconTurtle120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,7 +179,7 @@
 		4999C44618CC197300D2B9EC /* PowerUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerUp.m; sourceTree = "<group>"; };
 		4999C44818CC199000D2B9EC /* PowerUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUpLayer.h; sourceTree = "<group>"; };
 		4999C44918CC199000D2B9EC /* PowerUpLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerUpLayer.m; sourceTree = "<group>"; };
-		94519F6118CB9F000036B62A /* TurtleRun2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurtleRun2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94519F6118CB9F000036B62A /* TurtleRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurtleRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94519F6418CB9F000036B62A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		94519F6618CB9F000036B62A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		94519F6818CB9F000036B62A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -498,6 +499,7 @@
 		94F6E55818CD015100B296AD /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grass.png; path = Resources/grass.png; sourceTree = "<group>"; };
 		94F6E55A18CD0FE700B296AD /* TurtleIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TurtleIcon57x57.png; path = Resources/TurtleIcon57x57.png; sourceTree = "<group>"; };
 		94F6E55C18CD119800B296AD /* IconTurtle114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconTurtle114x114.png; path = Resources/IconTurtle114x114.png; sourceTree = "<group>"; };
+		94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconTurtle120x120.png; path = Resources/IconTurtle120x120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -524,7 +526,7 @@
 		94519F5818CB9F000036B62A = {
 			isa = PBXGroup;
 			children = (
-				94519F7818CB9F000036B62A /* TurtleRun2.0 */,
+				94519F7818CB9F000036B62A /* TurtleRun */,
 				94519F6318CB9F000036B62A /* Frameworks */,
 				94519F6218CB9F000036B62A /* Products */,
 			);
@@ -533,7 +535,7 @@
 		94519F6218CB9F000036B62A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94519F6118CB9F000036B62A /* TurtleRun2.0.app */,
+				94519F6118CB9F000036B62A /* TurtleRun.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -555,7 +557,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		94519F7818CB9F000036B62A /* TurtleRun2.0 */ = {
+		94519F7818CB9F000036B62A /* TurtleRun */ = {
 			isa = PBXGroup;
 			children = (
 				9451A10918CB9F020036B62A /* AppDelegate.h */,
@@ -594,6 +596,7 @@
 				9451A13818CBA6DD0036B62A /* UILayer.h */,
 				9451A13918CBA6DD0036B62A /* UILayer.m */,
 			);
+			name = TurtleRun;
 			path = TurtleRun2.0;
 			sourceTree = "<group>";
 		};
@@ -626,6 +629,7 @@
 				94519F8618CB9F000036B62A /* Icon-Small.png */,
 				94519F8818CB9F000036B62A /* Icon-Small@2x.png */,
 				94519F8A18CB9F000036B62A /* Icon.png */,
+				94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */,
 				94519F8C18CB9F000036B62A /* Icon@2x.png */,
 				94519F8E18CB9F000036B62A /* Info.plist */,
 				94519F8F18CB9F000036B62A /* iTunesArtwork */,
@@ -998,9 +1002,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		94519F6018CB9F000036B62A /* TurtleRun2.0 */ = {
+		94519F6018CB9F000036B62A /* TurtleRun */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9451A11418CB9F020036B62A /* Build configuration list for PBXNativeTarget "TurtleRun2.0" */;
+			buildConfigurationList = 9451A11418CB9F020036B62A /* Build configuration list for PBXNativeTarget "TurtleRun" */;
 			buildPhases = (
 				94519F5D18CB9F000036B62A /* Sources */,
 				94519F5E18CB9F000036B62A /* Frameworks */,
@@ -1010,9 +1014,9 @@
 			);
 			dependencies = (
 			);
-			name = TurtleRun2.0;
+			name = TurtleRun;
 			productName = TurtleRun2.0;
-			productReference = 94519F6118CB9F000036B62A /* TurtleRun2.0.app */;
+			productReference = 94519F6118CB9F000036B62A /* TurtleRun.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1024,7 +1028,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = TeamTurtleRun;
 			};
-			buildConfigurationList = 94519F5C18CB9F000036B62A /* Build configuration list for PBXProject "TurtleRun2.0" */;
+			buildConfigurationList = 94519F5C18CB9F000036B62A /* Build configuration list for PBXProject "TurtleRun" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1036,7 +1040,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94519F6018CB9F000036B62A /* TurtleRun2.0 */,
+				94519F6018CB9F000036B62A /* TurtleRun */,
 			);
 		};
 /* End PBXProject section */
@@ -1059,6 +1063,7 @@
 				94519F7D18CB9F000036B62A /* Default@2x.png in Resources */,
 				94519F8718CB9F000036B62A /* Icon-Small.png in Resources */,
 				94519F8318CB9F000036B62A /* Icon-72.png in Resources */,
+				94F6E55F18CD2EDD00B296AD /* IconTurtle120x120.png in Resources */,
 				9451A14818CBAB510036B62A /* blast.png in Resources */,
 				94F6E55918CD015100B296AD /* grass.png in Resources */,
 				9451A15218CBAB510036B62A /* turtle_150x150.png in Resources */,
@@ -1271,7 +1276,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TurtleRun;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1291,7 +1296,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TurtleRun;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1301,7 +1306,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94519F5C18CB9F000036B62A /* Build configuration list for PBXProject "TurtleRun2.0" */ = {
+		94519F5C18CB9F000036B62A /* Build configuration list for PBXProject "TurtleRun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9451A11218CB9F020036B62A /* Debug */,
@@ -1310,7 +1315,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9451A11418CB9F020036B62A /* Build configuration list for PBXNativeTarget "TurtleRun2.0" */ = {
+		9451A11418CB9F020036B62A /* Build configuration list for PBXNativeTarget "TurtleRun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9451A11518CB9F020036B62A /* Debug */,
