@@ -28,11 +28,9 @@ static int obstacleSpeed = 10;
         texSplode = [[CCTextureCache sharedTextureCache] addImage:@"splode.png"];
         CGSize size = [[CCDirector sharedDirector] winSize];
         self.position = ccp(
-<<<<<<< HEAD
+
+                            
                             (((col + 1) * size.width)/(cols+1)), 750
-=======
-                            (((col + 1) * size.width)/(cols+1)), size.height-50
->>>>>>> FETCH_HEAD
                             );
         //CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
         //[self runAction:moveAction];
