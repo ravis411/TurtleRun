@@ -62,10 +62,11 @@
     
     if (level <= 2) {
         nextBackground = @"floortile.jpg";
+    }else if(level <= 4){
+        nextBackground = @"grass.png";
     }
-    else if (level <= 4){
+    else if (level <= 5){
         nextBackground = @"water.png";
-
     }
     else{
         return;
