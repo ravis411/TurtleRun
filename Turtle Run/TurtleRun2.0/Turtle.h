@@ -27,6 +27,8 @@
     enum turtleWeapon weaponState;
     int updateCount;
     int m_weaponLevel;
+    
+    int shootingRate;
 }
 @property BOOL readyToFire;
 @property CGPoint direction;
@@ -40,4 +42,5 @@
 -(void) shootWeapon;
 -(BOOL) contains:(CGPoint)pt;//returns true if the point is within the turtle
 -(void) dragTurtle:(CGPoint)pt;//Called when the user drags the turtle
+-(void)changeShootingPauses:(int)amount;
 @end

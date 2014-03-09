@@ -5,7 +5,8 @@
 //  Created by Kyle on 2/18/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
-
+#define POWERUP_SHOOTING_DECREMENT -1
+#define POWERUP_CHANCE 35
 #import "SpriteLayer.h"
 //#import "Obstacle.h"//need this to check for colisions
 
@@ -19,7 +20,7 @@
     if (self) {
         self.enemiesKilled = 0;
         //        CGSize size = [[CCDirector sharedDirector] winSize];
-        
+        powerUpProbability = POWERUP_CHANCE;
         m_BackgroundLayer = [BackgroundLayer node];
         [self addChild:m_BackgroundLayer];
         
@@ -37,6 +38,9 @@
         
         m_TurtleAttackLayer = [TurtleAttackLayer node];
         [self addChild:m_TurtleAttackLayer];
+        
+        m_PowerUpLayer = [PowerUpLayer node];
+        [self addChild:m_PowerUpLayer];
         
         m_TurtleLives = 3;
         gameOver = NO;
@@ -82,10 +86,26 @@
 
 
 
--(void)detectColissions{
+-(void)detectCollisions{
     NSMutableArray *removeEnemiesList = [[NSMutableArray alloc]init];
     NSMutableArray *removeBulletsList = [[NSMutableArray alloc]init];
+    NSMutableArray *removePowerUpList = [[NSMutableArray alloc]init];
     //Loop through all children of ObstacleLayer
+    
+    for(CCNode *child in m_PowerUpLayer.children){
+        if([child isKindOfClass:[PowerUp class]])
+            if(CGRectIntersectsRect([m_Turtle rect], [child rect])){
+                NSLog(@"POWER UP");
+                
+                [removePowerUpList addObject:child];
+                [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
+            }
+    }
+    
+    for(CCNode *n in removePowerUpList){
+        [m_PowerUpLayer removeChild:n];
+    }
+    
     
     for (CCNode *child in m_ObstacleLayer.children) {
         //Make sure the child is an Obstacle
@@ -96,6 +116,15 @@
                     [removeBulletsList addObject:t];
                     self.enemiesKilled +=1;
                     NSLog(@"%i, Enemies hit!",self.enemiesKilled);
+                    NSUInteger randomIndex = arc4random() % powerUpProbability;
+
+                    if(randomIndex == 0){
+                        NSLog(@"Randomly Dropped Item!");
+                        [m_PowerUpLayer dropItem:[child rect]];
+                        powerUpProbability = POWERUP_CHANCE;
+                    }
+                    else
+                        powerUpProbability--;
                 }
             }
             if ( CGRectIntersectsRect([m_Turtle rect], [child rect])) {
@@ -154,13 +183,14 @@
 
 -(void) update:(ccTime)dt {
     if(!gameOver){
-        [self detectColissions];
+        [self detectCollisions];
         [m_BackgroundLayer update:dt];
         [m_Turtle update:dt];
         if(m_Turtle.readyToFire)
             [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
         [m_ObstacleLayer update:dt];
         [m_TurtleAttackLayer update:dt];
+        [m_PowerUpLayer update:dt];
     }
 }
 

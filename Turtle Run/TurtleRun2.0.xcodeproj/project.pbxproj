@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4999C44718CC197300D2B9EC /* PowerUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999C44618CC197300D2B9EC /* PowerUp.m */; };
+		4999C44A18CC199000D2B9EC /* PowerUpLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999C44918CC199000D2B9EC /* PowerUpLayer.m */; };
 		94519F6518CB9F000036B62A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94519F6418CB9F000036B62A /* QuartzCore.framework */; };
 		94519F6718CB9F000036B62A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94519F6618CB9F000036B62A /* OpenGLES.framework */; };
 		94519F6918CB9F000036B62A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94519F6818CB9F000036B62A /* OpenAL.framework */; };
@@ -168,6 +170,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4999C44518CC197300D2B9EC /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUp.h; sourceTree = "<group>"; };
+		4999C44618CC197300D2B9EC /* PowerUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerUp.m; sourceTree = "<group>"; };
+		4999C44818CC199000D2B9EC /* PowerUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUpLayer.h; sourceTree = "<group>"; };
+		4999C44918CC199000D2B9EC /* PowerUpLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerUpLayer.m; sourceTree = "<group>"; };
 		94519F6118CB9F000036B62A /* TurtleRun2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurtleRun2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94519F6418CB9F000036B62A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		94519F6618CB9F000036B62A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -555,12 +561,16 @@
 				9451A10518CB9F020036B62A /* Supporting Files */,
 				9451A11718CBA0280036B62A /* BackgroundLayer.h */,
 				9451A11818CBA0280036B62A /* BackgroundLayer.m */,
-				9451A11D18CBA0E50036B62A /* GamePlayScene.h */,
-				9451A11E18CBA0E50036B62A /* GamePlayScene.m */,
-				9451A12118CBA1590036B62A /* Obstacle.m */,
+				4999C44518CC197300D2B9EC /* PowerUp.h */,
+				4999C44618CC197300D2B9EC /* PowerUp.m */,
+				4999C44818CC199000D2B9EC /* PowerUpLayer.h */,
+				4999C44918CC199000D2B9EC /* PowerUpLayer.m */,
 				9451A12018CBA1590036B62A /* Obstacle.h */,
+				9451A12118CBA1590036B62A /* Obstacle.m */,
 				9451A12318CBA1AC0036B62A /* ObstacleLayer.h */,
 				9451A12418CBA1AC0036B62A /* ObstacleLayer.m */,
+				9451A11D18CBA0E50036B62A /* GamePlayScene.h */,
+				9451A11E18CBA0E50036B62A /* GamePlayScene.m */,
 				9451A12618CBA1DC0036B62A /* ImoveableObjectObstacle.h */,
 				9451A12718CBA1DC0036B62A /* ImoveableObjectObstacle.m */,
 				9451A12918CBA2110036B62A /* TurtleAttack.h */,
@@ -1109,6 +1119,7 @@
 				94519FE718CB9F010036B62A /* CCGrabber.m in Sources */,
 				9451A0F118CB9F020036B62A /* mat3.c in Sources */,
 				9451A10B18CB9F020036B62A /* AppDelegate.m in Sources */,
+				4999C44A18CC199000D2B9EC /* PowerUpLayer.m in Sources */,
 				9451A07B18CB9F010036B62A /* CCES2Renderer.m in Sources */,
 				94519FED18CB9F010036B62A /* CCLabelAtlas.m in Sources */,
 				9451A00918CB9F010036B62A /* CCParallaxNode.m in Sources */,
@@ -1161,6 +1172,7 @@
 				9451A03D18CB9F010036B62A /* ccShaders.m in Sources */,
 				9451A13418CBA2F70036B62A /* GroundLayer.m in Sources */,
 				9451A10E18CB9F020036B62A /* HelloWorldLayer.m in Sources */,
+				4999C44718CC197300D2B9EC /* PowerUp.m in Sources */,
 				9451A09318CB9F010036B62A /* CCWindow.m in Sources */,
 				9451A07118CB9F010036B62A /* cocos2d.m in Sources */,
 				9451A01E18CB9F010036B62A /* CCProgressTimer.m in Sources */,

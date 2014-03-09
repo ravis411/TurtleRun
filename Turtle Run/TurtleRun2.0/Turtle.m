@@ -27,6 +27,7 @@
         self.position = m_MoveToPoint = ccp(winSize.width/2, yPosition);
         weaponState = ice;
         m_weaponLevel = 1;
+        shootingRate = 20;
     }
     return self;
 }
@@ -47,8 +48,7 @@
 
 -(void) update:(ccTime)dt{
     updateCount=updateCount+ 1;
-    if(updateCount>20
-       ){
+    if(updateCount>shootingRate){
         self.readyToFire = YES;
         updateCount = 0;
     }
@@ -81,8 +81,10 @@
             }
         }
     }//end user tap if block
-    
-    
-    
 }
+
+-(void)changeShootingPauses:(int)amount{
+    shootingRate+=amount;
+}
+
 @end

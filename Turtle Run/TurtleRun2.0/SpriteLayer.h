@@ -12,15 +12,18 @@
 #import "ObstacleLayer.h"
 #import "TurtleAttackLayer.h"
 #import "BackgroundLayer.h"
+#import "PowerUpLayer.h"
 
 @interface SpriteLayer : CCLayer {
     bool draggingTurtle; //For when the user is dragging the turtle.
     Turtle *m_Turtle;
     Obstacle *m_ObstacleLayer;
     TurtleAttackLayer *m_TurtleAttackLayer;
+    PowerUpLayer *m_PowerUpLayer;
     int m_TurtleLives;
     BOOL gameOver;
     BackgroundLayer *m_BackgroundLayer;
+    int powerUpProbability;
 }
 
 
@@ -32,7 +35,7 @@
 //-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event;
 
 //Will loop through all obstacles and check for collisions
--(void) detectColissions;
+-(void) detectCollisions;
 
 -(void) clearChildren;
 
