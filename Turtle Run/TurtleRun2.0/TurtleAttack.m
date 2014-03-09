@@ -35,7 +35,7 @@
     return self;
 }
 
--(void) travel {
+-(void) travel:(ccTime)dt {
     int bufferedDeg = degree/10;
     self.position = ccpAdd(self.position, CGPointMake(bufferedDeg,travelSpeed));
 }

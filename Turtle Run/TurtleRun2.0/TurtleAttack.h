@@ -15,7 +15,7 @@
     CGPoint startPos;
     int degree;
 }
--(void) travel;
+-(void) travel:(ccTime)dt;
 -(id)initAttack:(int)speed pos:(CGPoint)point degree:(int)argumentDeg;
 -(CGRect)rect;
 @end
