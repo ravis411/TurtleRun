@@ -46,12 +46,9 @@
 }
 
 -(void) update:(ccTime)dt {
-    [self travel];
+    self.position = ccpAdd(self.position, CGPointMake(0,-150*dt));
 }
 
--(void)travel{
-    self.position = ccpAdd(self.position, CGPointMake(0,-1.5));
-}
 
 -(CGRect)rect{
     return CGRectMake(self.position.x - self.contentSize.width * self.anchorPoint.x,

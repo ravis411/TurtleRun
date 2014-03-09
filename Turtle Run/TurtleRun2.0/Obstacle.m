@@ -7,7 +7,7 @@
 //
 
 #import "Obstacle.h"
-static int obstacleSpeed = 10;
+static int obstacleSpeed = 100;
 
 @implementation Obstacle {
     
@@ -30,7 +30,7 @@ static int obstacleSpeed = 10;
         self.position = ccp(
 
                             
-                            (((col + 1) * size.width)/(cols+1)), 750
+                            (((col + 1) * size.width)/(cols+1)), size.height+100
                             );
         //CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
         //[self runAction:moveAction];
@@ -54,28 +54,33 @@ static int obstacleSpeed = 10;
 }
 
 //basic southward movement shared by all Obstacles
--(void) travel {
+-(void)  travel:(ccTime)dt {
 //     NSLog(diagonalType ? @"Yes" : @"No");
     CGSize size = [[CCDirector sharedDirector] winSize];
     if(!self.diagonalType){
-        self.position = ccpAdd(self.position, CGPointMake(0,-3));
+        self.position = ccpAdd(self.position, CGPointMake(0,-obstacleSpeed * dt));
     }
     else{
         if(leftToRightVelocity)
-            self.position = ccpAdd(self.position, CGPointMake(3,-3));
+            self.position = ccpAdd(self.position, CGPointMake((int)(obstacleSpeed * dt),-obstacleSpeed * dt));
         else
-            self.position = ccpAdd(self.position, CGPointMake(-3,-3));
+            self.position = ccpAdd(self.position, CGPointMake((int)(-obstacleSpeed * dt),-obstacleSpeed * dt));
         
-        if(self.position.x>size.width)
+        //Check for bouncing against walls.
+        if(self.position.x + self.contentSize.width/2>size.width){
+            self.position = ccp(size.width - self.contentSize.width/2, self.position.y);
             leftToRightVelocity = NO;
-        if(self.position.x<0)
+        }
+        else if(self.position.x - self.contentSize.width/2<0){
+            self.position = ccp(0 + self.contentSize.width/2, self.position.y);
             leftToRightVelocity = YES;
+        }
     }
     
 }
 
 -(void) update:(ccTime)dt {
-    [self travel];
+    [self travel:dt];
 }
 
 -(void) hit:(int)damage {

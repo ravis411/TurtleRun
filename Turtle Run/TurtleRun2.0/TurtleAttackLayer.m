@@ -28,7 +28,7 @@
             //            [self removeChild:ta];
         }
         else
-            [ta travel];
+            [ta travel:dt];
     }
     for(TurtleAttack *ta in removeAttacks){
         [attackCollection removeObject:ta];
