@@ -187,7 +187,7 @@
         [m_BackgroundLayer update:dt];
         [m_Turtle update:dt];
         if(m_Turtle.readyToFire)
-            [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position];
+            [m_TurtleAttackLayer addAttack:100 start:m_Turtle.position];
         [m_ObstacleLayer update:dt];
         [m_TurtleAttackLayer update:dt];
         [m_PowerUpLayer update:dt];

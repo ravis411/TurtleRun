@@ -39,7 +39,7 @@
     
     CCSprite* removableBackground = nil;
     for(CCSprite* cs in backgroundList){
-        cs.position = ccpAdd(cs.position, CGPointMake(0,-1));
+        cs.position = ccpAdd(cs.position, CGPointMake(0,(int)(-100*dt)));
         int checkHeight =cs.position.y + cs.boundingBox.size.height;
         if(checkHeight<0){
             removableBackground = cs;

@@ -34,8 +34,8 @@
     return self;
 }
 
--(void) travel {
-    self.position = ccpAdd(self.position, CGPointMake(0,travelSpeed));
+-(void) travel:(ccTime)dt {
+    self.position = ccpAdd(self.position, CGPointMake(0,travelSpeed*dt));
 }
 
 -(CGRect)rect{

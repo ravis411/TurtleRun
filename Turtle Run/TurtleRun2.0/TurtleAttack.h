@@ -14,7 +14,7 @@
     int travelSpeed;
     CGPoint startPos;
 }
--(void) travel;
+-(void) travel:(ccTime)dt;
 -(id)initAttack:(int)speed pos:(CGPoint)point;
 -(CGRect)rect;
 @end

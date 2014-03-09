@@ -24,11 +24,8 @@ static int obstacleSpeed = 10;
         texSplode = [[CCTextureCache sharedTextureCache] addImage:@"splode.png"];
         CGSize size = [[CCDirector sharedDirector] winSize];
         //[self setScale:.07];
-        self.position = ccp(
-                            (((col + 1) * size.width)/(cols+1)), size.height+50
-                            );
-        //CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
-        //[self runAction:moveAction];
+        self.position = ccp( ( ((col + 1)*size.width) / (cols+1) ), size.height+50 );
+
         [self scheduleUpdate];
     }
     return self;
@@ -36,11 +33,11 @@ static int obstacleSpeed = 10;
 
 //basic southward movement shared by all Obstacles
 -(void) travel {
-    self.position = ccpAdd(self.position, CGPointMake(0,-2));
+    
 }
 
 -(void) update:(ccTime)dt {
-    [self travel];
+    self.position = ccpAdd(self.position, CGPointMake(0, (int)(-100*dt)) );
 }
 
 -(void) hit:(int)damage {
