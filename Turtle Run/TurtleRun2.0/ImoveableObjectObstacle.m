@@ -63,6 +63,10 @@ static int obstacleSpeed = 10;
     [self addChild:[CCSprite spriteWithTexture:texSplode]];
 }
 
+-(CGRect)rect{
+    return CGRectMake(self.position.x - self.contentSize.width * self.anchorPoint.x,
+                      self.position.y - self.contentSize.height * self.anchorPoint.y, self.contentSize.width, self.contentSize.height);
+}
 
 
 -(BOOL)contains:(CGPoint)pt{
