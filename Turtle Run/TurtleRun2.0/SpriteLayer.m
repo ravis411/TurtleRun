@@ -5,7 +5,7 @@
 //  Created by Kyle on 2/18/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
-#define POWERUP_SHOOTING_DECREMENT -1
+#define POWERUP_SHOOTING_DECREMENT -3
 #define POWERUP_CHANCE 35
 #import "SpriteLayer.h"
 //#import "Obstacle.h"//need this to check for colisions

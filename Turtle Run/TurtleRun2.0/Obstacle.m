@@ -43,12 +43,10 @@ static int obstacleSpeed = 10;
 -(void)setType:(int)typeValue{
     int rawNum = typeValue %2;
     if(rawNum == 0){
-            NSLog(@"Set straight");
             leftToRightVelocity = YES;
             self.diagonalType = NO;
     }
     else{
-            NSLog(@"Set diaginal");
             leftToRightVelocity = YES;
             self.diagonalType = YES;
     }
