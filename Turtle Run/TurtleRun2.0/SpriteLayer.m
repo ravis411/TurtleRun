@@ -226,7 +226,9 @@
 
 
 
+
 -(void) update:(ccTime)dt {
+    NSLog(@"lives: %d", m_TurtleLives);
     if(!gameOver){
         self.totalScore = (int)[m_BackgroundLayer getDistancetraveled]+(self.totalEnemiesKilled*4);
         [self detectCollisions];
