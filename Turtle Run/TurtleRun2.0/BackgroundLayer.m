@@ -65,14 +65,14 @@
 
 -(void) changeBackground:(int)level{
     
-    if (level <= 5) {
+    if (level <= 2) {
         nextBackground = @"floortile.jpg";
-    }else if(level <= 8){
+    }else if(level <= 4){
         nextBackground = @"grass.png";
-    }else if(level <= 10){
+    }else if(level <= 6){
         nextBackground = @"sand.png";
     }
-    else if (level <= 12){
+    else if (level <= 8){
         nextBackground = @"water.png";
     }
     else{
