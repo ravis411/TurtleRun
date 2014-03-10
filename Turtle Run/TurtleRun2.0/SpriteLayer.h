@@ -25,9 +25,10 @@
     BackgroundLayer *m_BackgroundLayer;
     int powerUpProbability;
     int currentLevel;
+
 }
 
-
+@property float totalScore;
 @property int enemiesKilled;
 @property int totalEnemiesKilled;
 @property int turtleLives;

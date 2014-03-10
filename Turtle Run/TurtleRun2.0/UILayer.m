@@ -33,6 +33,11 @@
         m_EnemyKilledLabel.visible = YES;
         [self addChild:m_EnemyKilledLabel];
         
+        m_TotalScore = [CCLabelTTF labelWithString:@"Score: 0" fontName:@"ArialMT" fontSize:15];
+        m_TotalScore.position = ccp(60, size.height-35);
+        m_TotalScore.visible = YES;
+        [self addChild:m_TotalScore];
+        
         m_GameOverLabel = [CCLabelTTF labelWithString:@"Game Over" fontName:@"ArialMT" fontSize:34];
         m_GameOverLabel.position = ccp(size.width/2, size.height/2);
         m_GameOverLabel.visible = NO;
@@ -52,7 +57,7 @@
     m_GameOverLabel.visible = YES;
 }
 
--(void) update:(ccTime)dt level: (int)currentLevel lives: (int) currentLives killed:(int)currentKilled{
+-(void) update:(ccTime)dt level:(int) currentLevel lives:(int)currentLives killed:(int)currentKilled score:(double)s{
     m_LevelLabel.string = [NSString stringWithFormat:@"Level: %d", currentLevel];
 //    m_LifeLabel.string = [NSString stringWithFormat:@"Lives: %d", currentLives];
     if(currentLives != heartCount.count){
@@ -70,5 +75,6 @@
         }
     }
     m_EnemyKilledLabel.string = [NSString stringWithFormat:@"Kills: %d", currentKilled];
+    m_TotalScore.string = [NSString stringWithFormat:@"Score: %i", (int)s];
 }
 @end

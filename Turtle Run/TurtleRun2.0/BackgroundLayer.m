@@ -15,7 +15,7 @@
     if(self){
         CGSize size = [[CCDirector sharedDirector] winSize];
         nextBackground = @"floortile.jpg";
-        
+        distance_Traveled = 0;
         backgroundList = [[NSMutableArray alloc]init];
         int totalheight = 0;
         while(totalheight<size.height*1.7){
@@ -35,6 +35,7 @@
 }
 
 -(void) update:(ccTime)dt {
+    distance_Traveled++;
     
     
     CCSprite* removableBackground = nil;
@@ -55,6 +56,10 @@
         [backgroundList removeObject:removableBackground];
         [self removeChild:removableBackground];
     }
+}
+
+-(double)getDistancetraveled{
+    return (distance_Traveled/10.00);
 }
 
 

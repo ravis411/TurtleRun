@@ -12,10 +12,11 @@
 @interface BackgroundLayer : CCLayer {
     NSMutableArray* backgroundList;
     NSString *nextBackground;
+    double distance_Traveled;
 }
 
 -(void) update:(ccTime)dt;
 -(void) changeBackground:(int)level;
-
+-(double)getDistancetraveled;
 
 @end

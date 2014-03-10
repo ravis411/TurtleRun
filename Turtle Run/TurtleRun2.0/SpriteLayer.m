@@ -19,6 +19,7 @@
 {
     self = [super init];
     if (self) {
+        self.totalScore = 0;
         self.enemiesKilled = 0;
         self.totalEnemiesKilled = 0;
         //        CGSize size = [[CCDirector sharedDirector] winSize];
@@ -210,6 +211,7 @@
 
 -(void) update:(ccTime)dt {
     if(!gameOver){
+        self.totalScore = (int)[m_BackgroundLayer getDistancetraveled]+(self.totalEnemiesKilled*4);
         [self detectCollisions];
         [m_BackgroundLayer update:dt];
         [m_Turtle update:dt];
