@@ -62,13 +62,11 @@
 
 
 -(void)displayMovementInstructions1{
-    label = [CCLabelTTF labelWithString:@"Tap anywhere on screen to move the turtle..." fontName:@"ArialMT" fontSize:20 dimensions:CGSizeMake(size.width - 50, 300) hAlignment:kCCTextAlignmentCenter lineBreakMode:kCCLineBreakModeWordWrap];
+    label = [CCLabelTTF labelWithString:@"Tap anywhere on screen to move the turtle..." fontName:@"ArialMT" fontSize:20 dimensions:CGSizeMake(size.width - 50, size.height/2) hAlignment:kCCTextAlignmentCenter lineBreakMode:kCCLineBreakModeWordWrap];
     label.color = ccc3(120,255,120);
     label.position = ccp(size.width/2, size.height/2);
     label.visible = YES;
     [self addChild:label];
-    
-    
     [self scheduleOnce:@selector(removeLabel) delay:5];
     [self scheduleOnce:@selector(displayMovementInstructions2) delay:8];
 
@@ -77,7 +75,7 @@
 -(void)displayMovementInstructions2{
 
     
-    label = [CCLabelTTF labelWithString:@"Or drag the turtle where you want it to go." fontName:@"ArialMT" fontSize:20 dimensions:CGSizeMake(size.width - 50, 300) hAlignment:kCCTextAlignmentCenter lineBreakMode:kCCLineBreakModeWordWrap];
+    label = [CCLabelTTF labelWithString:@"Or drag the turtle where you want it to go." fontName:@"ArialMT" fontSize:20 dimensions:CGSizeMake(size.width - 50, size.height/2) hAlignment:kCCTextAlignmentCenter lineBreakMode:kCCLineBreakModeWordWrap];
     label.color = ccc3(120,255,120);
     label.position = ccp(size.width/2, size.height/2);
     label.visible = YES;

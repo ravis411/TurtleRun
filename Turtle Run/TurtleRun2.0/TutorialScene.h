@@ -10,12 +10,9 @@
 #import "CCLayer.h"
 #import "Turtle.h"
 #import "BackgroundLayer.h"
-#import "UILayer.h"
 #import "HelloWorldLayer.h"
-
-
-
-
+#import "Obstacle.h"
+#import "ImoveableObjectObstacle.h"
 
 
 
@@ -26,6 +23,7 @@
     Turtle *turtle;
     CCLabelTTF *backLabel;
     CCLabelTTF *label;
+    Obstacle *obstacle;
     
     bool draggingTurtle; //For when the user is dragging the turtle.
 
