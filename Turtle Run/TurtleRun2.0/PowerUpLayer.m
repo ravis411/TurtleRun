@@ -41,7 +41,7 @@
     pu.position = rect.origin;
     pu.position = CGPointMake(pu.position.x+15, pu.position.y);
     [pu setPowerUpType:arc4random()%4];
-//    [pu setPowerUpType:2];
+//    [pu setPowerUpType:0];
     [self addChild:pu];
     [powerUpList addObject:pu];
     //make a sprite at the point

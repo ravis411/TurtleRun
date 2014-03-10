@@ -107,6 +107,7 @@
                 switch ([child getPowerUpType]) {
                     case 0:
                         [m_Turtle incrementCannonCount:1];
+                        [m_Turtle changeShootingPauses:(3)];
                         break;
                     case 1:
                         [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
