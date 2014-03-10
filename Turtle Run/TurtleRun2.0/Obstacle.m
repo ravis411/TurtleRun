@@ -67,7 +67,6 @@
 
 //basic southward movement shared by all Obstacles
 -(void)  travel:(ccTime)dt {
-    NSLog(@"%d",obstacleSpeed);
 //     NSLog(diagonalType ? @"Yes" : @"No");
     CGSize size = [[CCDirector sharedDirector] winSize];
     if(!self.diagonalType){
