@@ -41,6 +41,7 @@
 @property CGPoint moveToPoint;//The point the turtle should move to.
 
 -(void) update:(ccTime)dt;
+-(void) lifeUp;
 -(void) setupAnim;
 -(CGRect) rect;
 -(BOOL) contains:(CGPoint)pt;//returns true if the point is within the turtle
