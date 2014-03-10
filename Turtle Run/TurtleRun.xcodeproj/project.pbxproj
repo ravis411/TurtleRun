@@ -199,6 +199,7 @@
 		94F6E55D18CD119800B296AD /* IconTurtle114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55C18CD119800B296AD /* IconTurtle114x114.png */; };
 		94F6E55F18CD2EDD00B296AD /* IconTurtle120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */; };
 		A213766B18CD9A5800F3AF0F /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A213766A18CD9A5800F3AF0F /* GameOverLayer.m */; };
+		A294E87A18CDEA370009CC31 /* LeaderBoardLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A294E87918CDEA370009CC31 /* LeaderBoardLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -556,6 +557,8 @@
 		94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconTurtle120x120.png; path = Resources/IconTurtle120x120.png; sourceTree = "<group>"; };
 		A213766918CD9A5800F3AF0F /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
 		A213766A18CD9A5800F3AF0F /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
+		A294E87818CDEA370009CC31 /* LeaderBoardLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardLayer.h; sourceTree = "<group>"; };
+		A294E87918CDEA370009CC31 /* LeaderBoardLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -673,6 +676,8 @@
 				3FBA4E1818CD8B2100522DC4 /* TutorialScene.m */,
 				A213766918CD9A5800F3AF0F /* GameOverLayer.h */,
 				A213766A18CD9A5800F3AF0F /* GameOverLayer.m */,
+				A294E87818CDEA370009CC31 /* LeaderBoardLayer.h */,
+				A294E87918CDEA370009CC31 /* LeaderBoardLayer.m */,
 			);
 			name = TurtleRun;
 			path = TurtleRun2.0;
@@ -1304,6 +1309,7 @@
 				9451A02218CB9F010036B62A /* CCRenderTexture.m in Sources */,
 				94519FAA18CB9F000036B62A /* CCActionInterval.m in Sources */,
 				9451A01818CB9F010036B62A /* CCPhysicsDebugNode.m in Sources */,
+				A294E87A18CDEA370009CC31 /* LeaderBoardLayer.m in Sources */,
 				94519F9E18CB9F000036B62A /* CCActionEase.m in Sources */,
 				94519FDB18CB9F010036B62A /* CCFontDefinition.m in Sources */,
 				9451A01B18CB9F010036B62A /* CCPhysicsSprite.mm in Sources */,

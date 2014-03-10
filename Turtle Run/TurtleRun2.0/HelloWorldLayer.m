@@ -149,18 +149,23 @@
     }];*/
     
     // Leaderboard Menu Item using blocks
+//    CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
+//        
+//        
+//        GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
+//        leaderboardViewController.leaderboardDelegate = copy_self;
+//        
+//        AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+//        
+//        [[app navController] presentModalViewController:leaderboardViewController animated:YES];
+//        
+//        [leaderboardViewController release];
+//    }];
+    
     CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
-        
-        
-        GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
-        leaderboardViewController.leaderboardDelegate = copy_self;
-        
-        AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-        
-        [[app navController] presentModalViewController:leaderboardViewController animated:YES];
-        
-        [leaderboardViewController release];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.0 scene:[LeaderBoardLayer scene]]];
     }];
+    
 
     
     

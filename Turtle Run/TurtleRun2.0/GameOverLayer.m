@@ -117,13 +117,13 @@ UIButton *doneButton;
     m_GameOverLabel.visible = YES;
     
     
-    NSDictionary *oldDictionary;
-    NSMutableDictionary *dictionary;
-    //TRYING TO IMPLEMENT PLIST HERE
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSString *finalPath = [path stringByAppendingPathComponent:@"LeaderBoard.plist"];
-    oldDictionary = [NSDictionary dictionaryWithContentsOfFile:finalPath];
-    dictionary = [oldDictionary mutableCopy];
+//    NSDictionary *oldDictionary;
+//    NSMutableDictionary *dictionary;
+//    //TRYING TO IMPLEMENT PLIST HERE
+//    NSString *path = [[NSBundle mainBundle] bundlePath];
+//    NSString *finalPath = [path stringByAppendingPathComponent:@"LeaderBoard.plist"];
+//    oldDictionary = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+//    dictionary = [oldDictionary mutableCopy];
     
     //Save current player's score
     NSString *currentPlayerScore = [defaults objectForKey:@"currentPlayer"];
