@@ -98,9 +98,9 @@ UITextField *userName;
 //    [leader2 setScore:@"120"];
     //[leaderList setObject:@"120" forKey:@"Player 2"];
     [leaderList setObject:@"250" forKey:@"Eric"];
-    [leaderList setObject:@"350" forKey:@"Andrew"];
-    [leaderList setObject:@"450" forKey:@"Kyle"];
-    [leaderList setObject:@"550" forKey:@"Ryan"];
+    [leaderList setObject:@"370" forKey:@"Andrew"];
+    [leaderList setObject:@"382" forKey:@"Kyle"];
+    [leaderList setObject:@"540" forKey:@"Ryan"];
     
     
     [defaults setObject:leaderList forKey:@"LeaderboardNames"];
