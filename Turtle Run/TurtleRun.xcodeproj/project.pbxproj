@@ -18,6 +18,7 @@
 		3D629AD218CD558E00555851 /* turtle8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC718CD558E00555851 /* turtle8.png */; };
 		3D629AD318CD558E00555851 /* turtlesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC818CD558E00555851 /* turtlesheet.plist */; };
 		3D629AD418CD558E00555851 /* turtlesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC918CD558E00555851 /* turtlesheet.png */; };
+		3FBA4E1618CD824A00522DC4 /* sand.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA4E1518CD824A00522DC4 /* sand.png */; };
 		4999C44718CC197300D2B9EC /* PowerUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999C44618CC197300D2B9EC /* PowerUp.m */; };
 		4999C44A18CC199000D2B9EC /* PowerUpLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999C44918CC199000D2B9EC /* PowerUpLayer.m */; };
 		944F3C9718CD393B000AA17D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944F3C9518CD393B000AA17D /* Default@2x.png */; };
@@ -199,6 +200,7 @@
 		3D629AC718CD558E00555851 /* turtle8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle8.png; sourceTree = "<group>"; };
 		3D629AC818CD558E00555851 /* turtlesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = turtlesheet.plist; sourceTree = "<group>"; };
 		3D629AC918CD558E00555851 /* turtlesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtlesheet.png; sourceTree = "<group>"; };
+		3FBA4E1518CD824A00522DC4 /* sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sand.png; path = Resources/sand.png; sourceTree = "<group>"; };
 		4999C44518CC197300D2B9EC /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUp.h; sourceTree = "<group>"; };
 		4999C44618CC197300D2B9EC /* PowerUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerUp.m; sourceTree = "<group>"; };
 		4999C44818CC199000D2B9EC /* PowerUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUpLayer.h; sourceTree = "<group>"; };
@@ -646,6 +648,7 @@
 		94519F7918CB9F000036B62A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3FBA4E1518CD824A00522DC4 /* sand.png */,
 				3D629ABE18CD558E00555851 /* TurtleAtlas */,
 				3D629AC818CD558E00555851 /* turtlesheet.plist */,
 				3D629AC918CD558E00555851 /* turtlesheet.png */,
@@ -1114,6 +1117,7 @@
 				94519F8318CB9F000036B62A /* Icon-72.png in Resources */,
 				94F6E55F18CD2EDD00B296AD /* IconTurtle120x120.png in Resources */,
 				9451A14818CBAB510036B62A /* blast.png in Resources */,
+				3FBA4E1618CD824A00522DC4 /* sand.png in Resources */,
 				94F6E55918CD015100B296AD /* grass.png in Resources */,
 				9451A15218CBAB510036B62A /* turtle_150x150.png in Resources */,
 				9451A15318CBAB510036B62A /* turtle_placeholder.png in Resources */,

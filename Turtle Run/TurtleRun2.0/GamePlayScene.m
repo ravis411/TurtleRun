@@ -54,28 +54,8 @@
     
     m_Lives = spriteLayer.turtleLives;
     
-    int numEnemiesToCompleteLevel;
+    int numEnemiesToCompleteLevel = 5 + m_Level * 5;
     
-    switch (m_Level) {
-        case 1:
-            numEnemiesToCompleteLevel = 10;
-            break;
-        case 2:
-            numEnemiesToCompleteLevel = 15;
-            break;
-        case 3:
-            numEnemiesToCompleteLevel = 20;
-            break;
-        case 4:
-            numEnemiesToCompleteLevel = 25;
-            break;
-        case 5:
-            numEnemiesToCompleteLevel = 30;
-            break;
-            
-        default:
-            break;
-    }
     if(spriteLayer.enemiesKilled >= numEnemiesToCompleteLevel){
         m_Level++;
         [spriteLayer level:m_Level];
