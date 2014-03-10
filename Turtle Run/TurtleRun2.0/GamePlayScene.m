@@ -17,7 +17,9 @@
 @synthesize deadObstacles = m_DeadObstacles;
 @synthesize score = m_Score;
 
+bool startGameOverFlag = NO;
 
+UITextField *userName;
 - (id)init
 {
     self = [super init];
@@ -53,9 +55,11 @@
     //NSTimeInterval timeElapsed = [self.date timeIntervalSinceNow];
     [spriteLayer update:dt];
     
-    if(m_Lives == 0){
-        [spriteLayer clearChildren];
+    if(m_Lives == 0 && startGameOverFlag == NO){
         [self startGameOver];
+        [spriteLayer clearChildren];
+        startGameOverFlag = YES;
+        
     }
     
     m_Lives = spriteLayer.turtleLives;
@@ -95,10 +99,34 @@
     
 }
 
+
+
 -(void)startGameOver{
 //    [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:NO];
 //    [uiLayer showGameOverLabel];
 //    [self scheduleOnce:@selector(exitScene) delay:3];
+    
+
+    
+    int currentPlayerScore = m_Score;
+    NSString *strCurrentPlayerScore = [NSString stringWithFormat:@"%d", currentPlayerScore];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *leaderList = [[NSMutableArray alloc] init];
+//    [leaderList addObject:@"Player 1"];
+//    [leaderList addObject:@"Player 2"];
+    
+    [defaults setObject:leaderList forKey:@"LeaderboardNames"];
+    [defaults setObject:strCurrentPlayerScore forKey:@"currentPlayer"];
+    
+    [defaults setObject:@"90" forKey:@"Player 1"];
+    [defaults setObject:@"40" forKey:@"Player 2"];
+    
+    [defaults synchronize];
+  
+    
+    NSLog(@"\n\n\n calling gameoover \n\n\n");
+
+    
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration:0.5 scene:[GameOverLayer scene]]];
     [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:YES];
 }

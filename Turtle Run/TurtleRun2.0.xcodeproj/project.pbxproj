@@ -167,7 +167,6 @@
 		9451A15418CBAB510036B62A /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9451A14718CBAB510036B62A /* turtle.png */; };
 		A213765F18CC4D3B00F3AF0F /* LeaderBoard.plist in Resources */ = {isa = PBXBuildFile; fileRef = A213765E18CC4D3B00F3AF0F /* LeaderBoard.plist */; };
 		A213766518CC5E0500F3AF0F /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A213766418CC5E0500F3AF0F /* GameOverLayer.m */; };
-		A213766818CD1C8F00F3AF0F /* LeaderBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = A213766718CD1C8F00F3AF0F /* LeaderBoardController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -490,8 +489,6 @@
 		A213765E18CC4D3B00F3AF0F /* LeaderBoard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LeaderBoard.plist; sourceTree = "<group>"; };
 		A213766318CC5E0500F3AF0F /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
 		A213766418CC5E0500F3AF0F /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
-		A213766618CD1C8F00F3AF0F /* LeaderBoardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardController.h; sourceTree = "<group>"; };
-		A213766718CD1C8F00F3AF0F /* LeaderBoardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,8 +583,6 @@
 				A213765E18CC4D3B00F3AF0F /* LeaderBoard.plist */,
 				A213766318CC5E0500F3AF0F /* GameOverLayer.h */,
 				A213766418CC5E0500F3AF0F /* GameOverLayer.m */,
-				A213766618CD1C8F00F3AF0F /* LeaderBoardController.h */,
-				A213766718CD1C8F00F3AF0F /* LeaderBoardController.m */,
 			);
 			path = TurtleRun2.0;
 			sourceTree = "<group>";
@@ -1188,7 +1183,6 @@
 				9451A12518CBA1AC0036B62A /* ObstacleLayer.m in Sources */,
 				9451A02818CB9F010036B62A /* CCScheduler.m in Sources */,
 				9451A07818CB9F010036B62A /* CCDirectorIOS.m in Sources */,
-				A213766818CD1C8F00F3AF0F /* LeaderBoardController.m in Sources */,
 				94519FFA18CB9F010036B62A /* CCMenu.m in Sources */,
 				9451A10318CB9F020036B62A /* vec4.c in Sources */,
 				94519FC518CB9F000036B62A /* CCCamera.m in Sources */,

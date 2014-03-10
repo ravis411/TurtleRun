@@ -17,12 +17,12 @@
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         m_LevelLabel = [CCLabelTTF labelWithString:@"Level: 1" fontName:@"ArialMT" fontSize:18];
-        m_LevelLabel.position = ccp(size.width/2 - 100, size.height-10);
+        m_LevelLabel.position = ccp(size.width/2 - 100, size.height-30);
         m_LevelLabel.visible = YES;
         [self addChild:m_LevelLabel];
         
         m_LifeLabel = [CCLabelTTF labelWithString:@"Lives: 3" fontName:@"ArialMT" fontSize:18];
-        m_LifeLabel.position = ccp(size.width/2 + 100, size.height-10);
+        m_LifeLabel.position = ccp(size.width/2 + 100, size.height-30);
         m_LifeLabel.visible = YES;
         [self addChild:m_LifeLabel];
         // m_WeaponLabel = [CCLabelTTF labelWithString:@"Weapon: Fire" fontName:@"Marker Felt" fontSize:12];
@@ -33,7 +33,7 @@
         [self addChild:m_GameOverLabel];
         
         m_ScoreLabel = [CCLabelTTF labelWithString:@"Score: 0" fontName:@"ArialMT" fontSize:18];
-        m_ScoreLabel.position = (ccp(size.width/2, size.height -10));
+        m_ScoreLabel.position = (ccp(size.width/2, size.height -30));
         m_ScoreLabel.visible = YES;
         [self addChild:m_ScoreLabel];
     }

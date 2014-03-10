@@ -3,6 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>Eric Liu</key>
-	<integer>90</integer>
+	<string>90</string>
+	<key>PLayer 2</key>
+	<string>50</string>
 </dict>
 </plist>
