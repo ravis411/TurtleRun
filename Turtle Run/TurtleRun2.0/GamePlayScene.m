@@ -54,9 +54,10 @@ UITextField *userName;
     
     [spriteLayer update:dt];
     
-    if(m_Lives == 0){
+    if(m_Lives == 0 && startGameOverFlag==NO){
         [spriteLayer clearChildren];
         [self startGameOver];
+        startGameOverFlag = YES;
     }
     
     m_Lives = spriteLayer.turtleLives;
