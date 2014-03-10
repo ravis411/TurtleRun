@@ -25,7 +25,6 @@
         hp = 100;
         int cols = 4;
         int col = arc4random_uniform(cols);
-        texSplode = [[CCTextureCache sharedTextureCache] addImage:@"splode.png"];
         CGSize size = [[CCDirector sharedDirector] winSize];
         self.position = ccp(
 
@@ -112,7 +111,7 @@
 
 -(void) splode {
     obstacleSpeed = 100;
-    [self addChild:[CCSprite spriteWithTexture:texSplode]];
+    [self addChild:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"splode.png"]];
 }
 
 

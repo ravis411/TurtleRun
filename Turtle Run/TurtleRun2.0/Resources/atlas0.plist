@@ -20,7 +20,7 @@
             <key>cannon_0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{193,95},{50,144}}</string>
+                <string>{{154,192},{50,144}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>cannon_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{158,241},{50,144}}</string>
+                <string>{{54,338},{50,144}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>cannon_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,241},{50,144}}</string>
+                <string>{{158,338},{50,144}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>cannon_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{54,241},{50,144}}</string>
+                <string>{{106,338},{50,144}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>cannon_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{106,241},{50,144}}</string>
+                <string>{{2,338},{50,144}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -134,6 +134,19 @@
                 <key>sourceSize</key>
                 <string>{92,91}</string>
             </dict>
+            <key>splode.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,192},{150,140}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,140}}</string>
+                <key>sourceSize</key>
+                <string>{150,140}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -144,7 +157,7 @@
             <key>size</key>
             <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:7f3833ea90f3b006d0d999c0592ee448:0458fc002d1c9908b6796b9ea2d42c1d:06be901968706a85a1a578946713a577$</string>
+            <string>$TexturePacker:SmartUpdate:c934688eefa26cc36b2468744c381627:24077d465c01ddd3a90f7e3866f1555e:06be901968706a85a1a578946713a577$</string>
             <key>textureFileName</key>
             <string>atlas0.png</string>
         </dict>
