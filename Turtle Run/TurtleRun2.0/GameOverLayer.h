@@ -15,8 +15,11 @@
     CCLabelTTF *m_GameOverLabel;
     
 }
+
+@property NSString *currentPlayerScore;
 +(CCScene *)scene;
 -(void) promptForUsername;
 -(void) updateLeaderBoard;
 -(void) exitScene;
+-(void) recordCurrentPlayerScore: (NSString *)currentScore;
 @end

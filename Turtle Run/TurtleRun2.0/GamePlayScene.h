@@ -26,6 +26,7 @@
     int m_Lives;
     int m_WeaponLevel;
     int m_Score;
+    int m_GamesPlayed;
     //    int m_DeadObstacles;
     //    GroundLayer *groundLayer;
     //    IntroLayer *introLayer;
@@ -38,6 +39,7 @@
 @property int weaponLevel;
 @property int deadObstacles;
 @property int score;
+@property int gamesPlayed;
 
 -(void) startGameOver;
 -(void) update:(ccTime)dt;

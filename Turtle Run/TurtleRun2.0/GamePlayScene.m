@@ -16,6 +16,7 @@
 @synthesize weaponLevel = m_WeaponLevel;
 @synthesize deadObstacles = m_DeadObstacles;
 @synthesize score = m_Score;
+@synthesize gamesPlayed = m_GamesPlayed;
 
 bool startGameOverFlag = NO;
 
@@ -43,6 +44,9 @@ UITextField *userName;
         //        m_DeadObstacles = 0;
         m_Score = 0;
         startGameOverFlag = NO;
+        
+        self.gamesPlayed = 0;
+        
         
         [self scheduleUpdate];
     }
@@ -87,24 +91,24 @@ UITextField *userName;
     int currentPlayerScore = spriteLayer.totalScore;
     NSString *strCurrentPlayerScore = [NSString stringWithFormat:@"%d", currentPlayerScore];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableDictionary *leaderList = [[NSMutableDictionary alloc] init];
-    
-//    UserModel *leader1 = [[UserModel alloc]init];
-//    UserModel *leader2 = [[UserModel alloc] init];
+//    NSMutableDictionary *leaderList = [[NSMutableDictionary alloc] init];
 //    
-//    [leader1 setUserName:@"Eric"];
-//    [leader1 setScore:@"250"];
+////    UserModel *leader1 = [[UserModel alloc]init];
+////    UserModel *leader2 = [[UserModel alloc] init];
+////    
+////    [leader1 setUserName:@"Eric"];
+////    [leader1 setScore:@"250"];
+////    
+////    [leader2 setUserName:@"Player 2"];
+////    [leader2 setScore:@"120"];
+//    [leaderList setObject:@"20" forKey:@"Player 2"];
+////    [leaderList setObject:@"250" forKey:@"Eric"];
+////    [leaderList setObject:@"370" forKey:@"Andrew"];
+//    [leaderList setObject:@"382" forKey:@"Kyle"];
+//    [leaderList setObject:@"540" forKey:@"Ryan"];
 //    
-//    [leader2 setUserName:@"Player 2"];
-//    [leader2 setScore:@"120"];
-    //[leaderList setObject:@"120" forKey:@"Player 2"];
-    [leaderList setObject:@"250" forKey:@"Eric"];
-    [leaderList setObject:@"370" forKey:@"Andrew"];
-    [leaderList setObject:@"382" forKey:@"Kyle"];
-    [leaderList setObject:@"540" forKey:@"Ryan"];
-    
-    
-    [defaults setObject:leaderList forKey:@"LeaderboardNames"];
+//    
+//    [defaults setObject:leaderList forKey:@"LeaderboardNames"];
     [defaults setObject:strCurrentPlayerScore forKey:@"currentPlayer"];
     
 //    for(int i=0; i<[leaderList count];i++){
@@ -114,12 +118,13 @@ UITextField *userName;
     
     [defaults synchronize];
     
-    
-    
+        
     [[SimpleAudioEngine sharedEngine] stopEffect:soundEffectID];
     
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration:0.5 scene:[GameOverLayer scene]]];
     [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:YES];
+    
+    ++self.gamesPlayed;
 }
 
 -(void) exitScene{

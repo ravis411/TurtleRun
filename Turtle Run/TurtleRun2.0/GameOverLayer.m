@@ -12,13 +12,18 @@ UITextField *userName;
 NSString *strUserName;
 UIButton *doneButton;
 
+
 @implementation GameOverLayer
+
+@synthesize currentPlayerScore;
+
 +(CCScene *) scene{
     // 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
 	GameOverLayer  *layer = [GameOverLayer node];
+    
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
@@ -127,8 +132,8 @@ UIButton *doneButton;
     
     //Save current player's score
     NSString *currentPlayerScore = [defaults objectForKey:@"currentPlayer"];
-    [defaults setObject:currentPlayerScore forKey:strUserName];
-    [defaults synchronize];
+//    [defaults setObject:currentPlayerScore forKey:strUserName];
+//    [defaults synchronize];
     
     NSMutableDictionary *newLeaderList = [leaderList mutableCopy];
     NSLog(@"\n\n\nCURRENT PLAYER SCORE: %@",currentPlayerScore);
@@ -243,10 +248,15 @@ UIButton *doneButton;
         }
     }
     
+    [defaults setObject:newLeaderList forKey:@"LeaderboardNames"];
     [defaults synchronize];
     
 //    [self schedule:@selector(exitScene) interval:3];
     
+}
+
+-(void)recordCurrentPlayerScore: (NSString *)currentScore{
+    currentPlayerScore = currentScore;
 }
 
 -(void) exitScene{
