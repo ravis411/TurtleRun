@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 
 #import "GamePlayScene.h"
+#import "TutorialScene.h"
 
 
 #pragma mark - HelloWorldLayer
@@ -134,7 +135,7 @@
     
     
     // Achievement Menu Item using blocks
-    CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
+ /*   CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
         
         
         GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
@@ -145,7 +146,7 @@
         [[app navController] presentModalViewController:achivementViewController animated:YES];
         
         [achivementViewController release];
-    }];
+    }];*/
     
     // Leaderboard Menu Item using blocks
     CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
@@ -170,8 +171,13 @@
     CCMenuItem *itemNewGame = [CCMenuItemFont itemWithString:@"New Game" block:^(id sender) {
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.0 scene:[GamePlayScene node]]];
     }];
+    
+    CCMenuItem *itemTutorial = [CCMenuItemFont itemWithString:@"Tutorial" block:^(id sender) {
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[TutorialScene node]]];
+    }];
+
 	
-	CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, itemNewGame, nil];
+	CCMenu *menu = [CCMenu menuWithItems:itemTutorial, itemLeaderboard, itemNewGame, nil];
 	
 //	[menu alignItemsVertically];
     [menu alignItemsVerticallyWithPadding:25.0f];
