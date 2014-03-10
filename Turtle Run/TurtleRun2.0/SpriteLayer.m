@@ -112,7 +112,7 @@
                         [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
                         break;
                     case 2:
-                        [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
+                        m_TurtleLives++;
                         break;
                     case 3:
                         [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
