@@ -57,18 +57,35 @@
 		[label setColor:ccc3(120,255,120)];
 		label.position = ccp( size.width/2, size.height-75);
         
-        //BATCHING SPRITES
-        CCSpriteBatchNode *atlasNode;
-        atlasNode = [CCSpriteBatchNode batchNodeWithFile:@"turtlesheet.png"];
-        [self addChild:atlasNode];
+        //BATCHING TURTLE SPRITES
+        CCSpriteBatchNode *turtleAtlasNode;
+        turtleAtlasNode = [CCSpriteBatchNode batchNodeWithFile:@"turtlesheet.png"];
+        [self addChild:turtleAtlasNode];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"turtlesheet.plist"];
         
-        NSMutableArray *animFrames = [NSMutableArray array];
-        for (int i = 1; i <= 5; i++) {
+        NSMutableArray *turtleAnimFrames = [NSMutableArray array];
+        for (int i = 0; i <= 8; i++) {
             NSString *file = [NSString stringWithFormat:@"turtle%d.png", i];
             CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:file];
-            [animFrames addObject:frame];
+            [turtleAnimFrames addObject:frame];
         }
+        
+        //BATCHING ADDITIONAL SPRITES
+        CCSpriteBatchNode *firstAtlasNode;
+        firstAtlasNode = [CCSpriteBatchNode batchNodeWithFile:@"turtlesheet.png"];
+        [self addChild:firstAtlasNode];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"turtlesheet.plist"];
+        
+        NSMutableArray *firstAtlasFrames = [NSMutableArray array];
+        NSArray *firstAtlasFilenames = [NSArray arrayWithObjects:@"blast.png", @"cannon_0.png", @"cannon_1.png", @"cannon_2.png", @"cannon_3.png", @"cannon_4.png", @"clawg.png", @"fpsup.png", @"oneup.png", @"scatterup.png", nil];
+        //GET THIS PART TO WORK!!!!!!!!!!!!!!!!!!!!!!
+//        for (int i = 0; i <= 9; i++) {
+//            NSString *file = firstAtlasFilenames[i];
+//            CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:file];
+//            [firstAtlasFrames addObject:frame];
+//        }
+
+        
         
 		[self createMenu];
 		
