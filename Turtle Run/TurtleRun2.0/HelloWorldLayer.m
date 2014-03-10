@@ -57,7 +57,18 @@
 		[label setColor:ccc3(120,255,120)];
 		label.position = ccp( size.width/2, size.height-75);
         
+        //BATCHING SPRITES
+        CCSpriteBatchNode *atlasNode;
+        atlasNode = [CCSpriteBatchNode batchNodeWithFile:@"turtlesheet.png"];
+        [self addChild:atlasNode];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"turtlesheet.plist"];
         
+        NSMutableArray *animFrames = [NSMutableArray array];
+        for (int i = 1; i <= 5; i++) {
+            NSString *file = [NSString stringWithFormat:@"turtle%d.png", i];
+            CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:file];
+            [animFrames addObject:frame];
+        }
         
 		[self createMenu];
 		
