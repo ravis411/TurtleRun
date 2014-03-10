@@ -45,6 +45,7 @@
 
 
 -(void) update:(ccTime)dt {
+    
     [spriteLayer update:dt];
     
     if(m_Lives == 0){
@@ -58,18 +59,23 @@
     
     switch (m_Level) {
         case 1:
+            [spriteLayer setLevel:1];
             numEnemiesToCompleteLevel = 10;
             break;
         case 2:
+            [spriteLayer setLevel:2];
             numEnemiesToCompleteLevel = 15;
             break;
         case 3:
+            [spriteLayer setLevel:3];
             numEnemiesToCompleteLevel = 20;
             break;
         case 4:
+            [spriteLayer setLevel:4];
             numEnemiesToCompleteLevel = 25;
             break;
         case 5:
+            [spriteLayer setLevel:5];
             numEnemiesToCompleteLevel = 30;
             break;
             

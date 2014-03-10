@@ -7,7 +7,7 @@
 //
 
 #import "Obstacle.h"
-static int obstacleSpeed = 100;
+//static int obstacleSpeed = 100;
 
 @implementation Obstacle {
     
@@ -15,7 +15,7 @@ static int obstacleSpeed = 100;
 
 @synthesize hp;
 
-+ (int) speed {return obstacleSpeed;}
+//+ (int) speed {return obstacleSpeed;}
 
 - (id)init
 {
@@ -32,6 +32,7 @@ static int obstacleSpeed = 100;
                             
                             (((col + 1) * size.width)/(cols+1)), size.height+100
                             );
+        obstacleSpeed = 100;
         //CCMoveTo *moveAction = [CCMoveTo actionWithDuration:5.0 position:ccp(self.position.x, -100)];
         //[self runAction:moveAction];
         [self scheduleUpdate];
@@ -40,21 +41,33 @@ static int obstacleSpeed = 100;
     return self;
 }
 
--(void)setType:(int)typeValue{
-    int rawNum = typeValue %2;
-    if(rawNum == 0){
+-(void)setType:(int)typeValue level:(int)lvl{
+    if(typeValue == 1){
             leftToRightVelocity = YES;
             self.diagonalType = NO;
     }
-    else{
+    else if(typeValue == 2){
             leftToRightVelocity = YES;
             self.diagonalType = YES;
     }
+    else if(typeValue == 3){
+        obstacleSpeed+=(lvl*10);
+        leftToRightVelocity = YES;
+        self.diagonalType = NO;
+
+    }
+    else if(typeValue == 4){
+        obstacleSpeed=(lvl*15);
+        leftToRightVelocity = YES;
+        self.diagonalType = YES;
+    }
+
     
 }
 
 //basic southward movement shared by all Obstacles
 -(void)  travel:(ccTime)dt {
+    NSLog(@"%d",obstacleSpeed);
 //     NSLog(diagonalType ? @"Yes" : @"No");
     CGSize size = [[CCDirector sharedDirector] winSize];
     if(!self.diagonalType){
@@ -99,6 +112,7 @@ static int obstacleSpeed = 100;
 }
 
 -(void) splode {
+    obstacleSpeed = 100;
     [self addChild:[CCSprite spriteWithTexture:texSplode]];
 }
 

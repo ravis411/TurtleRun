@@ -17,11 +17,13 @@
     NSMutableArray *obstacles;
     int spawnTimer;
     int spawnWallTimer;
+    int spawnTimerReset;
+    int currentLevel;
 }
 
 -(id) init;
 -(void)spawn;
 -(void)clean;
--(void)update:(ccTime)dt;
+-(void)update:(ccTime)dt level:(int)lvl;
 
 @end
