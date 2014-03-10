@@ -23,6 +23,7 @@
 		3D629AD318CD558E00555851 /* turtlesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC818CD558E00555851 /* turtlesheet.plist */; };
 		3D629AD418CD558E00555851 /* turtlesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC918CD558E00555851 /* turtlesheet.png */; };
 		3FBA4E1618CD824A00522DC4 /* sand.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA4E1518CD824A00522DC4 /* sand.png */; };
+		3FBA4E1918CD8B2100522DC4 /* TutorialScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBA4E1818CD8B2100522DC4 /* TutorialScene.m */; };
 		4999C44718CC197300D2B9EC /* PowerUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999C44618CC197300D2B9EC /* PowerUp.m */; };
 		4999C44A18CC199000D2B9EC /* PowerUpLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999C44918CC199000D2B9EC /* PowerUpLayer.m */; };
 		944F3C9718CD393B000AA17D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944F3C9518CD393B000AA17D /* Default@2x.png */; };
@@ -209,6 +210,8 @@
 		3D629AC818CD558E00555851 /* turtlesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = turtlesheet.plist; sourceTree = "<group>"; };
 		3D629AC918CD558E00555851 /* turtlesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtlesheet.png; sourceTree = "<group>"; };
 		3FBA4E1518CD824A00522DC4 /* sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sand.png; path = Resources/sand.png; sourceTree = "<group>"; };
+		3FBA4E1718CD8B2100522DC4 /* TutorialScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialScene.h; sourceTree = "<group>"; };
+		3FBA4E1818CD8B2100522DC4 /* TutorialScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialScene.m; sourceTree = "<group>"; };
 		4999C44518CC197300D2B9EC /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUp.h; sourceTree = "<group>"; };
 		4999C44618CC197300D2B9EC /* PowerUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerUp.m; sourceTree = "<group>"; };
 		4999C44818CC199000D2B9EC /* PowerUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUpLayer.h; sourceTree = "<group>"; };
@@ -649,6 +652,8 @@
 				9451A13818CBA6DD0036B62A /* UILayer.h */,
 				9451A13918CBA6DD0036B62A /* UILayer.m */,
 				944F3C9B18CD3C4D000AA17D /* Images.xcassets */,
+				3FBA4E1718CD8B2100522DC4 /* TutorialScene.h */,
+				3FBA4E1818CD8B2100522DC4 /* TutorialScene.m */,
 			);
 			name = TurtleRun;
 			path = TurtleRun2.0;
@@ -658,7 +663,6 @@
 			isa = PBXGroup;
 			children = (
 				3FBA4E1518CD824A00522DC4 /* sand.png */,
-				3D629ABE18CD558E00555851 /* TurtleAtlas */,
 				3D3E216F18CD81B800003E86 /* TurtleAtlas */,
 				3D3E218618CD821A00003E86 /* atlas0.plist */,
 				3D3E218718CD821A00003E86 /* atlas0.png */,
@@ -1214,6 +1218,7 @@
 				94519F9818CB9F000036B62A /* CCActionCamera.m in Sources */,
 				9451A0CA18CB9F020036B62A /* CDXPropertyModifierAction.m in Sources */,
 				9451A12218CBA1590036B62A /* Obstacle.m in Sources */,
+				3FBA4E1918CD8B2100522DC4 /* TutorialScene.m in Sources */,
 				9451A09A18CB9F010036B62A /* CCArray.m in Sources */,
 				9451A0F718CB9F020036B62A /* plane.c in Sources */,
 				9451A0A318CB9F020036B62A /* CCProfiling.m in Sources */,
