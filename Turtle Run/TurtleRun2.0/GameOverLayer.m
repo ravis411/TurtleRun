@@ -35,6 +35,7 @@ NSString *strUserName;
         m_GameOverLabel = [CCLabelTTF labelWithString:@"Game Over" fontName:@"ArialMT" fontSize:34];
         m_GameOverLabel.position = ccp(size.width/2, size.height-50);
         m_GameOverLabel.visible = NO;
+        
         [self addChild:m_GameOverLabel];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -42,18 +43,20 @@ NSString *strUserName;
         NSMutableArray *leaderList = [defaults objectForKey:@"LeaderboardNames"];
         
         
-        for(int i=0; i<[leaderList count]; i++){
-            NSString *currentLeader = [leaderList objectAtIndex:i];
-            NSString *currentLeaderScore = [defaults objectForKey:currentLeader];
-            
-            NSString *currentLeaderDescription = [NSString stringWithFormat:@"%@ -- %@",currentLeader, currentLeaderScore ];
-            CCLabelTTF *user1label = [CCLabelTTF labelWithString:currentLeaderDescription fontName:@"ArialMT" fontSize:14];
-            user1label.position = ccp(size.width/2, size.height-50-(1*10));
-            user1label.visible = NO;
-            [self addChild:user1label];
-        }
+        
+//        for(int i=0; i<[leaderList count]; i++){
+//            NSString *currentLeader = [leaderList objectAtIndex:i];
+//            NSString *currentLeaderScore = [defaults objectForKey:currentLeader];
+//            
+//            NSString *currentLeaderDescription = [NSString stringWithFormat:@"%@ -- %@",currentLeader, currentLeaderScore ];
+//            CCLabelTTF *user1label = [CCLabelTTF labelWithString:currentLeaderDescription fontName:@"ArialMT" fontSize:14];
+//            user1label.position = ccp(size.width/2, size.height-50-(1*10));
+//            user1label.visible = NO;
+//            [self addChild:user1label];
+//        }
         
         [self promptForUsername];
+       
         
     }
     return self;
@@ -107,132 +110,150 @@ NSString *strUserName;
     
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *leaderList = [defaults objectForKey:@"LeaderboardNames"];
+    NSMutableDictionary *leaderList = [defaults objectForKey:@"LeaderboardNames"];
     
-    NSLog([NSString stringWithFormat:@"\n\n\nUSERNAME: %@\n\n",strUserName]);
+    
     
     m_GameOverLabel.visible = YES;
     
     
+    NSDictionary *oldDictionary;
     NSMutableDictionary *dictionary;
     //TRYING TO IMPLEMENT PLIST HERE
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSString *finalPath = [path stringByAppendingPathComponent:@"LeaderBoard.plist"];
-    dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:finalPath];
+    oldDictionary = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+    dictionary = [oldDictionary mutableCopy];
     
     //Save current player's score
     NSString *currentPlayerScore = [defaults objectForKey:@"currentPlayer"];
     [defaults setObject:currentPlayerScore forKey:strUserName];
     [defaults synchronize];
     
-    int currentIndex=0;
-    //    while(currentIndex<5){
-    //        for (id key in dictionary){
-    //            currentIndex++;
-    //            if (currentPlayerScore > [dictionary objectForKey:key]) {
-    //                [dictionary removeObjectForKey:key];
-    //                [dictionary setValue:currentPlayerScore forKey:strUserName];
-    //                continue;
-    //            }
-    //
-    //        }
-    //    }
+    NSMutableDictionary *newLeaderList = [leaderList mutableCopy];
+    NSLog(@"\n\n\nCURRENT PLAYER SCORE: %@",currentPlayerScore);
+    [newLeaderList setObject:currentPlayerScore forKey:strUserName];
+    [defaults synchronize];
     
-    //    currentIndex = 0;
-    [dictionary setValue:currentPlayerScore forKey:strUserName];
-    //
-    [dictionary writeToFile:@"LeaderBoard.plist" atomically:YES];
+    [defaults setObject:newLeaderList forKey:@"LeaderboardNames"];
+    [defaults synchronize];
+    NSLog(@"\n\n\n calling gameoover \n\n\n");
     
-    // displays leaderboard at gameover
+    NSString *yourScoreSTR = [NSString stringWithFormat:@"Your Score: %@", currentPlayerScore];
+    CCLabelTTF *yourScoreLabel = [CCLabelTTF labelWithString:yourScoreSTR fontName:@"ArialMT" fontSize:22];
+    yourScoreLabel.position = ccp(size.width/2, size.height-100);
+    yourScoreLabel.visible = YES;
     
-    for (id key in dictionary) {
-        NSString *currentLeader = key;
-        NSString *currentLeaderScore = [dictionary objectForKey:key];
-        NSString *currentLeaderString = [NSString stringWithFormat:@"USER: %@ ----- SCORE: %@",currentLeader,currentLeaderScore];
+    [self addChild:yourScoreLabel];
+    
+    CCLabelTTF *leadersLabel = [CCLabelTTF labelWithString:@"Leaders:" fontName:@"ArialMT" fontSize:22];
+    leadersLabel.position = ccp(size.width/2, size.height-170);
+    leadersLabel.visible = YES;
+    
+    [self addChild:leadersLabel];
+    
+  //  NSMutableArray *leaderList = [defaults objectForKey:@"LeaderboardNames"];
+
+//    NSArray *allLeaderScores = [newLeaderList allValues];
+    NSArray *allLeaderScores = [newLeaderList allKeys];
+   // NSArray *sortedLeaderScores = [self sortLeaderBoard:allLeaderScores leaderDict:newLeaderList];
+    
+    NSArray *sortedLeaderScores = [allLeaderScores sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            NSString *str1 = (NSString *)obj1;
+            NSString *str2 = (NSString *)obj2;
         
-        CCLabelTTF *currentLeaderLabel = [CCLabelTTF labelWithString:currentLeaderString fontName:@"ArialMT" fontSize:14];
+        NSString *value1 = [newLeaderList objectForKey:str1];
+        NSString *value2 = [newLeaderList objectForKey:str2];
         
-        switch (currentIndex) {
-            case 0:
-                currentLeaderLabel.position = ccp(size.width/2, size.height-100);
-                break;
-            case 1:
-                currentLeaderLabel.position = ccp(size.width/2, size.height-130);
-                break;
-            case 2:
-                currentLeaderLabel.position = ccp(size.width/2, size.height-160);
-                break;
-            case 3:
-                currentLeaderLabel.position = ccp(size.width/2, size.height-190);
-                break;
-            case 4:
-                currentLeaderLabel.position = ccp(size.width/2, size.height-220);
-                break;
-            default:
-                break;
+        return [value1 compare:value2 options:NSNumericSearch];
+        
+    }];
+    
+
+    
+    int leaderScoreCount = [sortedLeaderScores count];
+    if (leaderScoreCount>5) {
+        int counter=0;
+        for (int i=(leaderScoreCount-1); i>=(leaderScoreCount-6); i--) {
+            NSString *currentLeader = [sortedLeaderScores objectAtIndex:i];
+            NSString *currentLeaderScore = [newLeaderList objectForKey:[sortedLeaderScores objectAtIndex:i]];
+            NSString *currentLeaderString = [NSString stringWithFormat:@"USER: %@ ----- SCORE: %@",currentLeader,currentLeaderScore];
+            
+            CCLabelTTF *currentLeaderLabel = [CCLabelTTF labelWithString:currentLeaderString fontName:@"ArialMT" fontSize:14];
+            
+            switch (counter) {
+                case 0:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-220);
+                    break;
+                case 1:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-250);
+                    break;
+                case 2:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-280);
+                    break;
+                case 3:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-310);
+                    break;
+                case 4:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-340);
+                    break;
+                default:
+                    break;
+            }
+            
+            currentLeaderLabel.visible = YES;
+            [self addChild:currentLeaderLabel];
+            counter++;
         }
-        
-        currentLeaderLabel.visible = YES;
-        [self addChild:currentLeaderLabel];
-        ++currentIndex;
+    }
+    else{
+        int counter=0;
+        for (int i=(leaderScoreCount-1); i>=0; i--) {
+            //        NSObject *currentLeader = [leaderList objectAtIndex:i];
+    //        NSLog([newLeaderList objectForKey:[sortedLeaderScores objectAtIndex:i]]);
+            NSString *currentLeader = [sortedLeaderScores objectAtIndex:i];
+            NSString *currentLeaderScore = [newLeaderList objectForKey:[sortedLeaderScores objectAtIndex:i]];
+            NSString *currentLeaderString = [NSString stringWithFormat:@"USER: %@ ----- SCORE: %@",currentLeader,currentLeaderScore];
+            
+            CCLabelTTF *currentLeaderLabel = [CCLabelTTF labelWithString:currentLeaderString fontName:@"ArialMT" fontSize:14];
+            
+            switch (counter) {
+                case 0:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-220);
+                    break;
+                case 1:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-250);
+                    break;
+                case 2:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-280);
+                    break;
+                case 3:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-310);
+                    break;
+                case 4:
+                    currentLeaderLabel.position = ccp(size.width/2, size.height-340);
+                    break;
+                default:
+                    break;
+            }
+            
+            currentLeaderLabel.visible = YES;
+            [self addChild:currentLeaderLabel];
+            counter++;
+        }
     }
     
+    [defaults synchronize];
     
-    
-    //    if( [leaderList count]<5){
-    //        for(int i=0; i<[leaderList count]; i++){
-    //            NSString *currentPlayerScore = [defaults objectForKey:@"currentPlayer"];
-    //            NSString *currentLeaderScore = [defaults objectForKey:[leaderList objectAtIndex:i]];
-    //            if ([defaults objectForKey:@"currentPlayer"] > currentLeaderScore) {
-    //                //[leaderList insertObject:userName atIndex:i];
-    //            }
-    //            [leaderList addObject:strUserName];
-    //            [defaults setObject:currentPlayerScore forKey:strUserName];
-    //            [defaults synchronize];
-    //        }
-    //    }
-    //
-    //    NSString *currentPlayerScore = [defaults objectForKey:@"currentPlayer"];
-    //    [leaderList addObject:strUserName];
-    //    [defaults setObject:currentPlayerScore forKey:strUserName];
-    //    [defaults synchronize];
-    //
-    //    for(int i=0; i<[leaderList count]; i++){
-    //        NSString *currentLeader = [leaderList objectAtIndex:i];
-    //        NSString *currentLeaderScore = [defaults objectForKey:currentLeader];
-    //        NSString *currentLeaderString = [NSString stringWithFormat:@"USER: %@ ----- SCORE: %@",currentLeader,currentLeaderScore];
-    //
-    //        CCLabelTTF *currentLeaderLabel = [CCLabelTTF labelWithString:currentLeaderString fontName:@"ArialMT" fontSize:14];
-    //
-    //        switch (i) {
-    //            case 0:
-    //                currentLeaderLabel.position = ccp(size.width/2, size.height-100);
-    //                break;
-    //            case 1:
-    //                currentLeaderLabel.position = ccp(size.width/2, size.height-130);
-    //                break;
-    //            case 2:
-    //                currentLeaderLabel.position = ccp(size.width/2, size.height-160);
-    //                break;
-    //            case 3:
-    //                currentLeaderLabel.position = ccp(size.width/2, size.height-190);
-    //                break;
-    //            case 4:
-    //                currentLeaderLabel.position = ccp(size.width/2, size.height-220);
-    //                break;
-    //            default:
-    //                break;
-    //        }
-    //        
-    //        currentLeaderLabel.visible = YES;
-    //        [self addChild:currentLeaderLabel];
-    //
-    //    }
-    //
-    //    [defaults synchronize];
-    
-    
-    
+    [self schedule:@selector(exitScene) interval:3];
     
 }
+
+-(void) exitScene{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:8.0 scene:[HelloWorldLayer scene]]];
+    [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:YES];
+
+}
+
+
 @end

@@ -199,7 +199,6 @@
 		94F6E55D18CD119800B296AD /* IconTurtle114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55C18CD119800B296AD /* IconTurtle114x114.png */; };
 		94F6E55F18CD2EDD00B296AD /* IconTurtle120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */; };
 		A213766B18CD9A5800F3AF0F /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A213766A18CD9A5800F3AF0F /* GameOverLayer.m */; };
-		A213766D18CD9B9700F3AF0F /* LeaderBoard.plist in Resources */ = {isa = PBXBuildFile; fileRef = A213766C18CD9B9700F3AF0F /* LeaderBoard.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -557,7 +556,6 @@
 		94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconTurtle120x120.png; path = Resources/IconTurtle120x120.png; sourceTree = "<group>"; };
 		A213766918CD9A5800F3AF0F /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
 		A213766A18CD9A5800F3AF0F /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
-		A213766C18CD9B9700F3AF0F /* LeaderBoard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LeaderBoard.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -675,7 +673,6 @@
 				3FBA4E1818CD8B2100522DC4 /* TutorialScene.m */,
 				A213766918CD9A5800F3AF0F /* GameOverLayer.h */,
 				A213766A18CD9A5800F3AF0F /* GameOverLayer.m */,
-				A213766C18CD9B9700F3AF0F /* LeaderBoard.plist */,
 			);
 			name = TurtleRun;
 			path = TurtleRun2.0;
@@ -1169,7 +1166,6 @@
 				94F6E55918CD015100B296AD /* grass.png in Resources */,
 				9451A15218CBAB510036B62A /* turtle_150x150.png in Resources */,
 				9451A15318CBAB510036B62A /* turtle_placeholder.png in Resources */,
-				A213766D18CD9B9700F3AF0F /* LeaderBoard.plist in Resources */,
 				94519F7B18CB9F000036B62A /* Default.png in Resources */,
 				94519F8518CB9F000036B62A /* Icon-Small-50.png in Resources */,
 				9451A14C18CBAB510036B62A /* clawg.png in Resources */,

@@ -8,14 +8,15 @@
 
 #import "CCLayer.h"
 #import "AppDelegate.h"
+#import "HelloWorldLayer.h"
 
 @interface GameOverLayer : CCLayer
 {
     CCLabelTTF *m_GameOverLabel;
     
 }
-
 +(CCScene *)scene;
 -(void) promptForUsername;
 -(void) updateLeaderBoard;
+-(void) exitScene;
 @end

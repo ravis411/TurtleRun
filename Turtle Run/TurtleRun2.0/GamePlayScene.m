@@ -83,23 +83,38 @@ UITextField *userName;
     
     
     
-    int currentPlayerScore = m_Score;
+    int currentPlayerScore = spriteLayer.totalScore;
     NSString *strCurrentPlayerScore = [NSString stringWithFormat:@"%d", currentPlayerScore];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *leaderList = [[NSMutableArray alloc] init];
-    //    [leaderList addObject:@"Player 1"];
-    //    [leaderList addObject:@"Player 2"];
+    NSMutableDictionary *leaderList = [[NSMutableDictionary alloc] init];
+    
+//    UserModel *leader1 = [[UserModel alloc]init];
+//    UserModel *leader2 = [[UserModel alloc] init];
+//    
+//    [leader1 setUserName:@"Eric"];
+//    [leader1 setScore:@"250"];
+//    
+//    [leader2 setUserName:@"Player 2"];
+//    [leader2 setScore:@"120"];
+    //[leaderList setObject:@"120" forKey:@"Player 2"];
+    [leaderList setObject:@"250" forKey:@"Eric"];
+    [leaderList setObject:@"350" forKey:@"Andrew"];
+    [leaderList setObject:@"450" forKey:@"Kyle"];
+    [leaderList setObject:@"550" forKey:@"Ryan"];
+    
     
     [defaults setObject:leaderList forKey:@"LeaderboardNames"];
     [defaults setObject:strCurrentPlayerScore forKey:@"currentPlayer"];
     
-    [defaults setObject:@"90" forKey:@"Player 1"];
-    [defaults setObject:@"40" forKey:@"Player 2"];
+//    for(int i=0; i<[leaderList count];i++){
+//        NSString *name = [NSString stringWithFormat:@"Leader %d",i];
+//        [defaults setObject:[leaderList objectAtIndex:i] forKey:name];
+//    }
     
     [defaults synchronize];
     
     
-    NSLog(@"\n\n\n calling gameoover \n\n\n");
+    
     
     
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration:0.5 scene:[GameOverLayer scene]]];
