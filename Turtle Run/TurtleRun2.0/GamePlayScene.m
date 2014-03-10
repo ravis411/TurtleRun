@@ -68,7 +68,7 @@ UITextField *userName;
         [spriteLayer setLevel:m_Level];
         spriteLayer.enemiesKilled = 0;
     }
-    m_Score = spriteLayer.score;
+//    m_Score = spriteLayer.score;
     
     
     [uiLayer update:dt level:m_Level lives:m_Lives score:m_Score];
