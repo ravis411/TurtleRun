@@ -42,23 +42,30 @@
 }
 
 -(void)setType:(int)typeValue level:(int)lvl{
+    int temp = arc4random()%2;
     if(typeValue == 1){
             leftToRightVelocity = YES;
             self.diagonalType = NO;
     }
     else if(typeValue == 2){
+        if (temp)
             leftToRightVelocity = YES;
+        else
+            leftToRightVelocity = NO;
             self.diagonalType = YES;
     }
     else if(typeValue == 3){
-        obstacleSpeed+=(lvl*10);
+        obstacleSpeed+=(lvl*15);
         leftToRightVelocity = YES;
         self.diagonalType = NO;
 
     }
     else if(typeValue == 4){
-        obstacleSpeed=(lvl*15);
-        leftToRightVelocity = YES;
+        obstacleSpeed=(lvl*20);
+        if (temp)
+            leftToRightVelocity = YES;
+        else
+            leftToRightVelocity = NO;
         self.diagonalType = YES;
     }
 
@@ -79,16 +86,22 @@
             self.position = ccpAdd(self.position, CGPointMake((int)(-obstacleSpeed * dt),-obstacleSpeed * dt));
         
         //Check for bouncing against walls.
-        if(self.position.x + self.contentSize.width/2>size.width){
-            self.position = ccp(size.width - self.contentSize.width/2, self.position.y);
-            leftToRightVelocity = NO;
-        }
-        else if(self.position.x - self.contentSize.width/2<0){
-            self.position = ccp(0 + self.contentSize.width/2, self.position.y);
-            leftToRightVelocity = YES;
+        if(obstacleSpeed >0){
+            if(self.position.x + self.contentSize.width/2>size.width){
+                self.position = ccp(size.width - self.contentSize.width/2, self.position.y);
+                leftToRightVelocity = NO;
+            }
+            else if(self.position.x - self.contentSize.width/2<0){
+                self.position = ccp(0 + self.contentSize.width/2, self.position.y);
+                leftToRightVelocity = YES;
+            }
         }
     }
     
+}
+
+-(void)setSpeed:(int)spd{
+    obstacleSpeed = spd;
 }
 
 -(void) update:(ccTime)dt {

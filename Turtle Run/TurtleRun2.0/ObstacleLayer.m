@@ -73,6 +73,12 @@
     }
 }
 
+-(void)destroyTarget:(Obstacle*)target{
+    [target setSpeed:-400];
+    [self performSelector:@selector(removeChild:) withObject:target afterDelay:1.0];
+//    [self removeChild:target];
+}
+
 
 
 -(CGRect)rect{

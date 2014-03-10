@@ -5,7 +5,7 @@
 //  Created by Kyle on 2/18/14.
 //  Copyright (c) 2014 USC. All rights reserved.
 //
-#define POWERUP_SHOOTING_DECREMENT -3
+#define POWERUP_SHOOTING_DECREMENT -6
 #define POWERUP_CHANCE 35
 #import "SpriteLayer.h"
 //#import "Obstacle.h"//need this to check for colisions
@@ -177,7 +177,8 @@
         CCSprite *splode = [CCSprite spriteWithFile:@"splode.png"];
         splode.position = remove.position;
         [self addChild:splode];
-        [m_ObstacleLayer removeChild:remove];
+//        [m_ObstacleLayer removeChild:remove];
+        [m_ObstacleLayer destroyTarget:remove];
         [self performSelector:@selector(removeEnemy:) withObject:splode afterDelay:0.1];
     }
 }
@@ -213,7 +214,7 @@
         [m_Turtle update:dt];
         if(m_Turtle.readyToFire){
             for(int i=1;i<=[m_Turtle getCannonCount];i++){
-                int temp = 45 - i*(90/([m_Turtle getCannonCount]+1));
+                int temp = 100 - i*(200/([m_Turtle getCannonCount]+1));
                 [m_TurtleAttackLayer addAttack:10 start:m_Turtle.position degree:temp];
 
             }

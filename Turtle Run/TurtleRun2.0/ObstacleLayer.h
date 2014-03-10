@@ -25,5 +25,5 @@
 -(void)spawn;
 -(void)clean;
 -(void)update:(ccTime)dt level:(int)lvl;
-
+-(void)destroyTarget:(Obstacle*)target;
 @end

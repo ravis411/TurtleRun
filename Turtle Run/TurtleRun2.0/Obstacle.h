@@ -32,4 +32,5 @@
 -(CGRect) rect;
 -(BOOL) contains:(CGPoint)pt;//returns true if the point is within the obstacle
 -(void)setType:(int)typeValue level:(int)lvl;
+-(void)setSpeed:(int)spd;
 @end
