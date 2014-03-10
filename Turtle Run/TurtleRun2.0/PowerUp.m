@@ -40,6 +40,7 @@
             
         case 3:
             type = bomb;
+            [self setDisplayFrame:NULL];
             break;
             
         default:

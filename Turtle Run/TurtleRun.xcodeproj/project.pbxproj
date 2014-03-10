@@ -191,6 +191,8 @@
 		94F6E55B18CD0FE700B296AD /* TurtleIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55A18CD0FE700B296AD /* TurtleIcon57x57.png */; };
 		94F6E55D18CD119800B296AD /* IconTurtle114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55C18CD119800B296AD /* IconTurtle114x114.png */; };
 		94F6E55F18CD2EDD00B296AD /* IconTurtle120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */; };
+		A213766B18CD9A5800F3AF0F /* GameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A213766A18CD9A5800F3AF0F /* GameOverLayer.m */; };
+		A213766D18CD9B9700F3AF0F /* LeaderBoard.plist in Resources */ = {isa = PBXBuildFile; fileRef = A213766C18CD9B9700F3AF0F /* LeaderBoard.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -539,6 +541,9 @@
 		94F6E55A18CD0FE700B296AD /* TurtleIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TurtleIcon57x57.png; path = Resources/TurtleIcon57x57.png; sourceTree = "<group>"; };
 		94F6E55C18CD119800B296AD /* IconTurtle114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconTurtle114x114.png; path = Resources/IconTurtle114x114.png; sourceTree = "<group>"; };
 		94F6E55E18CD2EDD00B296AD /* IconTurtle120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconTurtle120x120.png; path = Resources/IconTurtle120x120.png; sourceTree = "<group>"; };
+		A213766918CD9A5800F3AF0F /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
+		A213766A18CD9A5800F3AF0F /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
+		A213766C18CD9B9700F3AF0F /* LeaderBoard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LeaderBoard.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -654,6 +659,9 @@
 				944F3C9B18CD3C4D000AA17D /* Images.xcassets */,
 				3FBA4E1718CD8B2100522DC4 /* TutorialScene.h */,
 				3FBA4E1818CD8B2100522DC4 /* TutorialScene.m */,
+				A213766918CD9A5800F3AF0F /* GameOverLayer.h */,
+				A213766A18CD9A5800F3AF0F /* GameOverLayer.m */,
+				A213766C18CD9B9700F3AF0F /* LeaderBoard.plist */,
 			);
 			name = TurtleRun;
 			path = TurtleRun2.0;
@@ -1139,6 +1147,7 @@
 				94F6E55918CD015100B296AD /* grass.png in Resources */,
 				9451A15218CBAB510036B62A /* turtle_150x150.png in Resources */,
 				9451A15318CBAB510036B62A /* turtle_placeholder.png in Resources */,
+				A213766D18CD9B9700F3AF0F /* LeaderBoard.plist in Resources */,
 				94519F7B18CB9F000036B62A /* Default.png in Resources */,
 				94519F8518CB9F000036B62A /* Icon-Small-50.png in Resources */,
 				9451A14C18CBAB510036B62A /* clawg.png in Resources */,
@@ -1242,6 +1251,7 @@
 				9451A0CD18CB9F020036B62A /* CocosDenshion.m in Sources */,
 				9451A05218CB9F010036B62A /* CCTextureCache.m in Sources */,
 				9451A0F518CB9F020036B62A /* neon_matrix_impl.c in Sources */,
+				A213766B18CD9A5800F3AF0F /* GameOverLayer.m in Sources */,
 				9451A02518CB9F010036B62A /* CCScene.m in Sources */,
 				94519FA418CB9F000036B62A /* CCActionGrid3D.m in Sources */,
 				9451A0ED18CB9F020036B62A /* mat4stack.c in Sources */,

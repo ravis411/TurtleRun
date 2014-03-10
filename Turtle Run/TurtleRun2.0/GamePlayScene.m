@@ -15,6 +15,11 @@
 @synthesize lives = m_Lives;
 @synthesize weaponLevel = m_WeaponLevel;
 @synthesize deadObstacles = m_DeadObstacles;
+@synthesize score = m_Score;
+
+bool startGameOverFlag = NO;
+
+UITextField *userName;
 
 - (id)init
 {
@@ -36,6 +41,7 @@
         m_Lives = 3;
         m_WeaponLevel = 1;
         //        m_DeadObstacles = 0;
+        m_Score = 0;
         
         [self scheduleUpdate];
     }
@@ -48,9 +54,10 @@
     
     [spriteLayer update:dt];
     
-    if(m_Lives == 0){
+    if(m_Lives == 0 && startGameOverFlag==NO){
         [spriteLayer clearChildren];
         [self startGameOver];
+        startGameOverFlag = YES;
     }
     
     m_Lives = spriteLayer.turtleLives;
@@ -62,15 +69,41 @@
         [spriteLayer setLevel:m_Level];
         spriteLayer.enemiesKilled = 0;
     }
-    [uiLayer update:dt level:m_Level lives:m_Lives];
+//    m_Score = spriteLayer.score;
+    
+    
+    [uiLayer update:dt level:m_Level lives:m_Lives score:m_Score];
     
 }
 
 -(void)startGameOver{
-    [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:NO];
-    [[SimpleAudioEngine sharedEngine] stopEffect:soundEffectID];
-    [uiLayer showGameOverLabel];
-    [self scheduleOnce:@selector(exitScene) delay:3];
+    //    [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:NO];
+    //    [uiLayer showGameOverLabel];
+    //    [self scheduleOnce:@selector(exitScene) delay:3];
+    
+    
+    
+    int currentPlayerScore = m_Score;
+    NSString *strCurrentPlayerScore = [NSString stringWithFormat:@"%d", currentPlayerScore];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *leaderList = [[NSMutableArray alloc] init];
+    //    [leaderList addObject:@"Player 1"];
+    //    [leaderList addObject:@"Player 2"];
+    
+    [defaults setObject:leaderList forKey:@"LeaderboardNames"];
+    [defaults setObject:strCurrentPlayerScore forKey:@"currentPlayer"];
+    
+    [defaults setObject:@"90" forKey:@"Player 1"];
+    [defaults setObject:@"40" forKey:@"Player 2"];
+    
+    [defaults synchronize];
+    
+    
+    NSLog(@"\n\n\n calling gameoover \n\n\n");
+    
+    
+    [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration:0.5 scene:[GameOverLayer scene]]];
+    [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:YES];
 }
 
 -(void) exitScene{
