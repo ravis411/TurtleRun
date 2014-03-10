@@ -19,7 +19,7 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"clawg_64x64.png"];
+    self = [super initWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"clawg.png"]];
     
     if (self) {
         hp = 100;

@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D629ACA18CD558E00555851 /* turtle0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629ABF18CD558E00555851 /* turtle0.png */; };
-		3D629ACB18CD558E00555851 /* turtle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC018CD558E00555851 /* turtle1.png */; };
-		3D629ACC18CD558E00555851 /* turtle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC118CD558E00555851 /* turtle2.png */; };
-		3D629ACD18CD558E00555851 /* turtle3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC218CD558E00555851 /* turtle3.png */; };
-		3D629ACE18CD558E00555851 /* turtle4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC318CD558E00555851 /* turtle4.png */; };
-		3D629ACF18CD558E00555851 /* turtle5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC418CD558E00555851 /* turtle5.png */; };
-		3D629AD018CD558E00555851 /* turtle6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC518CD558E00555851 /* turtle6.png */; };
-		3D629AD118CD558E00555851 /* turtle7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC618CD558E00555851 /* turtle7.png */; };
-		3D629AD218CD558E00555851 /* turtle8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC718CD558E00555851 /* turtle8.png */; };
+		3D3E216D18CD817000003E86 /* atlas0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216B18CD817000003E86 /* atlas0.plist */; };
+		3D3E216E18CD817000003E86 /* atlas0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216C18CD817000003E86 /* atlas0.png */; };
+		3D3E217D18CD81B800003E86 /* turtle0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217218CD81B800003E86 /* turtle0.png */; };
+		3D3E217E18CD81B800003E86 /* turtle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217318CD81B800003E86 /* turtle1.png */; };
+		3D3E217F18CD81B800003E86 /* turtle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217418CD81B800003E86 /* turtle2.png */; };
+		3D3E218018CD81B800003E86 /* turtle3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217518CD81B800003E86 /* turtle3.png */; };
+		3D3E218118CD81B800003E86 /* turtle4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217618CD81B800003E86 /* turtle4.png */; };
+		3D3E218218CD81B800003E86 /* turtle5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217718CD81B800003E86 /* turtle5.png */; };
+		3D3E218318CD81B800003E86 /* turtle6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217818CD81B800003E86 /* turtle6.png */; };
+		3D3E218418CD81B800003E86 /* turtle7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217918CD81B800003E86 /* turtle7.png */; };
+		3D3E218518CD81B800003E86 /* turtle8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217A18CD81B800003E86 /* turtle8.png */; };
+		3D3E218818CD821A00003E86 /* atlas0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E218618CD821A00003E86 /* atlas0.plist */; };
+		3D3E218918CD821A00003E86 /* atlas0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E218718CD821A00003E86 /* atlas0.png */; };
 		3D629AD318CD558E00555851 /* turtlesheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC818CD558E00555851 /* turtlesheet.plist */; };
 		3D629AD418CD558E00555851 /* turtlesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D629AC918CD558E00555851 /* turtlesheet.png */; };
 		4999C44718CC197300D2B9EC /* PowerUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4999C44618CC197300D2B9EC /* PowerUp.m */; };
@@ -188,15 +192,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D629ABF18CD558E00555851 /* turtle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle0.png; sourceTree = "<group>"; };
-		3D629AC018CD558E00555851 /* turtle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle1.png; sourceTree = "<group>"; };
-		3D629AC118CD558E00555851 /* turtle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle2.png; sourceTree = "<group>"; };
-		3D629AC218CD558E00555851 /* turtle3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle3.png; sourceTree = "<group>"; };
-		3D629AC318CD558E00555851 /* turtle4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle4.png; sourceTree = "<group>"; };
-		3D629AC418CD558E00555851 /* turtle5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle5.png; sourceTree = "<group>"; };
-		3D629AC518CD558E00555851 /* turtle6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle6.png; sourceTree = "<group>"; };
-		3D629AC618CD558E00555851 /* turtle7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle7.png; sourceTree = "<group>"; };
-		3D629AC718CD558E00555851 /* turtle8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle8.png; sourceTree = "<group>"; };
+		3D3E216B18CD817000003E86 /* atlas0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = atlas0.plist; path = Resources/atlas0.plist; sourceTree = "<group>"; };
+		3D3E216C18CD817000003E86 /* atlas0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atlas0.png; path = Resources/atlas0.png; sourceTree = "<group>"; };
+		3D3E217218CD81B800003E86 /* turtle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle0.png; sourceTree = "<group>"; };
+		3D3E217318CD81B800003E86 /* turtle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle1.png; sourceTree = "<group>"; };
+		3D3E217418CD81B800003E86 /* turtle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle2.png; sourceTree = "<group>"; };
+		3D3E217518CD81B800003E86 /* turtle3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle3.png; sourceTree = "<group>"; };
+		3D3E217618CD81B800003E86 /* turtle4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle4.png; sourceTree = "<group>"; };
+		3D3E217718CD81B800003E86 /* turtle5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle5.png; sourceTree = "<group>"; };
+		3D3E217818CD81B800003E86 /* turtle6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle6.png; sourceTree = "<group>"; };
+		3D3E217918CD81B800003E86 /* turtle7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle7.png; sourceTree = "<group>"; };
+		3D3E217A18CD81B800003E86 /* turtle8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle8.png; sourceTree = "<group>"; };
+		3D3E218618CD821A00003E86 /* atlas0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = atlas0.plist; path = TurtleRun2.0/Resources/atlas0.plist; sourceTree = SOURCE_ROOT; };
+		3D3E218718CD821A00003E86 /* atlas0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atlas0.png; path = TurtleRun2.0/Resources/atlas0.png; sourceTree = SOURCE_ROOT; };
 		3D629AC818CD558E00555851 /* turtlesheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = turtlesheet.plist; sourceTree = "<group>"; };
 		3D629AC918CD558E00555851 /* turtlesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtlesheet.png; sourceTree = "<group>"; };
 		4999C44518CC197300D2B9EC /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUp.h; sourceTree = "<group>"; };
@@ -549,20 +557,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D629ABE18CD558E00555851 /* TurtleAtlas */ = {
+		3D3E216F18CD81B800003E86 /* TurtleAtlas */ = {
 			isa = PBXGroup;
 			children = (
-				3D629ABF18CD558E00555851 /* turtle0.png */,
-				3D629AC018CD558E00555851 /* turtle1.png */,
-				3D629AC118CD558E00555851 /* turtle2.png */,
-				3D629AC218CD558E00555851 /* turtle3.png */,
-				3D629AC318CD558E00555851 /* turtle4.png */,
-				3D629AC418CD558E00555851 /* turtle5.png */,
-				3D629AC518CD558E00555851 /* turtle6.png */,
-				3D629AC618CD558E00555851 /* turtle7.png */,
-				3D629AC718CD558E00555851 /* turtle8.png */,
+				3D3E217218CD81B800003E86 /* turtle0.png */,
+				3D3E217318CD81B800003E86 /* turtle1.png */,
+				3D3E217418CD81B800003E86 /* turtle2.png */,
+				3D3E217518CD81B800003E86 /* turtle3.png */,
+				3D3E217618CD81B800003E86 /* turtle4.png */,
+				3D3E217718CD81B800003E86 /* turtle5.png */,
+				3D3E217818CD81B800003E86 /* turtle6.png */,
+				3D3E217918CD81B800003E86 /* turtle7.png */,
+				3D3E217A18CD81B800003E86 /* turtle8.png */,
 			);
-			path = TurtleAtlas;
+			name = TurtleAtlas;
+			path = Resources/TurtleAtlas;
 			sourceTree = "<group>";
 		};
 		94519F5818CB9F000036B62A = {
@@ -646,7 +655,9 @@
 		94519F7918CB9F000036B62A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3D629ABE18CD558E00555851 /* TurtleAtlas */,
+				3D3E216F18CD81B800003E86 /* TurtleAtlas */,
+				3D3E218618CD821A00003E86 /* atlas0.plist */,
+				3D3E218718CD821A00003E86 /* atlas0.png */,
 				3D629AC818CD558E00555851 /* turtlesheet.plist */,
 				3D629AC918CD558E00555851 /* turtlesheet.png */,
 				944F3C9918CD3AF2000AA17D /* Default.png */,
@@ -660,6 +671,8 @@
 				9451A13C18CBAB510036B62A /* blocks.png */,
 				9451A13D18CBAB510036B62A /* cannon_spritesheet.png */,
 				9451A13E18CBAB510036B62A /* clawg_64x64.png */,
+				3D3E216B18CD817000003E86 /* atlas0.plist */,
+				3D3E216C18CD817000003E86 /* atlas0.png */,
 				9451A13F18CBAB510036B62A /* clawg.png */,
 				9451A14018CBAB510036B62A /* fireandflames.mp3 */,
 				9451A14118CBAB510036B62A /* floortile.jpg */,
@@ -1129,17 +1142,21 @@
 				9451A14918CBAB510036B62A /* blocks.png in Resources */,
 				9451A14A18CBAB510036B62A /* cannon_spritesheet.png in Resources */,
 				944F3C9A18CD3AF2000AA17D /* Default.png in Resources */,
-				3D629ACA18CD558E00555851 /* turtle0.png in Resources */,
-				3D629ACB18CD558E00555851 /* turtle1.png in Resources */,
-				3D629ACC18CD558E00555851 /* turtle2.png in Resources */,
-				3D629ACD18CD558E00555851 /* turtle3.png in Resources */,
-				3D629ACE18CD558E00555851 /* turtle4.png in Resources */,
-				3D629ACF18CD558E00555851 /* turtle5.png in Resources */,
-				3D629AD018CD558E00555851 /* turtle6.png in Resources */,
-				3D629AD118CD558E00555851 /* turtle7.png in Resources */,
-				3D629AD218CD558E00555851 /* turtle8.png in Resources */,
 				3D629AD318CD558E00555851 /* turtlesheet.plist in Resources */,
 				3D629AD418CD558E00555851 /* turtlesheet.png in Resources */,
+				3D3E216D18CD817000003E86 /* atlas0.plist in Resources */,
+				3D3E216E18CD817000003E86 /* atlas0.png in Resources */,
+				3D3E217D18CD81B800003E86 /* turtle0.png in Resources */,
+				3D3E217E18CD81B800003E86 /* turtle1.png in Resources */,
+				3D3E217F18CD81B800003E86 /* turtle2.png in Resources */,
+				3D3E218018CD81B800003E86 /* turtle3.png in Resources */,
+				3D3E218118CD81B800003E86 /* turtle4.png in Resources */,
+				3D3E218218CD81B800003E86 /* turtle5.png in Resources */,
+				3D3E218318CD81B800003E86 /* turtle6.png in Resources */,
+				3D3E218418CD81B800003E86 /* turtle7.png in Resources */,
+				3D3E218518CD81B800003E86 /* turtle8.png in Resources */,
+				3D3E218818CD821A00003E86 /* atlas0.plist in Resources */,
+				3D3E218918CD821A00003E86 /* atlas0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
