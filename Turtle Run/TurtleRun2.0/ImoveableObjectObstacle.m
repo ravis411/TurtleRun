@@ -31,10 +31,7 @@ static int obstacleSpeed = 10;
     return self;
 }
 
-//basic southward movement shared by all Obstacles
--(void) travel {
-    
-}
+
 
 -(void) update:(ccTime)dt {
     self.position = ccpAdd(self.position, CGPointMake(0, (int)(-100*dt)) );
