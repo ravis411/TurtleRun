@@ -71,6 +71,9 @@ UITextField *userName;
     }
     [uiLayer update:dt level:m_Level lives:m_Lives killed:spriteLayer.totalEnemiesKilled score:spriteLayer.totalScore];
     
+    
+//    [uiLayer update:dt level:m_Level lives:m_Lives score:m_Score];
+    
 }
 
 -(void)startGameOver{
