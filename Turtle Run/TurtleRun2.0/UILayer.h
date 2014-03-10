@@ -15,9 +15,12 @@
     CCLabelTTF *m_LifeLabel;
     CCLabelTTF *m_WeaponLabel;
     CCLabelTTF *m_GameOverLabel;
+    CCLabelTTF *m_EnemyKilledLabel;
+    NSMutableArray *heartCount;
+    CGSize size;
 }
 
 -(void) showGameOverLabel;
 
--(void) update:(ccTime)dt level:(int) currentLevel lives:(int)currentLives;
+-(void) update:(ccTime)dt level:(int) currentLevel lives:(int)currentLives killed:(int)currentKilled;
 @end

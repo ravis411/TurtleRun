@@ -87,7 +87,7 @@
         [spriteLayer level:m_Level];
         spriteLayer.enemiesKilled = 0;
     }
-    [uiLayer update:dt level:m_Level lives:m_Lives];
+    [uiLayer update:dt level:m_Level lives:m_Lives killed:spriteLayer.totalEnemiesKilled];
     
 }
 

@@ -20,6 +20,7 @@
     self = [super init];
     if (self) {
         self.enemiesKilled = 0;
+        self.totalEnemiesKilled = 0;
         //        CGSize size = [[CCDirector sharedDirector] winSize];
         powerUpProbability = POWERUP_CHANCE;
         currentLevel = 1;
@@ -135,13 +136,13 @@
                     [removeEnemiesList addObject:child];
                     [removeBulletsList addObject:t];
                     self.enemiesKilled +=1;
+                    self.totalEnemiesKilled++;
 //                    NSLog(@"%i, Enemies hit!",self.enemiesKilled);
                     NSUInteger randomIndex = arc4random() % powerUpProbability;
-
                     if(randomIndex == 0){
                         NSLog(@"Randomly Dropped Item!");
                         [m_PowerUpLayer dropItem:[child rect]];
-                        powerUpProbability = POWERUP_CHANCE;
+                        powerUpProbability = POWERUP_CHANCE+(currentLevel*10);
                     }
                     else
                         powerUpProbability--;

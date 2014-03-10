@@ -29,6 +29,7 @@
 
 
 @property int enemiesKilled;
+@property int totalEnemiesKilled;
 @property int turtleLives;
 
 

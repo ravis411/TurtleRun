@@ -14,23 +14,36 @@
 {
     self = [super init];
     if (self) {
-        CGSize size = [[CCDirector sharedDirector] winSize];
+        size = [[CCDirector sharedDirector] winSize];
         
-        m_LevelLabel = [CCLabelTTF labelWithString:@"Level: 1" fontName:@"ArialMT" fontSize:18];
-        m_LevelLabel.position = ccp(size.width/2 - 80, size.height-10);
+        m_LevelLabel = [CCLabelTTF labelWithString:@"Level: 1" fontName:@"ArialMT" fontSize:25];
+        m_LevelLabel.position = ccp(50, size.height-15);
         m_LevelLabel.visible = YES;
         [self addChild:m_LevelLabel];
         
-        m_LifeLabel = [CCLabelTTF labelWithString:@"Lives: 3" fontName:@"ArialMT" fontSize:18];
-        m_LifeLabel.position = ccp(size.width/2 + 80, size.height-10);
-        m_LifeLabel.visible = YES;
-        [self addChild:m_LifeLabel];
+//        m_LifeLabel = [CCLabelTTF labelWithString:@"Lives: 3" fontName:@"ArialMT" fontSize:18];
+//        m_LifeLabel.position = ccp(size.width/2 + 80, size.height-10);
+//        m_LifeLabel.visible = YES;
+//        [self addChild:m_LifeLabel];
         // m_WeaponLabel = [CCLabelTTF labelWithString:@"Weapon: Fire" fontName:@"Marker Felt" fontSize:12];
+        
+        
+        m_EnemyKilledLabel = [CCLabelTTF labelWithString:@"Kills: 0" fontName:@"ArialMT" fontSize:15];
+        m_EnemyKilledLabel.position = ccp(size.width - 47, size.height-37);
+        m_EnemyKilledLabel.visible = YES;
+        [self addChild:m_EnemyKilledLabel];
         
         m_GameOverLabel = [CCLabelTTF labelWithString:@"Game Over" fontName:@"ArialMT" fontSize:34];
         m_GameOverLabel.position = ccp(size.width/2, size.height/2);
         m_GameOverLabel.visible = NO;
         [self addChild:m_GameOverLabel];
+        heartCount = [[NSMutableArray alloc]init];
+        for(int i=0;i<3;i++){
+            CCSprite *heart = [CCSprite spriteWithFile:@"heart.png"];
+            heart.position = ccp(size.width -17 - (30*i), size.height-15);
+            [heartCount addObject:heart];
+            [self addChild:heart];
+        }
     }
     return self;
 }
@@ -39,8 +52,23 @@
     m_GameOverLabel.visible = YES;
 }
 
--(void) update:(ccTime)dt level: (int)currentLevel lives: (int) currentLives{
+-(void) update:(ccTime)dt level: (int)currentLevel lives: (int) currentLives killed:(int)currentKilled{
     m_LevelLabel.string = [NSString stringWithFormat:@"Level: %d", currentLevel];
-    m_LifeLabel.string = [NSString stringWithFormat:@"Lives: %d", currentLives];
+//    m_LifeLabel.string = [NSString stringWithFormat:@"Lives: %d", currentLives];
+    if(currentLives != heartCount.count){
+        //remove all other
+        for(CCSprite* s in heartCount){
+            [self removeChild:s];
+        }
+        [heartCount removeAllObjects];
+        
+        for(int i=0;i<currentLives;i++){
+            CCSprite *heart = [CCSprite spriteWithFile:@"heart.png"];
+            heart.position = ccp(size.width -17 - (30*i), size.height-15);
+            [heartCount addObject:heart];
+            [self addChild:heart];
+        }
+    }
+    m_EnemyKilledLabel.string = [NSString stringWithFormat:@"Kills: %d", currentKilled];
 }
 @end
