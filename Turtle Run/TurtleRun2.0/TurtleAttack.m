@@ -15,6 +15,7 @@
 
 -(id)init{
     self = [super initWithFile:@"blast.png"];
+    [self setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"blast.png"]];
     if (self) {
         winSize = [[CCDirector sharedDirector] winSize];
         self.position = ccp(winSize.width/2, 350);
