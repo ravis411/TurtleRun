@@ -16,8 +16,11 @@
     CGPoint m_MoveToPoint; //The point the turtle should move to
     CGSize winSize;//The size of the window
     int speed; //Speed of turtle
+    int animframe;
+    BOOL spriteRest;
     float yPosition; //The y value of the position should always be the same
     
+    CCArray *frames;
     
     enum turtleWeapon{
         fire,

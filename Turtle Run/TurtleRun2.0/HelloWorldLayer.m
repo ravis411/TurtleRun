@@ -57,9 +57,22 @@
 		[label setColor:ccc3(120,255,120)];
 		label.position = ccp( size.width/2, size.height-75);
         
+        //BATCHING SPRITES
+        CCSpriteBatchNode *atlasNode;
+        atlasNode = [CCSpriteBatchNode batchNodeWithFile:@"turtlesheet.png"];
+        [self addChild:atlasNode];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"turtlesheet.plist"];
         
+        NSMutableArray *animFrames = [NSMutableArray array];
+        for (int i = 1; i <= 5; i++) {
+            NSString *file = [NSString stringWithFormat:@"turtle%d.png", i];
+            CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:file];
+            [animFrames addObject:frame];
+        }
         
 		[self createMenu];
+        
+        [self scheduleUpdate];
 		
 
 	}
@@ -69,14 +82,30 @@
 
 
 
+#import "BackgroundLayer.h"
+#import "Turtle.h"
 
-
+-(void) update:(ccTime)dt{
+    for (CCNode *s in self.children) {
+        [s update:dt];
+    }
+    
+}
 
 
 
 -(void) createMenu
 {
-	// Default font size will be 22 points.
+	
+    Turtle *turtle = [Turtle node];
+    BackgroundLayer *background = [BackgroundLayer node];
+    
+    [self addChild:background z:-2];
+    [self addChild:turtle z:-1];
+    
+    
+    
+    // Default font size will be 22 points.
 	[CCMenuItemFont setFontSize:22];
     
 	// to avoid a retain-cycle with the menuitem and blocks
@@ -124,7 +153,7 @@
     //Start New Game
     
     CCMenuItem *itemNewGame = [CCMenuItemFont itemWithString:@"New Game" block:^(id sender) {
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[GamePlayScene node]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.0 scene:[GamePlayScene node]]];
     }];
 	
 	CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, itemNewGame, nil];
@@ -137,6 +166,8 @@
 	
 	
 	[self addChild: menu z:-1];
+    
+    
 }
 
 
