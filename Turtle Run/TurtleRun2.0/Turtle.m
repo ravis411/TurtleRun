@@ -19,6 +19,7 @@
 {
     self = [super initWithFile:@"turtle_150x150.png"];
     if (self) {
+        spriteRest = false;
         updateCount = 0;
         yPosition = 50;
         speed = 400;
@@ -29,6 +30,7 @@
         m_weaponLevel = 1;
         shootingRate = 20;
         cannonCount = 1;
+        animframe = 0;
     }
     return self;
 }
@@ -47,7 +49,9 @@
     self.position = self.moveToPoint = ccp(pt.x, yPosition);
 }
 
--(void) update:(ccTime)dt{
+
+
+-(void) update:(ccTime)dt{    
     updateCount=updateCount+ 1;
     if(updateCount>shootingRate){
         self.readyToFire = YES;
@@ -56,6 +60,19 @@
     else{
         self.readyToFire = NO;
     }
+    
+    if (spriteRest) {
+        spriteRest = false;
+    }
+    else {
+    animframe++;
+        if (animframe > 8) {animframe = 0;}
+        CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache]
+                                spriteFrameByName:[NSString stringWithFormat:@"turtle%d.png", animframe]];
+        [self setDisplayFrame:frame];
+        spriteRest = true;
+    }
+
     
     //CGSize size = [[CCDirector sharedDirector] winSize];
     
