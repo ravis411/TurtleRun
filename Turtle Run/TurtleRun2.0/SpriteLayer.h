@@ -17,13 +17,14 @@
 @interface SpriteLayer : CCLayer {
     bool draggingTurtle; //For when the user is dragging the turtle.
     Turtle *m_Turtle;
-    Obstacle *m_ObstacleLayer;
+    ObstacleLayer *m_ObstacleLayer;
     TurtleAttackLayer *m_TurtleAttackLayer;
     PowerUpLayer *m_PowerUpLayer;
     int m_TurtleLives;
     BOOL gameOver;
     BackgroundLayer *m_BackgroundLayer;
     int powerUpProbability;
+    int currentLevel;
 }
 
 
@@ -44,4 +45,5 @@
 -(void)dealloc;
 
 -(void)level:(int)level;
+-(void)setLevel:(int)lvl;
 @end

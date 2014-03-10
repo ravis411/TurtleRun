@@ -14,13 +14,14 @@
 @interface Obstacle : CCSprite {
     CCTexture2D *texSplode;
     BOOL leftToRightVelocity;
+    int obstacleSpeed;
 
 }
 
 @property int hp;
 @property BOOL diagonalType;
 
-+ (int) speed;
+//+ (int) speed;
 -(void) hit:(int)damage;
 -(bool) dies;
 -(void) splode;
@@ -30,5 +31,5 @@
 -(void) dealloc;
 -(CGRect) rect;
 -(BOOL) contains:(CGPoint)pt;//returns true if the point is within the obstacle
--(void)setType:(int)typeValue;
+-(void)setType:(int)typeValue level:(int)lvl;
 @end

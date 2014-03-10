@@ -88,6 +88,8 @@
         
         
 		[self createMenu];
+        
+        [self scheduleUpdate];
 		
 
 	}
@@ -97,14 +99,30 @@
 
 
 
+#import "BackgroundLayer.h"
+#import "Turtle.h"
 
-
+-(void) update:(ccTime)dt{
+    for (CCNode *s in self.children) {
+        [s update:dt];
+    }
+    
+}
 
 
 
 -(void) createMenu
 {
-	// Default font size will be 22 points.
+	
+    Turtle *turtle = [Turtle node];
+    BackgroundLayer *background = [BackgroundLayer node];
+    
+    [self addChild:background z:-2];
+    [self addChild:turtle z:-1];
+    
+    
+    
+    // Default font size will be 22 points.
 	[CCMenuItemFont setFontSize:22];
     
 	// to avoid a retain-cycle with the menuitem and blocks
@@ -152,7 +170,7 @@
     //Start New Game
     
     CCMenuItem *itemNewGame = [CCMenuItemFont itemWithString:@"New Game" block:^(id sender) {
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[GamePlayScene node]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.0 scene:[GamePlayScene node]]];
     }];
 	
 	CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, itemNewGame, nil];
@@ -165,6 +183,8 @@
 	
 	
 	[self addChild: menu z:-1];
+    
+    
 }
 
 

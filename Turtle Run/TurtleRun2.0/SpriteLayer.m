@@ -22,6 +22,7 @@
         self.enemiesKilled = 0;
         //        CGSize size = [[CCDirector sharedDirector] winSize];
         powerUpProbability = POWERUP_CHANCE;
+        currentLevel = 1;
         m_BackgroundLayer = [BackgroundLayer node];
         [self addChild:m_BackgroundLayer];
         
@@ -193,11 +194,16 @@
     //        [self removeChild:attack];
     //    }
     //    [self removeChild:m_Turtle];
+    currentLevel = 1;
     gameOver = YES;
     [self removeAllChildrenWithCleanup:YES];
     
     
 }
+-(void)setLevel:(int)lvl{
+    currentLevel = lvl;
+}
+
 
 
 -(void) update:(ccTime)dt {
@@ -212,7 +218,8 @@
 
             }
         }
-        [m_ObstacleLayer update:dt];
+//        [m_ObstacleLayer update:dt];
+        [m_ObstacleLayer update:dt level:currentLevel];
         [m_TurtleAttackLayer update:dt];
         [m_PowerUpLayer update:dt];
     }
