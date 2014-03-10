@@ -205,6 +205,7 @@
 }
 -(void)setLevel:(int)lvl{
     currentLevel = lvl;
+    [m_BackgroundLayer changeBackground:lvl];
 }
 
 
@@ -231,7 +232,7 @@
 
 
 -(void)level:(int)level{
-    [m_BackgroundLayer changeBackground:level];
+    
 }
 
 

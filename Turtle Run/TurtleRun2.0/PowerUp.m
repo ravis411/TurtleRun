@@ -26,18 +26,21 @@
     switch (value) {
         case 0:
             type = weapons;
-            [self setTexture:[[CCTextureCache sharedTextureCache] addImage:@"splode.png"]];
+            [self setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"scatterup.png"]];
             break;
         case 1:
             type = shootingAbility;
+            [self setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"fpsup.png"]];
             break;
 
         case 2:
             type = lives;
+            [self setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"oneup.png"]];
             break;
             
         case 3:
             type = bomb;
+            [self setDisplayFrame:NULL];
             break;
             
         default:

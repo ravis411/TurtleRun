@@ -19,13 +19,12 @@
 
 - (id)init
 {
-    self = [super initWithFile:@"clawg_64x64.png"];
+    self = [super initWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"clawg.png"]];
     
     if (self) {
         hp = 100;
         int cols = 4;
         int col = arc4random_uniform(cols);
-        texSplode = [[CCTextureCache sharedTextureCache] addImage:@"splode.png"];
         CGSize size = [[CCDirector sharedDirector] winSize];
         self.position = ccp(
 
@@ -125,7 +124,7 @@
 
 -(void) splode {
     obstacleSpeed = 100;
-    [self addChild:[CCSprite spriteWithTexture:texSplode]];
+    [self addChild:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"splode.png"]];
 }
 
 

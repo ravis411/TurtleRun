@@ -49,9 +49,7 @@
     self.position = self.moveToPoint = ccp(pt.x, yPosition);
 }
 
-
-
--(void) update:(ccTime)dt{    
+-(void) update:(ccTime)dt{
     updateCount=updateCount+ 1;
     if(updateCount>shootingRate){
         self.readyToFire = YES;
