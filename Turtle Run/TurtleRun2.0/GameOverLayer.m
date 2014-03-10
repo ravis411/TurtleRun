@@ -10,6 +10,7 @@
 
 UITextField *userName;
 NSString *strUserName;
+UIButton *doneButton;
 
 @implementation GameOverLayer
 +(CCScene *) scene{
@@ -42,18 +43,17 @@ NSString *strUserName;
         
         NSMutableArray *leaderList = [defaults objectForKey:@"LeaderboardNames"];
         
+        doneButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [doneButton addTarget:self
+                   action:@selector(exitScene)
+         forControlEvents:UIControlEventTouchDown];
+        [doneButton setTitle:@"Done" forState:UIControlStateNormal];
+        [doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        doneButton.frame = CGRectMake(80.0, 440.0, 160.0, 40.0);
         
+        [[[[CCDirector sharedDirector] openGLView] window] addSubview:doneButton];
         
-//        for(int i=0; i<[leaderList count]; i++){
-//            NSString *currentLeader = [leaderList objectAtIndex:i];
-//            NSString *currentLeaderScore = [defaults objectForKey:currentLeader];
-//            
-//            NSString *currentLeaderDescription = [NSString stringWithFormat:@"%@ -- %@",currentLeader, currentLeaderScore ];
-//            CCLabelTTF *user1label = [CCLabelTTF labelWithString:currentLeaderDescription fontName:@"ArialMT" fontSize:14];
-//            user1label.position = ccp(size.width/2, size.height-50-(1*10));
-//            user1label.visible = NO;
-//            [self addChild:user1label];
-//        }
+
         
         [self promptForUsername];
        
@@ -245,13 +245,14 @@ NSString *strUserName;
     
     [defaults synchronize];
     
-    [self schedule:@selector(exitScene) interval:3];
+//    [self schedule:@selector(exitScene) interval:3];
     
 }
 
 -(void) exitScene{
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:8.0 scene:[HelloWorldLayer scene]]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.0 scene:[HelloWorldLayer scene]]];
     [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:YES];
+    [doneButton removeFromSuperview];
 
 }
 
