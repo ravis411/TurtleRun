@@ -42,6 +42,7 @@ UITextField *userName;
         m_WeaponLevel = 1;
         //        m_DeadObstacles = 0;
         m_Score = 0;
+        startGameOverFlag = NO;
         
         [self scheduleUpdate];
     }
@@ -115,7 +116,7 @@ UITextField *userName;
     
     
     
-    
+    [[SimpleAudioEngine sharedEngine] stopEffect:soundEffectID];
     
     [[CCDirector sharedDirector] replaceScene: [CCTransitionFade transitionWithDuration:0.5 scene:[GameOverLayer scene]]];
     [[CCTouchDispatcher sharedDispatcher] setDispatchEvents:YES];

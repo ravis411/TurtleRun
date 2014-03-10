@@ -47,7 +47,7 @@
         
         self.touchEnabled = YES;
         
-        backLabel = [CCLabelTTF labelWithString:@"<-Back" fontName:@"ArialMT" fontSize:20];
+        backLabel = [CCLabelTTF labelWithString:@"<<Back" fontName:@"ArialMT" fontSize:20];
         backLabel.color = ccc3(120,255,120);
         backLabel.position = ccp(0, size.height-100);
         backLabel.anchorPoint = ccp(0, 0);

@@ -112,7 +112,7 @@
                         [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
                         break;
                     case 2:
-                        [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
+                        m_TurtleLives++;
                         break;
                     case 3:
                         [m_Turtle changeShootingPauses:POWERUP_SHOOTING_DECREMENT];
@@ -226,7 +226,9 @@
 
 
 
+
 -(void) update:(ccTime)dt {
+    NSLog(@"lives: %d", m_TurtleLives);
     if(!gameOver){
         self.totalScore = (int)[m_BackgroundLayer getDistancetraveled]+(self.totalEnemiesKilled*4);
         [self detectCollisions];

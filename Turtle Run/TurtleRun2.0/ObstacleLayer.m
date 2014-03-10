@@ -22,7 +22,6 @@
 }
 
 -(void) spawn:(int)level {
-    NSLog(@"level %d", level);
 //    NSLog(@"Spawn");
     //[obstacles addObject:[Obstacle node]];
     Obstacle *o = [Obstacle node];
