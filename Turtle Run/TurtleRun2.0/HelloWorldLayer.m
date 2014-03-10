@@ -129,7 +129,8 @@
 	
 	CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, itemNewGame, nil];
 	
-	[menu alignItemsVertically];
+//	[menu alignItemsVertically];
+    [menu alignItemsVerticallyWithPadding:25.0f];
 	
 	
 	[menu setPosition:ccp( size.width/2, size.height/2)];
