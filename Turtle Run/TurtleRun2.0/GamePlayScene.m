@@ -45,6 +45,7 @@
 
 
 -(void) update:(ccTime)dt {
+    
     [spriteLayer update:dt];
     
     if(m_Lives == 0){
@@ -55,10 +56,10 @@
     m_Lives = spriteLayer.turtleLives;
     
     int numEnemiesToCompleteLevel = 5 + m_Level * 5;
-    
+
     if(spriteLayer.enemiesKilled >= numEnemiesToCompleteLevel){
         m_Level++;
-        [spriteLayer level:m_Level];
+        [spriteLayer setLevel:m_Level];
         spriteLayer.enemiesKilled = 0;
     }
     [uiLayer update:dt level:m_Level lives:m_Lives];
