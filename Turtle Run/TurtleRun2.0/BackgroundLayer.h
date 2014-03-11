@@ -12,7 +12,12 @@
 @interface BackgroundLayer : CCLayer {
     NSMutableArray* backgroundList;
     NSString *nextBackground;
+//    CCSpriteFrame *nextBackground;
     double distance_Traveled;
+    CCSpriteFrame *concreteTile;
+    CCSpriteFrame *grassTile;
+    CCSpriteFrame *sandTile;
+    CCSpriteFrame *waterTile;
 }
 
 -(void) update:(ccTime)dt;

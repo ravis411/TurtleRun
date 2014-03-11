@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D05CA1918CE884D00BEC243 /* tileatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D05CA1718CE884D00BEC243 /* tileatlas.plist */; };
+		3D05CA1A18CE884D00BEC243 /* tileatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D05CA1818CE884D00BEC243 /* tileatlas.png */; };
 		3D3E216D18CD817000003E86 /* atlas0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216B18CD817000003E86 /* atlas0.plist */; };
 		3D3E216E18CD817000003E86 /* atlas0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216C18CD817000003E86 /* atlas0.png */; };
 		3D3E217D18CD81B800003E86 /* turtle0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217218CD81B800003E86 /* turtle0.png */; };
@@ -203,6 +205,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D05CA1718CE884D00BEC243 /* tileatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = tileatlas.plist; path = Resources/tileatlas.plist; sourceTree = "<group>"; };
+		3D05CA1818CE884D00BEC243 /* tileatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tileatlas.png; path = Resources/tileatlas.png; sourceTree = "<group>"; };
 		3D3E216B18CD817000003E86 /* atlas0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = atlas0.plist; path = Resources/atlas0.plist; sourceTree = "<group>"; };
 		3D3E216C18CD817000003E86 /* atlas0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atlas0.png; path = Resources/atlas0.png; sourceTree = "<group>"; };
 		3D3E217218CD81B800003E86 /* turtle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle0.png; sourceTree = "<group>"; };
@@ -686,6 +690,8 @@
 		94519F7918CB9F000036B62A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D05CA1718CE884D00BEC243 /* tileatlas.plist */,
+				3D05CA1818CE884D00BEC243 /* tileatlas.png */,
 				3D3E219018CDA33E00003E86 /* gamover-iphone4.png */,
 				3D3E219118CDA33E00003E86 /* gamover-iphone4r.png */,
 				3D3E219218CDA33E00003E86 /* gamover-iphone5.png */,
@@ -704,6 +710,7 @@
 				944F3C9618CD393B000AA17D /* Default~iphone.png */,
 				94F6E55C18CD119800B296AD /* IconTurtle114x114.png */,
 				94F6E55A18CD0FE700B296AD /* TurtleIcon57x57.png */,
+				9451A14118CBAB510036B62A /* floortile.jpg */,
 				94F6E55818CD015100B296AD /* grass.png */,
 				94F6E55618CCFB7700B296AD /* water.png */,
 				9451A13B18CBAB510036B62A /* blast.png */,
@@ -714,7 +721,6 @@
 				3D3E216C18CD817000003E86 /* atlas0.png */,
 				9451A13F18CBAB510036B62A /* clawg.png */,
 				9451A14018CBAB510036B62A /* fireandflames.mp3 */,
-				9451A14118CBAB510036B62A /* floortile.jpg */,
 				9451A14218CBAB510036B62A /* splode.png */,
 				9451A14318CBAB510036B62A /* tile_tiny.png */,
 				9451A14418CBAB510036B62A /* tile.png */,
@@ -1204,6 +1210,8 @@
 				3D3E219318CDA33E00003E86 /* gamover-iphone4.png in Resources */,
 				3D3E219418CDA33E00003E86 /* gamover-iphone4r.png in Resources */,
 				3D3E219518CDA33E00003E86 /* gamover-iphone5.png in Resources */,
+				3D05CA1918CE884D00BEC243 /* tileatlas.plist in Resources */,
+				3D05CA1A18CE884D00BEC243 /* tileatlas.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
