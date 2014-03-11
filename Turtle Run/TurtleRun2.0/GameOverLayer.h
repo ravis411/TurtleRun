@@ -22,4 +22,5 @@
 -(void) updateLeaderBoard;
 -(void) exitScene;
 -(void) recordCurrentPlayerScore: (NSString *)currentScore;
+-(void) showLeaderScores;
 @end
