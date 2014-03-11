@@ -18,7 +18,7 @@
         distance_Traveled = 0;
         backgroundList = [[NSMutableArray alloc]init];
         int totalheight = 0;
-        while(totalheight<(size.height*1.7)){
+        while(totalheight<(size.height*2.7)){
             CGRect rect= CGRectMake(0, 0, size.width, size.width);
             CCSprite *background = [CCSprite spriteWithFile:nextBackground rect:rect];
             background.position = ccp(size.width/2, totalheight);
