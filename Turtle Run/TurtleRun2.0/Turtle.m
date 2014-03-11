@@ -31,6 +31,9 @@
         shootingRate = 20;
         cannonCount = 1;
         animframe = 0;
+        turtleCannon = [Cannon node];
+        turtleCannon.position = self.position;
+        [self addChild:turtleCannon];
     }
     return self;
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D05CA1918CE884D00BEC243 /* tileatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D05CA1718CE884D00BEC243 /* tileatlas.plist */; };
 		3D05CA1A18CE884D00BEC243 /* tileatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D05CA1818CE884D00BEC243 /* tileatlas.png */; };
+		3D05CA1D18CE8DD600BEC243 /* Cannon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D05CA1C18CE8DD600BEC243 /* Cannon.m */; };
 		3D3E216D18CD817000003E86 /* atlas0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216B18CD817000003E86 /* atlas0.plist */; };
 		3D3E216E18CD817000003E86 /* atlas0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216C18CD817000003E86 /* atlas0.png */; };
 		3D3E217D18CD81B800003E86 /* turtle0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217218CD81B800003E86 /* turtle0.png */; };
@@ -207,6 +208,8 @@
 /* Begin PBXFileReference section */
 		3D05CA1718CE884D00BEC243 /* tileatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = tileatlas.plist; path = Resources/tileatlas.plist; sourceTree = "<group>"; };
 		3D05CA1818CE884D00BEC243 /* tileatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tileatlas.png; path = Resources/tileatlas.png; sourceTree = "<group>"; };
+		3D05CA1B18CE8DD600BEC243 /* Cannon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cannon.h; sourceTree = "<group>"; };
+		3D05CA1C18CE8DD600BEC243 /* Cannon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cannon.m; sourceTree = "<group>"; };
 		3D3E216B18CD817000003E86 /* atlas0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = atlas0.plist; path = Resources/atlas0.plist; sourceTree = "<group>"; };
 		3D3E216C18CD817000003E86 /* atlas0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atlas0.png; path = Resources/atlas0.png; sourceTree = "<group>"; };
 		3D3E217218CD81B800003E86 /* turtle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle0.png; sourceTree = "<group>"; };
@@ -669,6 +672,8 @@
 				9451A12D18CBA2440036B62A /* TurtleAttackLayer.m */,
 				9451A12F18CBA26D0036B62A /* Turtle.h */,
 				9451A13018CBA26D0036B62A /* Turtle.m */,
+				3D05CA1B18CE8DD600BEC243 /* Cannon.h */,
+				3D05CA1C18CE8DD600BEC243 /* Cannon.m */,
 				9451A13218CBA2F70036B62A /* GroundLayer.h */,
 				9451A13318CBA2F70036B62A /* GroundLayer.m */,
 				9451A13518CBA3260036B62A /* SpriteLayer.h */,
@@ -1350,6 +1355,7 @@
 				9451A08318CB9F010036B62A /* CCTouchDispatcher.m in Sources */,
 				9451A11F18CBA0E50036B62A /* GamePlayScene.m in Sources */,
 				9451A00618CB9F010036B62A /* CCNode.m in Sources */,
+				3D05CA1D18CE8DD600BEC243 /* Cannon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
