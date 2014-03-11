@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3D274D8518CEA9CC002516BA /* tileatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8318CEA9CB002516BA /* tileatlas.plist */; };
 		3D274D8618CEA9CC002516BA /* tileatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8418CEA9CC002516BA /* tileatlas.png */; };
+		3D274D8818CEAC4E002516BA /* eyecon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8718CEAC4E002516BA /* eyecon.jpg */; };
+		3D274D8A18CEAD0D002516BA /* eyecon-r.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8918CEAD0D002516BA /* eyecon-r.png */; };
+		3D274D8C18CEAD39002516BA /* eyecon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8B18CEAD39002516BA /* eyecon.png */; };
+		3D274D8E18CEAD5E002516BA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8D18CEAD5D002516BA /* Default-568h@2x.png */; };
 		3D3E216D18CD817000003E86 /* atlas0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216B18CD817000003E86 /* atlas0.plist */; };
 		3D3E216E18CD817000003E86 /* atlas0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216C18CD817000003E86 /* atlas0.png */; };
 		3D3E217D18CD81B800003E86 /* turtle0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217218CD81B800003E86 /* turtle0.png */; };
@@ -210,6 +214,10 @@
 		3D274D8218CEA9A3002516BA /* Cannon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cannon.m; sourceTree = "<group>"; };
 		3D274D8318CEA9CB002516BA /* tileatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tileatlas.plist; sourceTree = "<group>"; };
 		3D274D8418CEA9CC002516BA /* tileatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileatlas.png; sourceTree = "<group>"; };
+		3D274D8718CEAC4E002516BA /* eyecon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = eyecon.jpg; path = Resources/eyecon.jpg; sourceTree = "<group>"; };
+		3D274D8918CEAD0D002516BA /* eyecon-r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eyecon-r.png"; sourceTree = "<group>"; };
+		3D274D8B18CEAD39002516BA /* eyecon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyecon.png; sourceTree = "<group>"; };
+		3D274D8D18CEAD5D002516BA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3D3E216B18CD817000003E86 /* atlas0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = atlas0.plist; path = Resources/atlas0.plist; sourceTree = "<group>"; };
 		3D3E216C18CD817000003E86 /* atlas0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atlas0.png; path = Resources/atlas0.png; sourceTree = "<group>"; };
 		3D3E217218CD81B800003E86 /* turtle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle0.png; sourceTree = "<group>"; };
@@ -610,6 +618,9 @@
 		94519F5818CB9F000036B62A = {
 			isa = PBXGroup;
 			children = (
+				3D274D8D18CEAD5D002516BA /* Default-568h@2x.png */,
+				3D274D8B18CEAD39002516BA /* eyecon.png */,
+				3D274D8918CEAD0D002516BA /* eyecon-r.png */,
 				94519F7818CB9F000036B62A /* TurtleRun */,
 				94519F6318CB9F000036B62A /* Frameworks */,
 				94519F6218CB9F000036B62A /* Products */,
@@ -697,6 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				3D3E219018CDA33E00003E86 /* gamover-iphone4.png */,
+				3D274D8718CEAC4E002516BA /* eyecon.jpg */,
 				3D3E219118CDA33E00003E86 /* gamover-iphone4r.png */,
 				3D3E219218CDA33E00003E86 /* gamover-iphone5.png */,
 				3D3E218A18CDA32C00003E86 /* tutorial-iphone4.png */,
@@ -1220,6 +1232,10 @@
 				3D3E219518CDA33E00003E86 /* gamover-iphone5.png in Resources */,
 				3D274D8518CEA9CC002516BA /* tileatlas.plist in Resources */,
 				3D274D8618CEA9CC002516BA /* tileatlas.png in Resources */,
+				3D274D8818CEAC4E002516BA /* eyecon.jpg in Resources */,
+				3D274D8A18CEAD0D002516BA /* eyecon-r.png in Resources */,
+				3D274D8C18CEAD39002516BA /* eyecon.png in Resources */,
+				3D274D8E18CEAD5E002516BA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
