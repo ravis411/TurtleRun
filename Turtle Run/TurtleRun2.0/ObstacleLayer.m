@@ -54,7 +54,7 @@
     
     if (spawnTimer <= 0) {
         [self spawn:lvl];
-        spawnTimer = spawnTimerReset-5*currentLevel;
+        spawnTimer = spawnTimerReset-3*currentLevel;
     }
     if(spawnWallTimer <=0){
         spawnWallTimer = 1000;
