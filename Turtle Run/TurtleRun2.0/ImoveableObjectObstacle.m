@@ -14,9 +14,9 @@ static int obstacleSpeed = 10;
 
 - (id)init
 {
-    CGRect rect= CGRectMake(0, 0, 75, 25);
-    self = [super initWithFile:@"tile.png" rect:rect];
-    
+//    CGRect rect= CGRectMake(0, 0, 75, 25);
+//    self = [super initWithFile:@"wall.png" rect:rect];
+    self = [super initWithFile:@"wall.png"];
     if (self) {
         hp = 100;
         int cols = 4;

@@ -18,9 +18,11 @@
         distance_Traveled = 0;
         backgroundList = [[NSMutableArray alloc]init];
         int totalheight = 0;
-        while(totalheight<size.height*1.7){
-            CCSprite *background = [CCSprite spriteWithFile:nextBackground];
+        while(totalheight<(size.height*1.7)){
+            CGRect rect= CGRectMake(0, 0, size.width, size.width);
+            CCSprite *background = [CCSprite spriteWithFile:nextBackground rect:rect];
             background.position = ccp(size.width/2, totalheight);
+            
             [self addChild:background];
             [backgroundList addObject:background];
             totalheight += [background boundingBox].size.height;
@@ -47,10 +49,12 @@
         }
     }
    if(removableBackground != nil){
+       
         CGSize size = [[CCDirector sharedDirector] winSize];
-        CCSprite *background = [CCSprite spriteWithFile:nextBackground];
+       CGRect rect= CGRectMake(0, 0, size.width, size.width);
+        CCSprite *background = [CCSprite spriteWithFile:nextBackground rect:rect];
         CCSprite *last = [backgroundList lastObject];
-        background.position = ccp(size.width/2, (last.position.y+last.boundingBox.size.height));
+        background.position = ccp(size.width/2, (last.position.y+last.boundingBox.size.height-30));
         [self addChild:background];
         [backgroundList addObject:background];
         [backgroundList removeObject:removableBackground];
