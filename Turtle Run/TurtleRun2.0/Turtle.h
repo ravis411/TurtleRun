@@ -8,9 +8,11 @@
 
 #import "CCSprite.h"
 #import "AppDelegate.h"
+#import "Cannon.h"
 
 @interface Turtle : CCSprite
 {
+    Cannon *turtleCannon;
     BOOL m_ReadyToFire;
     CGPoint m_Direction;
     CGPoint m_MoveToPoint; //The point the turtle should move to
