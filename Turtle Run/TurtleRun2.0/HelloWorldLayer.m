@@ -83,20 +83,8 @@
             CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:firstAtlasFilenames[i]];
             [firstAtlasFrames addObject:frame];
         }
-        
-        //BATCHING TILES
-        CCSpriteBatchNode *tileAtlasNode;
-        tileAtlasNode = [CCSpriteBatchNode batchNodeWithFile:@"tileatlas.png"];
-        [self addChild:tileAtlasNode];
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"tileatlas.plist"];
-        
-        NSMutableArray *tileAtlasFrames = [NSMutableArray array];
-        NSArray *tileAtlasFilenames = [NSArray arrayWithObjects:@"floortile.png", @"grass.png", @"sand.png", @"water.png", nil];
-        for (int i = 0; i <= 3; i++) {
-            CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:tileAtlasFilenames[i]];
-            [tileAtlasFrames addObject:frame];
-        }
 
+        
         
 		[self createMenu];
         

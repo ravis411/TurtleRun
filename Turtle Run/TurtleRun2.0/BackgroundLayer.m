@@ -20,19 +20,11 @@
         int totalheight = 0;
         while(totalheight<size.height*1.7){
             CCSprite *background = [CCSprite spriteWithFile:nextBackground];
-    
             background.position = ccp(size.width/2, totalheight);
             [self addChild:background];
             [backgroundList addObject:background];
             totalheight += [background boundingBox].size.height;
         }
-        
-        //Setting the tiles
-        concreteTile = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"floortile.png"];
-        grassTile = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"grass.png"];
-                sandTile = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"sand.png"];
-        waterTile = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"water.png"];
-       
         //        CCSprite *background = [CCSprite spriteWithFile:@"floortile.jpg"];
         //        background.position = ccp(size.width/2, 0);
         //        [self addChild:background];
@@ -56,9 +48,8 @@
     }
    if(removableBackground != nil){
         CGSize size = [[CCDirector sharedDirector] winSize];
-       CCSprite *background = [CCSprite spriteWithFile:nextBackground];
-//       [background setDisplayFrame:nextBackground];
-       CCSprite *last = [backgroundList lastObject];
+        CCSprite *background = [CCSprite spriteWithFile:nextBackground];
+        CCSprite *last = [backgroundList lastObject];
         background.position = ccp(size.width/2, (last.position.y+last.boundingBox.size.height));
         [self addChild:background];
         [backgroundList addObject:background];
@@ -76,19 +67,13 @@
     
     if (level <= 2) {
         nextBackground = @"floortile.jpg";
-        
-//        nextBackground = concreteTile;
     }else if(level <= 4){
         nextBackground = @"grass.png";
-//        nextBackground = grassTile;
     }else if(level <= 6){
         nextBackground = @"sand.png";
-        
-//        nextBackground = sandTile;
     }
     else if (level <= 8){
         nextBackground = @"water.png";
-//        nextBackground = waterTile;
     }
     else{
         return;
