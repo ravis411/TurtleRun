@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D274D8518CEA9CC002516BA /* tileatlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8318CEA9CB002516BA /* tileatlas.plist */; };
+		3D274D8618CEA9CC002516BA /* tileatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D274D8418CEA9CC002516BA /* tileatlas.png */; };
 		3D3E216D18CD817000003E86 /* atlas0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216B18CD817000003E86 /* atlas0.plist */; };
 		3D3E216E18CD817000003E86 /* atlas0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E216C18CD817000003E86 /* atlas0.png */; };
 		3D3E217D18CD81B800003E86 /* turtle0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3E217218CD81B800003E86 /* turtle0.png */; };
@@ -204,6 +206,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D274D8118CEA9A3002516BA /* Cannon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cannon.h; sourceTree = "<group>"; };
+		3D274D8218CEA9A3002516BA /* Cannon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cannon.m; sourceTree = "<group>"; };
+		3D274D8318CEA9CB002516BA /* tileatlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tileatlas.plist; sourceTree = "<group>"; };
+		3D274D8418CEA9CC002516BA /* tileatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileatlas.png; sourceTree = "<group>"; };
 		3D3E216B18CD817000003E86 /* atlas0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = atlas0.plist; path = Resources/atlas0.plist; sourceTree = "<group>"; };
 		3D3E216C18CD817000003E86 /* atlas0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = atlas0.png; path = Resources/atlas0.png; sourceTree = "<group>"; };
 		3D3E217218CD81B800003E86 /* turtle0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle0.png; sourceTree = "<group>"; };
@@ -649,6 +655,8 @@
 				9451A10518CB9F020036B62A /* Supporting Files */,
 				9451A11718CBA0280036B62A /* BackgroundLayer.h */,
 				9451A11818CBA0280036B62A /* BackgroundLayer.m */,
+				3D274D8118CEA9A3002516BA /* Cannon.h */,
+				3D274D8218CEA9A3002516BA /* Cannon.m */,
 				4999C44518CC197300D2B9EC /* PowerUp.h */,
 				4999C44618CC197300D2B9EC /* PowerUp.m */,
 				4999C44818CC199000D2B9EC /* PowerUpLayer.h */,
@@ -714,6 +722,8 @@
 				9451A13E18CBAB510036B62A /* clawg_64x64.png */,
 				3D3E216B18CD817000003E86 /* atlas0.plist */,
 				3D3E216C18CD817000003E86 /* atlas0.png */,
+				3D274D8318CEA9CB002516BA /* tileatlas.plist */,
+				3D274D8418CEA9CC002516BA /* tileatlas.png */,
 				9451A13F18CBAB510036B62A /* clawg.png */,
 				9451A14018CBAB510036B62A /* fireandflames.mp3 */,
 				9451A14118CBAB510036B62A /* floortile.jpg */,
@@ -1208,6 +1218,8 @@
 				3D3E219318CDA33E00003E86 /* gamover-iphone4.png in Resources */,
 				3D3E219418CDA33E00003E86 /* gamover-iphone4r.png in Resources */,
 				3D3E219518CDA33E00003E86 /* gamover-iphone5.png in Resources */,
+				3D274D8518CEA9CC002516BA /* tileatlas.plist in Resources */,
+				3D274D8618CEA9CC002516BA /* tileatlas.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
