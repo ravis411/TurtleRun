@@ -59,38 +59,38 @@ UIButton *doneButton;
         [[[[CCDirector sharedDirector] openGLView] window] addSubview:doneButton];
         
        
-        NSString *currentPlayerScore2 = [defaults objectForKey:@"currentPlayer"];
-
-        NSArray *allLeaderScores = [leaderList allKeys];
-        // NSArray *sortedLeaderScores = [self sortLeaderBoard:allLeaderScores leaderDict:newLeaderList];
-        
-        NSArray *sortedLeaderScores = [allLeaderScores sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            NSString *str1 = (NSString *)obj1;
-            NSString *str2 = (NSString *)obj2;
-            
-            NSString *value1 = [leaderList objectForKey:str1];
-            NSString *value2 = [leaderList objectForKey:str2];
-            
-            return [value1 compare:value2 options:NSNumericSearch];
-            
-        }];
-        int listCount = [leaderList count];
-        //[leaderList objectForKey:[sortedLeaderScores objectAtIndex:i]]
-        if([leaderList count]>5){
-            if( [leaderList objectForKey:[sortedLeaderScores objectAtIndex:(listCount-4)]]<currentPlayerScore2){
-                NSLog(@"leaderlistlowscore: %@",[leaderList objectForKey:[sortedLeaderScores objectAtIndex:(listCount-6)]]);
-                NSLog(@"currentPlayerScore: %@", currentPlayerScore2);
-                //NSLog(@"\n\n\nRAN TIL HERE \n\n\n");
-                [self promptForUsername];
-            }
-            else{
-                [self showLeaderScores];
-            }
-        }
-        else{
-            [self promptForUsername];
-        }
-       
+//        NSString *currentPlayerScore2 = [defaults objectForKey:@"currentPlayer"];
+//
+//        NSArray *allLeaderScores = [leaderList allKeys];
+//        // NSArray *sortedLeaderScores = [self sortLeaderBoard:allLeaderScores leaderDict:newLeaderList];
+//        
+//        NSArray *sortedLeaderScores = [allLeaderScores sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//            NSString *str1 = (NSString *)obj1;
+//            NSString *str2 = (NSString *)obj2;
+//            
+//            NSString *value1 = [leaderList objectForKey:str1];
+//            NSString *value2 = [leaderList objectForKey:str2];
+//            
+//            return [value1 compare:value2 options:NSNumericSearch];
+//            
+//        }];
+//        int listCount = [leaderList count];
+//        //[leaderList objectForKey:[sortedLeaderScores objectAtIndex:i]]
+//        if([leaderList count]>5){
+//            if( [leaderList objectForKey:[sortedLeaderScores objectAtIndex:(listCount-5)]]<currentPlayerScore2){
+//                NSLog(@"leaderlistlowscore: %@",[leaderList objectForKey:[sortedLeaderScores objectAtIndex:(listCount-5)]]);
+//                NSLog(@"currentPlayerScore: %@", currentPlayerScore2);
+//                //NSLog(@"\n\n\nRAN TIL HERE \n\n\n");
+//                [self promptForUsername];
+//            }
+//            else{
+//                [self showLeaderScores];
+//            }
+//        }
+//        else{
+//            [self promptForUsername];
+//        }
+        [self promptForUsername];
         
     }
     return self;
