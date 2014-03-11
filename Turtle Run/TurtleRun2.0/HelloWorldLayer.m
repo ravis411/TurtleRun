@@ -89,6 +89,7 @@
 		[self createMenu];
         
         [self scheduleUpdate];
+        
 		
 
 	}

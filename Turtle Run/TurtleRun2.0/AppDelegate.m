@@ -136,6 +136,27 @@
 	
 	// make main window visible
 	[window_ makeKeyAndVisible];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *leaderList = [[NSMutableDictionary alloc] init];
+    
+    //    UserModel *leader1 = [[UserModel alloc]init];
+    //    UserModel *leader2 = [[UserModel alloc] init];
+    //
+    //    [leader1 setUserName:@"Eric"];
+    //    [leader1 setScore:@"250"];
+    //
+    //    [leader2 setUserName:@"Player 2"];
+    //    [leader2 setScore:@"120"];
+    [leaderList setObject:@"20" forKey:@"Player 2"];
+    //    [leaderList setObject:@"250" forKey:@"Eric"];
+    //    [leaderList setObject:@"370" forKey:@"Andrew"];
+    [leaderList setObject:@"382" forKey:@"Kyle"];
+    [leaderList setObject:@"540" forKey:@"Ryan"];
+    
+    
+    [defaults setObject:leaderList forKey:@"LeaderboardNames"];
+    [defaults synchronize];
 	
 	return YES;
 }
